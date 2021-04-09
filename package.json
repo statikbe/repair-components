@@ -1,26 +1,32 @@
 {
   "name": "repair-components",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "yalc": "yarn build && yalc push"
   },
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "vue": "^3.0.5"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^11.2.0",
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.8",
-    "tailwindcss": "^2.0.4",
-    "vite": "^2.1.0"
+    "tailwindcss": "^2.1.1",
+    "vite": "^2.1.0",
+    "vitepress": "^0.12.2"
   },
   "files": [
-    "dist"
+    "dist",
+    "tailwind.config.js",
+    "tailwind",
+    "src/assets/css/index.css"
   ],
   "main": "./dist/repair-components.umd.js",
   "module": "./dist/repair-components.es.js",
@@ -29,9 +35,15 @@
       "import": "./dist/repair-components.es.js",
       "require": "./dist/repair-components.umd.js"
     },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "export": "./dist/style.css"
+    "./style.css": "./src/assets/css/index.css",
+    "./tailwind/config": {
+      "require": "./tailwind.config.js"
+    },
+    "./tailwind/safelist": {
+      "require": "./tailwind/safelist.js"
+    },
+    "./tailwind/colors": {
+      "require": "./tailwind/colors.js"
     }
   }
 }

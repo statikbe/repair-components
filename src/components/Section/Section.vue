@@ -1,22 +1,39 @@
 <template>
-  <div class="p-3" :class="[color && `bg-${color}-default text-${color}-contrast`, `py-${size}`]">
-    <div class="container">
+  <div :class="[sizeClass, color && `bg-${color} text-${color}-contrast`]">
+    <v-container v-if="container" class="container">
       <slot />
-    </div>
+    </v-container>
+    <template v-else>
+      <slot />
+    </template>
   </div>
 </template>
 
 <script>
 export default {
-  name: "r-section",
+  name: 'r-section',
   props: {
     color: {
       type: String,
       default: () => null,
     },
     size: {
-      type: Number,
-      default: () => 3,
+      type: String,
+      default: () => 'DEFAULT',
+    },
+    container: {
+      type: Boolean,
+      default: () => true,
+    },
+  },
+  computed: {
+    sizeClass() {
+      return {
+        0: 'py-0',
+        sm: 'py-3',
+        DEFAULT: 'py-9',
+        lg: 'py-12',
+      }[this.size];
     },
   },
 };

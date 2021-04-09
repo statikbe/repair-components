@@ -1,0 +1,11 @@
+h3 {
+  margin-bottom: 0.75em;
+}
+
+.api td:last-child {
+  width: 100%;
+}
+
+.api td:first-child {
+  white-space: nowrap;
+}

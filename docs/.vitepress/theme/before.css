@@ -1,0 +1,4 @@
+.vue * {
+  all: initial;
+  display: inherit;
+}

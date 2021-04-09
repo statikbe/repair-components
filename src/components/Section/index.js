@@ -1,3 +1,3 @@
-import RSection from "./Section.vue";
+import RSection from './Section.vue';
 
 export { RSection };
