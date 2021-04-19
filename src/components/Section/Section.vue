@@ -1,8 +1,8 @@
 <template>
-  <div :class="[sizeClass, color && `bg-${color} text-${color}-contrast`]">
-    <v-container v-if="container" class="container">
+  <div :class="dynamicClasses">
+    <r-container v-if="container">
       <slot />
-    </v-container>
+    </r-container>
     <template v-else>
       <slot />
     </template>
@@ -10,8 +10,13 @@
 </template>
 
 <script>
+import { RContainer } from '..';
+
 export default {
   name: 'r-section',
+  components: {
+    RContainer,
+  },
   props: {
     color: {
       type: String,
@@ -19,7 +24,7 @@ export default {
     },
     size: {
       type: String,
-      default: () => 'DEFAULT',
+      default: () => 'md',
     },
     container: {
       type: Boolean,
@@ -27,13 +32,19 @@ export default {
     },
   },
   computed: {
-    sizeClass() {
-      return {
+    // bg-primary text-primary-contrast hover:bg-primary-dark bg-primary-contrast text-primary hover:bg-primary-dark hover:text-primary-contrast
+    // bg-secondary text-secondary-contrast hover:bg-secondary-dark bg-secondary-contrast text-secondary hover:bg-secondary-dark hover:text-secondary-contrast
+    dynamicClasses() {
+      const { color, size } = this;
+
+      const sizeClass = {
         0: 'py-0',
         sm: 'py-3',
-        DEFAULT: 'py-9',
+        md: 'py-9',
         lg: 'py-12',
-      }[this.size];
+      }[size];
+
+      return [sizeClass, `bg-${color} text-${color}-contrast`];
     },
   },
 };

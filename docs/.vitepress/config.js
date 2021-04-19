@@ -30,13 +30,13 @@ module.exports = {
   },
 
   themeConfig: {
-    repoLabel: 'Contribute!',
+    repoLabel: 'BitBucket',
     repo: 'https://bitbucket.org/statikbe/repair-components',
     docsDir: 'docs',
     editLinks: true,
     docsBranch: 'master',
     editLinkText: 'Edit this page',
-    search: false,
+    search: true,
     locales: {
       '/': {
         label: 'English',
@@ -48,25 +48,32 @@ module.exports = {
             buttonText: 'Refresh',
           },
         },
-        nav: [
-          { text: 'Getting Started', link: '/guide' },
-          { text: 'Components', link: '/components/' },
-          { text: 'BitBucket', link: 'https://bitbucket.org/statikbe/repair-components' },
-        ],
         sidebar: [
           {
-            text: 'Getting started',
+            text: 'Installation',
+            children: [
+              { text: 'Vue', link: '/Installation/Vue' },
+              { text: 'Tailwind', link: '/Installation/Tailwind' },
+            ],
           },
           {
-            text: 'Tailwind',
-            children: [{ text: 'Config', link: '/tailwind/Config' }],
+            text: 'Styling',
+            children: [{ text: 'Typography', link: '/Styling/Typography' }],
           },
           {
             text: 'Components',
             children: [
-              { text: 'Button', link: '/components/Button' },
-              { text: 'Heading', link: '/components/Heading' },
-              { text: 'Section', link: '/components/Section' },
+              { text: 'App', link: '/Components/App/index' },
+              { text: 'Button', link: '/Components/Button/index' },
+              {
+                text: 'Form',
+                link: '/Components/Form/index',
+                children: [
+                  { text: 'FormField', link: '/Components/Form/FormField/index' },
+                  { text: 'FormText', link: '/Components/Form/FormText/index' },
+                ],
+              },
+              { text: 'Section', link: '/Components/Section/index' },
             ],
           },
         ],

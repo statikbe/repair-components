@@ -1,6 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const defaultColors = require('tailwindcss/colors');
 
+const typographyPlugin = require('./tailwind/plugins/typography');
+
 const colors = {
   ...defaultColors,
   primary: {
@@ -13,6 +15,10 @@ const colors = {
     dark: '#7C6178',
     contrast: 'white',
   },
+  info: defaultColors.yellow[500],
+  success: defaultColors.green[500],
+  warning: defaultColors.blue[500],
+  error: defaultColors.red[500],
 };
 
 module.exports = {
@@ -20,6 +26,8 @@ module.exports = {
   theme: {
     borderWidth: {
       default: '1px',
+      1: '1px',
+      2: '2px',
       0: '0',
       4: '4px',
     },
@@ -33,6 +41,10 @@ module.exports = {
     },
     fontSize: {
       base: ['18px', '25px'],
+      tiny: ['14px', '20px'],
+      small: ['16px', '24px'],
+      large: ['20px', '30px'],
+      huge: [],
       intro: ['20px', '30px'],
       h1: ['40px', '50px'],
       h2: ['35px', '40px'],
@@ -80,5 +92,5 @@ module.exports = {
   // variants: {
   //   extend: {},
   // },
-  plugins: [],
+  plugins: [typographyPlugin],
 };

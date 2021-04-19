@@ -1,17 +1,12 @@
 import DefaultTheme from 'vitepress/theme';
-import * as components from '../../../src/components';
+import ComponentLibrary from '../../../lib/main';
 
-import './before.css';
-import './tailwind.css';
-import './after.css';
+import './index.css';
+import '../../../src/assets/css/index.css';
 
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    for (const componentName in components) {
-      const component = components[componentName];
-
-      app.component(component.name, component);
-    }
+    app.use(ComponentLibrary, {});
   },
 };

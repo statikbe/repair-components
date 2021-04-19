@@ -1,8 +1,12 @@
-# Section
+#
 
 ## Examples
 
 ###
+
+<r-app>
+
+</r-app>
 
 ```vue
 

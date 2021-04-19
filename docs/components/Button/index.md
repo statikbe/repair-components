@@ -4,7 +4,9 @@
 
 ### Default button
 
+<r-app>
 <r-button>Submit</r-button>
+</r-app>
 
 ```vue
 <r-button>Submit</r-button>
@@ -12,7 +14,9 @@
 
 ### Colored button
 
+<r-app>
 <r-button color="secondary">Submit</r-button>
+</r-app>
 
 ```vue
 <r-button color="secondary">Submit</r-button>
@@ -20,9 +24,11 @@
 
 ### Contrasted button
 
+<r-app>
 <r-section color="secondary">
-  <r-button color="secondary" contrast>Submit</r-button>
+<r-button color="secondary" contrast>Submit</r-button>
 </r-section>
+</r-app>
 
 ```vue
 <r-button contrast>Submit</r-button>

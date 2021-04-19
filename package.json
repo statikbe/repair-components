@@ -12,12 +12,13 @@
     "yalc": "yarn build && yalc push"
   },
   "dependencies": {
-    "vue": "^2.6.12"
+    "vue": "^3.0.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.2.5",
+    "lodash.merge": "^4.6.2",
     "tailwindcss": "^2.1.1",
     "vite": "^2.1.0",
     "vitepress": "^0.12.2"
@@ -25,8 +26,8 @@
   "files": [
     "dist",
     "tailwind.config.js",
-    "tailwind",
-    "src/assets/css/index.css"
+    "src/assets/css/index.css",
+    "tailwind/plugins/typography.js"
   ],
   "main": "./dist/repair-components.umd.js",
   "module": "./dist/repair-components.es.js",
@@ -38,12 +39,6 @@
     "./style.css": "./src/assets/css/index.css",
     "./tailwind/config": {
       "require": "./tailwind.config.js"
-    },
-    "./tailwind/safelist": {
-      "require": "./tailwind/safelist.js"
-    },
-    "./tailwind/colors": {
-      "require": "./tailwind/colors.js"
     }
   }
 }

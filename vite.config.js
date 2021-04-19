@@ -12,6 +12,9 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'lib/main.js'),
       name: 'RepairComponents',
     },
+    optimizeDeps: {
+      include: ['vue'],
+    },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
@@ -22,6 +25,7 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
         },
+        exports: 'named',
       },
     },
   },
