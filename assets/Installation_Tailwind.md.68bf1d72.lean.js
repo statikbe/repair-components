@@ -1,0 +1,1 @@
+import{o as n,c as a,a as s}from"./app.c06a1e91.js";const t='{"title":"Tailwind","description":"","frontmatter":{},"relativePath":"Installation/Tailwind.md","lastUpdated":1618227623011}',p={},e=s('',3);p.render=function(s,t,p,o,i,c){return n(),a("div",null,[e])};export default p;export{t as __pageData};
