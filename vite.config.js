@@ -2,6 +2,7 @@ const path = require('path');
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import { createVuePlugin } from 'vite-plugin-vue2';
 
 // https://vitejs.dev/config/
 // https://vitejs.dev/guide/build.html#library-mode
@@ -29,5 +30,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [vue()],
+  plugins: [createVuePlugin(), vue()],
 });
