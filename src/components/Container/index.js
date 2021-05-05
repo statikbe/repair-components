@@ -1,3 +1,3 @@
-import RContainer from './Container.vue';
+import { default as RContainer } from './Container.vue';
 
 export { RContainer };
