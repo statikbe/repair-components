@@ -1,3 +1,3 @@
-import { default as RButton } from './Button.vue';
+import { default as RButton } from "./Button.vue";
 
 export { RButton };

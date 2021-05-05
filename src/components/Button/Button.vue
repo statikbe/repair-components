@@ -14,11 +14,11 @@
 
 <script>
 export default {
-  name: 'r-button',
+  name: "r-button",
   props: {
     color: {
       type: String,
-      default: () => 'primary',
+      default: () => "primary",
     },
     contrast: {
       type: Boolean,
@@ -32,9 +32,13 @@ export default {
       const { $prefix, color, contrast } = this;
 
       if (!contrast) {
-        return $prefix(`bg-${color} text-${color}-contrast hover:bg-${color}-dark`);
+        return $prefix(
+          `bg-${color} text-${color}-contrast hover:bg-${color}-dark`
+        );
       } else {
-        return $prefix(`bg-${color}-contrast text-${color} hover:bg-${color}-dark hover:text-${color}-contrast`);
+        return $prefix(
+          `bg-${color}-contrast text-${color} hover:bg-${color}-dark hover:text-${color}-contrast`
+        );
       }
     },
   },

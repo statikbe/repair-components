@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import uuid from '../../mixins/uuid';
+import uuid from "../../mixins/uuid";
 
 export default {
-  name: 'r-form',
+  name: "r-form",
   mixins: [uuid],
   computed: {
     id() {

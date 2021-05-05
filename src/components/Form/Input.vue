@@ -5,7 +5,11 @@
         :id="id"
         :value="modelValue"
         type="text"
-        :class="$prefix('text-small block w-full px-3 py-2 rounded border-gray-300 border-solid border bg-white')"
+        :class="
+          $prefix(
+            'text-small block w-full px-3 py-2 rounded border-gray-300 border-solid border bg-white'
+          )
+        "
         @input="$emit('update:modelValue', $event.target.value)"
       />
     </template>
@@ -14,13 +18,13 @@
 
 <script>
 export default {
-  name: 'r-input',
+  name: "r-input",
   props: {
     modelValue: {
       type: String,
-      default: () => '',
+      default: () => "",
     },
   },
-  emits: ['update:modelValue'],
+  emits: ["update:modelValue"],
 };
 </script>

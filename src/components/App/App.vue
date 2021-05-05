@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'r-app',
+  name: "r-app",
 };
 </script>

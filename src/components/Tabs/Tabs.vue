@@ -5,20 +5,33 @@
         type="button"
         v-for="tab in tabs"
         :key="tab"
-        :class="[$prefix('p-0 border-1 border-b-0 border-solid cursor-pointer'), dynamicClasses(tab)]"
+        :class="[
+          $prefix('p-0 border-1 border-b-0 border-solid cursor-pointer'),
+          dynamicClasses(tab),
+        ]"
         @click="activeTab = tab"
       >
         <div
           :class="[
-            $prefix('p-2 border-0 border-b-1 border-solid min-w-[100px] text-small'),
-            isTabActive(tab) ? $prefix('border-white') : $prefix('border-gray-300'),
+            $prefix(
+              'p-2 border-0 border-b-1 border-solid min-w-[100px] text-small'
+            ),
+            isTabActive(tab)
+              ? $prefix('border-white')
+              : $prefix('border-gray-300'),
           ]"
         >
           {{ tab }}
         </div>
       </button>
     </div>
-    <div :class="$prefix('relative top-[-1px] bg-white p-4 border-1 border-solid border-gray-300')">
+    <div
+      :class="
+        $prefix(
+          'relative top-[-1px] bg-white p-4 border-1 border-solid border-gray-300'
+        )
+      "
+    >
       <slot v-bind="{ activeTab }" />
     </div>
   </div>
@@ -26,7 +39,7 @@
 
 <script>
 export default {
-  name: 'r-tabs',
+  name: "r-tabs",
   props: {
     tabs: {
       type: Array,

@@ -1,31 +1,24 @@
-# repair-components
+# vue-lib
 
-This package contains Vue components for Repair projects, styled with TailwindCSS.
-
-## Getting started
-
-Install the package to your Repair project:
-
+## Project setup
 ```
-@todo
+npm install
 ```
 
-## Local development
-
-For local development, it is highly recommended to use `yalc` to link up this package to your Repair projects.
-
-After cloning this repository, publish it to the `yalc` repository:
-
+### Compiles and hot-reloads for development
 ```
-yalc publish
+npm run serve
 ```
 
-Then, in your Repair projects, link your local build like so:
-
+### Compiles and minifies for production
 ```
-yalc link repair-components
+npm run build
 ```
 
-Now, if you make changes in your local components repository, you can quickly build and push the package to every local Repair project using `yarn build && yalc push` (or `yarn yalc` for short).
+### Lints and fixes files
+```
+npm run lint
+```
 
-**Note:** After installing or removing Yarn packages in your Repair project, the components package has to be pushed again with `yalc push`.
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

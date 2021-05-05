@@ -1,19 +1,25 @@
 <template>
   <div>
     <label :for="htmlId">
-      <input type="checkbox" :id="htmlId" :value="value" :checked="isChecked" @change="onChange" />
+      <input
+        type="checkbox"
+        :id="htmlId"
+        :value="value"
+        :checked="isChecked"
+        @change="onChange"
+      />
       <span>{{ label }}</span>
     </label>
   </div>
 </template>
 
 <script>
-import uuid from '../../mixins/uuid';
+import uuid from "../../mixins/uuid";
 
 export default {
   mixins: [uuid],
-  name: 'r-checkbox',
-  emits: ['update:modelValue'],
+  name: "r-checkbox",
+  emits: ["update:modelValue"],
   props: {
     label: {
       type: String,
@@ -47,7 +53,7 @@ export default {
   },
   methods: {
     onChange(event) {
-      const { modelValue, value, $emit } = this;
+      const { modelValue, value } = this;
       const isChecked = event.target.checked;
       let newValue;
       if (Array.isArray(modelValue)) {
@@ -61,7 +67,7 @@ export default {
         newValue = isChecked ? this.trueValue : this.falseValue;
       }
 
-      this.$emit('update:modelValue', newValue);
+      this.$emit("update:modelValue", newValue);
     },
   },
 };

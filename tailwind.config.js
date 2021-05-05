@@ -1,19 +1,19 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const defaultColors = require('tailwindcss/colors');
+const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultColors = require("tailwindcss/colors");
 
-const typographyPlugin = require('./tailwind/plugins/typography');
+const typographyPlugin = require("./tailwind/plugins/typography");
 
 const colors = {
   ...defaultColors,
   primary: {
-    DEFAULT: '#71b8c5',
-    dark: '#5A939D',
-    contrast: 'white',
+    DEFAULT: "#71b8c5",
+    dark: "#5A939D",
+    contrast: "white",
   },
   secondary: {
-    DEFAULT: '#9C7A97',
-    dark: '#7C6178',
-    contrast: 'white',
+    DEFAULT: "#9C7A97",
+    dark: "#7C6178",
+    contrast: "white",
   },
   info: defaultColors.yellow[500],
   success: defaultColors.green[500],
@@ -25,41 +25,41 @@ module.exports = {
   darkMode: false,
   theme: {
     borderWidth: {
-      default: '1px',
-      1: '1px',
-      2: '2px',
-      0: '0',
-      4: '4px',
+      default: "1px",
+      1: "1px",
+      2: "2px",
+      0: "0",
+      4: "4px",
     },
     borderColor: colors,
     container: {
       center: true,
-      padding: defaultTheme.spacing['4'],
+      padding: defaultTheme.spacing["4"],
     },
     fontFamily: {
-      base: ['Titillium Web', 'sans-serif'],
+      base: ["Titillium Web", "sans-serif"],
     },
     fontSize: {
-      base: ['18px', '25px'],
-      tiny: ['14px', '20px'],
-      small: ['16px', '24px'],
-      large: ['20px', '30px'],
+      base: ["18px", "25px"],
+      tiny: ["14px", "20px"],
+      small: ["16px", "24px"],
+      large: ["20px", "30px"],
       huge: [],
-      intro: ['20px', '30px'],
-      h1: ['40px', '50px'],
-      h2: ['35px', '40px'],
-      h3: ['28px', '35px'],
-      h4: ['22px', '25px'],
-      h5: ['20px', '25px'],
-      h6: ['18px', '25px'],
-      button: ['18px', 1],
+      intro: ["20px", "30px"],
+      h1: ["40px", "50px"],
+      h2: ["35px", "40px"],
+      h3: ["28px", "35px"],
+      h4: ["22px", "25px"],
+      h5: ["20px", "25px"],
+      h6: ["18px", "25px"],
+      button: ["18px", 1],
     },
     screens: {
-      xs: '480px',
-      sm: '660px',
-      md: '820px',
-      lg: '980px',
-      xl: '1200px',
+      xs: "480px",
+      sm: "660px",
+      md: "820px",
+      lg: "980px",
+      xl: "1200px",
     },
     colors,
     // aspectRatio: {

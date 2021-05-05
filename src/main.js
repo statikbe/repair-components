@@ -1,13 +1,11 @@
-import { createApp } from 'vue';
-import App from './App.vue';
+import Vue from "vue";
+import App from "./App.vue";
+// import ComponentLibrary from "../lib/main";
+import "./assets/tailwind.css";
 
-import ComponentLibrary from '../lib/main';
+Vue.config.productionTip = false;
+// Vue.use(ComponentLibrary);
 
-import './assets/css/app.css';
-import './assets/css/index.css';
-
-const app = createApp(App);
-
-app.use(ComponentLibrary);
-
-app.mount('#app');
+new Vue({
+  render: (h) => h(App),
+}).$mount("#app");

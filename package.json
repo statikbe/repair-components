@@ -1,45 +1,31 @@
 {
   "name": "repair-components",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
-    "yalc": "yarn build && yalc push"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.6.12"
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9",
+    "core-js": "^3.6.5",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.1.5",
-    "@vue/compiler-sfc": "^3.0.5",
-    "autoprefixer": "^10.2.5",
-    "lodash.merge": "^4.6.2",
-    "tailwindcss": "^2.1.1",
-    "vite": "^2.1.0",
-    "vite-plugin-vue2": "^1.4.4",
-    "vitepress": "^0.12.2"
-  },
-  "files": [
-    "dist",
-    "tailwind.config.js",
-    "src/assets/css/index.css",
-    "tailwind/plugins/typography.js"
-  ],
-  "main": "./dist/repair-components.umd.js",
-  "module": "./dist/repair-components.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/repair-components.es.js",
-      "require": "./dist/repair-components.umd.js"
-    },
-    "./style.css": "./src/assets/css/index.css",
-    "./tailwind/config": {
-      "require": "./tailwind.config.js"
-    }
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.2.1",
+    "vue-cli-plugin-tailwind": "~2.0.6",
+    "vue-template-compiler": "^2.6.11"
   }
 }

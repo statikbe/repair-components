@@ -2,22 +2,33 @@
   <div class="mb-4">
     <slot name="label" v-bind="{ id, resettable }">
       <div class="mb-1">
-        <label :for="id" :class="$prefix('text-base font-medium')">{{ label }}</label>
+        <label :for="id" :class="$prefix('text-base font-medium')">{{
+          label
+        }}</label>
         <span v-if="resettable" class="text-small">
-          (<a href="javascript:void(0)" class="text-gray-700" @click="$emit('reset')">reset</a>)
+          (<a
+            href="javascript:void(0)"
+            class="text-gray-700"
+            @click="$emit('reset')"
+            >reset</a
+          >)
         </span>
       </div>
     </slot>
     <slot name="default" v-bind="{ id }"></slot>
-    <div v-if="errors" :class="$prefix('text-tiny text-error font-bold mt-1')" v-html="formattedErrors"></div>
+    <div
+      v-if="errors"
+      :class="$prefix('text-tiny text-error font-bold mt-1')"
+      v-html="formattedErrors"
+    ></div>
   </div>
 </template>
 
 <script>
-import uuid from '../../mixins/uuid';
+import uuid from "../../mixins/uuid";
 
 export default {
-  name: 'r-form-field',
+  name: "r-form-field",
   mixins: [uuid],
   props: {
     label: {
@@ -26,7 +37,7 @@ export default {
     },
     errors: {
       type: [String, Array],
-      default: () => '',
+      default: () => "",
     },
     resettable: {
       type: Boolean,
@@ -38,7 +49,9 @@ export default {
       return `form-field-${this.uuid}`;
     },
     formattedErrors() {
-      return Array.isArray(this.errors) ? this.errors.join('<br/>') : this.errors;
+      return Array.isArray(this.errors)
+        ? this.errors.join("<br/>")
+        : this.errors;
     },
   },
 };
