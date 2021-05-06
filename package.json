@@ -32,18 +32,5 @@
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.8.2"
   },
-  "files": [
-    "dist",
-    "tailwind.config.js",
-    "src/assets",
-    "tailwind"
-  ],
-  "main": "./dist/repair-components.umd.js",
-  "exports": {
-    ".": "./dist/repair-components.umd.js",
-    "./icons": "./src/assets/icons/index.js",
-    "./style.css": "./src/assets/css/index.css",
-    "./tailwind/config": "./tailwind.config.js",
-    "./tailwind/safelist": "./tailwind/safelist.js"
-  }
+  "main": "./dist/repair-components.umd.js"
 }
