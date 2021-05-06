@@ -11941,7 +11941,7 @@ __webpack_require__.d(__webpack_exports__, "RPagination", function() { return /*
 __webpack_require__.d(__webpack_exports__, "RSection", function() { return /* reexport */ Section; });
 __webpack_require__.d(__webpack_exports__, "RTabs", function() { return /* reexport */ Tabs; });
 __webpack_require__.d(__webpack_exports__, "tailwindConfig", function() { return /* reexport */ tailwind_config_default.a; });
-__webpack_require__.d(__webpack_exports__, "icons", function() { return /* reexport */ /* Cannot get final name for export "default" in "./src/assets/icons/index.js" (known exports: , known reexports: mdiChevronDown mdiChevronLeft mdiChevronRight mdiChevronUp mdiClose mdiMapMarker) */ undefined; });
+__webpack_require__.d(__webpack_exports__, "icons", function() { return /* reexport */ icons_namespaceObject; });
 
 // NAMESPACE OBJECT: ./src/components/index.js
 var components_namespaceObject = {};
@@ -19410,6 +19410,7 @@ var ComponentLibrary = {
     // };
   }
 };
+
 
 
 
