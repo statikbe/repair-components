@@ -1,13 +1,13 @@
 {
   "name": "repair-components",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "yalc": "yarn build && yalc push"
   },
   "dependencies": {
     "@mdi/js": "^5.9.55",
@@ -40,19 +40,10 @@
   ],
   "main": "./dist/repair-components.umd.js",
   "exports": {
-    ".": {
-      "import": "./dist/repair-components.es.js",
-      "require": "./dist/repair-components.umd.js"
-    },
-    "./icons": {
-      "import": "./src/assets/icons/index.js"
-    },
+    ".": "./dist/repair-components.umd.js",
+    "./icons": "./src/assets/icons/index.js",
     "./style.css": "./src/assets/css/index.css",
-    "./tailwind/config": {
-      "require": "./tailwind.config.js"
-    },
-    "./tailwind/safelist": {
-      "require": "./tailwind/safelist.js"
-    }
+    "./tailwind/config": "./tailwind.config.js",
+    "./tailwind/safelist": "./tailwind/safelist.js"
   }
 }
