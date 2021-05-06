@@ -9,5 +9,3 @@ export default {
   name: 'r-container',
 };
 </script>
-
-<style></style>
