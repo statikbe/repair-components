@@ -5,7 +5,7 @@
 ###
 
 <r-app>
-<r-mapbox-search access-token="pk.eyJ1IjoiZHVwb250bmllbHMiLCJhIjoiY2tsdXoyNDNvMDk5MzJ3bXdmMnNndWFqcSJ9.1uvdTrAsxKX6sARWZDA93A" label="Location"/>
+<r-form-location label="Location"/>
 </r-app>
 
 ```vue

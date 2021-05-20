@@ -69,7 +69,7 @@ module.exports = {
               '/pages/Components/Form/Form',
               '/pages/Components/Form/FormField',
               '/pages/Components/Form/FormText',
-              '/pages/Components/Form/MapboxSearch',
+              '/pages/Components/Form/FormLocation',
             ],
           },
           '/pages/Components/Section',

@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  inject: ['$icons'],
   name: 'r-icon',
   props: {
     name: {
