@@ -1,6 +1,6 @@
 <template>
   <div v-if="pages > 1" class="text-center">
-    <div class="inline-flex align-middle -m-1">
+    <div class="inline-flex items-center -m-1">
       <r-pagination-button
         class="bg-white bg-opacity-0"
         :class="{
@@ -15,7 +15,7 @@
       <r-pagination-button :is-active="isActive(1)" @click="$emit('update:modelValue', 1)">
         {{ 1 }}
       </r-pagination-button>
-      <span v-if="modelValue > 3" class="mx-1"> &hellip; </span>
+      <span v-if="modelValue > 4" class="mx-1"> <r-icon name="mdiDotsHorizontal" /> </span>
       <r-pagination-button
         v-for="page in visiblePages"
         :is-active="isActive(page)"
@@ -24,7 +24,7 @@
       >
         {{ page }}
       </r-pagination-button>
-      <span v-if="modelValue < pages - 2" class="mx-1"> &hellip; </span>
+      <span v-if="modelValue < pages - 3" class="mx-1"> <r-icon name="mdiDotsHorizontal" /> </span>
       <r-pagination-button :is-active="isActive(pages)" @click="$emit('update:modelValue', pages)">
         {{ pages }}
       </r-pagination-button>
@@ -82,6 +82,10 @@ export default {
 
       const visiblePages = [];
 
+      if (pageBefore === 3) {
+        visiblePages.push(2);
+      }
+
       if (pageBefore > 1) {
         visiblePages.push(pageBefore);
       }
@@ -92,6 +96,10 @@ export default {
 
       if (pageAfter < pages) {
         visiblePages.push(pageAfter);
+      }
+
+      if (pageAfter === pages - 2) {
+        visiblePages.push(pages - 1);
       }
 
       return visiblePages;
