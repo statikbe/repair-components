@@ -1,13 +1,15 @@
 <template>
-  <button
-    type="button"
+  <component
+    v-on="$listeners"
+    :is="link ? 'a' : 'button'"
+    :type="link ? undefined : 'button'"
     class="inline-flex align-center rounded-full border-0 font-base font-bold text-button tracking-wider cursor-pointer transition-colors"
     :class="dynamicClasses"
   >
-    <r-icon v-if="iconBefore" :name="iconBefore" class="mr-1" />
+    <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" />
     <slot />
-    <r-icon v-if="iconAfter" :name="iconAfter" class="mr-1" />
-  </button>
+    <r-icon v-if="iconAfter" :name="iconAfter" class="mr-2" />
+  </component>
 </template>
 
 <script>
@@ -19,6 +21,10 @@ export default {
     RIcon,
   },
   props: {
+    link: {
+      type: Boolean,
+      default: () => false,
+    },
     color: {
       type: String,
       default: () => 'primary',
