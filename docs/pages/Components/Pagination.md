@@ -5,7 +5,7 @@
 ### Default pagination
 
 <r-app>
-<r-pagination :model-value="119" :pages="123"/>
+<r-pagination :model-value="7" :pages="123"/>
 </r-app>
 
 ```vue
