@@ -9107,29 +9107,6 @@ module.exports = isSet;
 
 /***/ }),
 
-/***/ "d81d":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var $ = __webpack_require__("23e7");
-var $map = __webpack_require__("b727").map;
-var arrayMethodHasSpeciesSupport = __webpack_require__("1dde");
-
-var HAS_SPECIES_SUPPORT = arrayMethodHasSpeciesSupport('map');
-
-// `Array.prototype.map` method
-// https://tc39.es/ecma262/#sec-array.prototype.map
-// with adding support of @@species
-$({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT }, {
-  map: function map(callbackfn /* , thisArg */) {
-    return $map(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
-  }
-});
-
-
-/***/ }),
-
 /***/ "d925":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11868,17 +11845,14 @@ var FormField_component = normalizeComponent(
 )
 
 /* harmony default export */ var FormField = (FormField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"18ad52f4-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Location.vue?vue&type=template&id=47a717c7&
-var Locationvue_type_template_id_47a717c7_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-form-field',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(ref){return [_c('v-multiselect',{attrs:{"options":_vm.options,"loading":_vm.isLoading,"placeholder":null},on:{"search-change":_vm.onSearchChange},scopedSlots:_vm._u([{key:"option",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"18ad52f4-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Location.vue?vue&type=template&id=6a47856e&
+var Locationvue_type_template_id_6a47856e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-form-field',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(ref){return [_c('v-multiselect',{attrs:{"options":_vm.options,"loading":_vm.isLoading,"placeholder":null},on:{"search-change":_vm.onSearchChange},scopedSlots:_vm._u([{key:"option",fn:function(ref){
 var option = ref.option;
 return [_c('div',[_vm._v(_vm._s(option.display_name))])]}}],null,true),model:{value:(_vm.selected),callback:function ($$v) {_vm.selected=$$v},expression:"selected"}})]}}])},'r-form-field',{ label: _vm.label },false))}
-var Locationvue_type_template_id_47a717c7_staticRenderFns = []
+var Locationvue_type_template_id_6a47856e_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/Location.vue?vue&type=template&id=47a717c7&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__("d81d");
+// CONCATENATED MODULE: ./src/components/Form/Location.vue?vue&type=template&id=6a47856e&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.find-index.js
 var es_array_find_index = __webpack_require__("c740");
@@ -11899,7 +11873,6 @@ var vue_multiselect_min_default = /*#__PURE__*/__webpack_require__.n(vue_multise
 var dist_vue_multiselect_min = __webpack_require__("e607");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Location.vue?vue&type=script&lang=js&
-
 
 
 //
@@ -11960,11 +11933,8 @@ var dist_vue_multiselect_min = __webpack_require__("e607");
     this.onSearchChange = lodash_debounce_default()(function (keyword) {
       _this.isLoading = true;
       axios_default.a.get("https://nominatim.openstreetmap.org/search?q=".concat(keyword)).then(function (options) {
-        var results = options.map(function (_ref) {
-          var category = _ref.category;
-          return category === 'boundary';
-        });
-        results.reduce(function (uniqueArray, obj) {
+        _this.options = options.reduce(function (uniqueArray, obj) {
+          if (obj.category !== 'boundary') return uniqueArray;
           var index = uniqueArray.findIndex(function (x) {
             return x.display_name === obj.display_name;
           });
@@ -11994,8 +11964,8 @@ var dist_vue_multiselect_min = __webpack_require__("e607");
 
 var Location_component = normalizeComponent(
   Form_Locationvue_type_script_lang_js_,
-  Locationvue_type_template_id_47a717c7_render,
-  Locationvue_type_template_id_47a717c7_staticRenderFns,
+  Locationvue_type_template_id_6a47856e_render,
+  Locationvue_type_template_id_6a47856e_staticRenderFns,
   false,
   null,
   null,
