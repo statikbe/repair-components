@@ -3,11 +3,11 @@
     v-on="$listeners"
     :is="button ? 'button' : 'a'"
     :type="button ? 'button' : undefined"
-    class="inline-flex align-center font-base font-bold text-button tracking-wider cursor-pointer transition-colors underline hover:no-underline"
+    class="inline-flex align-center font-base font-bold text-button text-black tracking-wider cursor-pointer transition-colors underline hover:no-underline"
   >
     <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" :class="`text-${color}`" />
     <slot />
-    <r-icon v-if="iconAfter" :name="iconAfter" class="mr-2" :class="`text-${color}`" />
+    <r-icon v-if="iconAfter" :name="iconAfter" class="ml-2" :class="`text-${color}`" />
   </component>
 </template>
 

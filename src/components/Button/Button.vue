@@ -8,7 +8,7 @@
   >
     <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" />
     <slot />
-    <r-icon v-if="iconAfter" :name="iconAfter" class="mr-2" />
+    <r-icon v-if="iconAfter" :name="iconAfter" class="ml-2" />
   </component>
 </template>
 

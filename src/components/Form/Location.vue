@@ -50,15 +50,28 @@ export default {
     selected: null,
     isLoading: false,
   }),
-  methods: {
-    onSearchChange: debounce((keyword) => {
+  created() {
+    this.onSearchChange = debounce((keyword) => {
       this.isLoading = true;
 
       axios.get(`https://nominatim.openstreetmap.org/search?q=${keyword}`).then((options) => {
-        this.options = options.map(({ category, importance }) => category === 'boundary' && importance > 0.3);
+        const results = options.map(({ category }) => category === 'boundary');
+
+        results.reduce((uniqueArray, obj) => {
+          const index = uniqueArray.findIndex((x) => x.display_name === obj.display_name);
+
+          if (index === -1) {
+            uniqueArray.push(obj);
+          } else if (uniqueArray[index].importance < obj.importance) {
+            uniqueArray.splice(index, 1, obj);
+          }
+
+          return uniqueArray;
+        }, []);
+
         this.isLoading = false;
       });
-    }, 500),
+    }, 500);
   },
 };
 </script>
