@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import uuid from '../../mixins/uuid';
+import Uuid from '../../mixins/Uuid';
 
 export default {
-  mixins: [uuid],
+  mixins: [Uuid],
   name: 'r-checkbox',
   model: {
     prop: 'modelValue',

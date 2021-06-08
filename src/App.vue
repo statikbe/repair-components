@@ -70,6 +70,10 @@
           <r-button>Previous</r-button>
           <r-button class="ml-auto">Next</r-button>
         </div>
+        <button type="button" @click="$modal.show('modal')">modal</button>
+        <r-modal name="modal">
+          <r-form-wysiwyg label="Text " />
+        </r-modal>
       </r-form>
     </r-section>
   </r-app>

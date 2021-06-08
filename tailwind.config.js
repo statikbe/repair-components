@@ -29,9 +29,10 @@ module.exports = {
   theme: {
     borderWidth: {
       default: '1px',
+      0: '0',
       1: '1px',
       2: '2px',
-      0: '0',
+      3: '3px',
       4: '4px',
     },
     borderColor: colors,

@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@mdi/js": "^5.9.55",
+    "@tiptap/starter-kit": "^2.0.0-beta.76",
+    "@tiptap/vue-2": "^2.0.0-beta.34",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "lodash.pick": "^4.4.0",
     "vue": "^2.6.11",
+    "vue-js-modal": "^2.0.0-rc.6",
     "vue-multiselect": "^2.1.6"
   },
   "devDependencies": {

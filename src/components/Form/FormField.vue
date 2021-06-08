@@ -8,17 +8,18 @@
         </span>
       </div>
     </slot>
+    <div v-if="infoText" v-html="infoText"></div>
     <slot name="default" v-bind="{ id }"></slot>
     <div v-if="errors" class="text-tiny text-error font-bold mt-1" v-html="formattedErrors"></div>
   </div>
 </template>
 
 <script>
-import uuid from '../../mixins/uuid';
+import Uuid from '../../mixins/Uuid';
 
 export default {
   name: 'r-form-field',
-  mixins: [uuid],
+  mixins: [Uuid],
   props: {
     label: {
       type: String,
@@ -32,6 +33,10 @@ export default {
       type: Boolean,
       default: () => false,
     },
+    infoText: {
+      type: String,
+      default: () => null,
+    },
   },
   computed: {
     id() {
@@ -43,5 +48,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

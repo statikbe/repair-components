@@ -21,29 +21,17 @@ import axios from 'axios';
 import debounce from 'lodash.debounce';
 import VMultiselect from 'vue-multiselect';
 
-import { RFormField } from '.';
+import FormField from '../../mixins/FormField';
 
 import 'vue-multiselect/dist/vue-multiselect.min.css';
 
+delete axios.defaults.headers.common['Authorization'];
+
 export default {
   name: 'r-form-location',
+  mixins: [FormField],
   components: {
-    RFormField,
     VMultiselect,
-  },
-  model: {
-    prop: 'modelValue',
-    event: 'update:modelValue',
-  },
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    modelValue: {
-      type: String,
-      default: () => '',
-    },
   },
   data: () => ({
     options: [],

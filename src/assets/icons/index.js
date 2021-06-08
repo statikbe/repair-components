@@ -7,6 +7,8 @@ export {
   mdiChevronUp,
   mdiClose,
   mdiDotsHorizontal,
+  mdiFormatBold,
+  mdiFormatItalic,
   mdiMapMarker,
 } from '@mdi/js';
 

@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import uuid from '../../mixins/uuid';
+import Uuid from '../../mixins/Uuid';
 
 export default {
-  mixins: [uuid],
+  mixins: [Uuid],
   name: 'r-radio',
   model: {
     prop: 'modelValue',

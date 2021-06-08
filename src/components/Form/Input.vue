@@ -5,7 +5,7 @@
         :id="id"
         :value="modelValue"
         type="text"
-        class="text-small block w-full px-3 py-2 rounded border-gray-300 border-solid border bg-white"
+        class="text-small block w-full px-3 py-2 rounded border-gray-300 border-2 border-solid bg-white"
         @input="$emit('update:modelValue', $event.target.value)"
       />
     </template>
@@ -13,26 +13,10 @@
 </template>
 
 <script>
-import { RFormField } from '.';
+import FormField from '../../mixins/FormField';
 
 export default {
   name: 'r-input',
-  components: {
-    RFormField,
-  },
-  model: {
-    prop: 'modelValue',
-    event: 'update:modelValue',
-  },
-  props: {
-    modelValue: {
-      type: String,
-      default: () => '',
-    },
-    label: {
-      type: String,
-      required: true,
-    },
-  },
+  mixins: [FormField],
 };
 </script>
