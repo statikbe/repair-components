@@ -7,5 +7,10 @@
 <script>
 export default {
   name: 'r-app',
+  provide() {
+    return {
+      $icons: this.$icons,
+    };
+  },
 };
 </script>
