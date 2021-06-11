@@ -2,16 +2,16 @@ export { RApp } from './App';
 export { RButton } from './Button';
 export { RContainer } from './Container';
 export {
+  RForm,
   RFormCheckbox,
   RFormCollection,
-  RForm,
+  RFormEditor,
   RFormField,
-  RFormImages,
   RFormLocation,
+  RFormImages,
   RFormInput,
   RFormRadio,
   RFormTextarea,
-  RFormWysiwyg,
 } from './Form';
 export { RIcon } from './Icon';
 export { RGallery } from './Gallery';
