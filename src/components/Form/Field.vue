@@ -1,6 +1,6 @@
 <template>
   <div class="mb-4">
-    <slot name="label" v-bind="{ id, resettable, optional }">
+    <slot name="label" v-bind="{ id, resettable, required, label, tooltip }">
       <label :for="id" class="text-base font-medium flex items-center">
         <span>{{ label }}</span>
         <r-icon
@@ -9,7 +9,7 @@
           name="mdiInformationOutline"
           class="relative text-tiny text-primary ml-1"
         />
-        <small v-if="optional" class="text-gray-400 ml-1">(Optional)</small>
+        <small v-if="!required" class="text-gray-400 ml-1">(optional)</small>
       </label>
       <span v-if="resettable" class="text-small">
         (<a href="javascript:void(0)" class="text-gray-700" @click="$emit('reset')">reset</a>)
@@ -42,7 +42,7 @@ export default {
       type: Boolean,
       default: () => false,
     },
-    optional: {
+    required: {
       type: Boolean,
       default: () => false,
     },

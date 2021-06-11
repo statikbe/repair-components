@@ -1,7 +1,7 @@
 <template>
   <div>
-    <label :for="htmlId">
-      <input type="checkbox" :id="htmlId" :value="value" :checked="isChecked" @change="onChange" />
+    <label :for="htmlId" class="flex mb-1">
+      <input type="checkbox" :id="htmlId" :value="value" :checked="isChecked" class="mr-1" @change="onChange" />
       <slot name="label">
         <span>{{ label }}</span>
       </slot>
@@ -10,27 +10,16 @@
 </template>
 
 <script>
+import FormField from '../../mixins/FormField';
 import Uuid from '../../mixins/Uuid';
 
 export default {
-  mixins: [Uuid],
+  mixins: [FormField, Uuid],
   name: 'r-checkbox',
-  model: {
-    prop: 'modelValue',
-    event: 'update:modelValue',
-  },
   props: {
-    label: {
-      type: String,
-      required: true,
-    },
     value: {
       type: String,
       required: true,
-    },
-    modelValue: {
-      type: [Array, Boolean],
-      default: () => false,
     },
     trueValue: {
       default: () => true,

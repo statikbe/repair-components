@@ -57,7 +57,7 @@ import Link from '@tiptap/extension-link';
 import FormField from '../../mixins/FormField';
 
 export default {
-  name: 'r-form-wysiwyg',
+  name: 'r-editor',
   mixins: [FormField],
 
   components: {

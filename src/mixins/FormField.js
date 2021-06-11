@@ -27,9 +27,13 @@ export default {
       type: Boolean,
       default: () => false,
     },
-    optional: {
+    required: {
       type: Boolean,
       default: () => false,
+    },
+    placeholder: {
+      type: String,
+      default: () => null,
     },
     info: {
       type: String,
@@ -42,7 +46,7 @@ export default {
   },
   computed: {
     fieldProps() {
-      return pick(this, ['label', 'errors', 'resettable', 'optional', 'info', 'tooltip']);
+      return pick(this, ['label', 'errors', 'resettable', 'required', 'placeholder', 'info', 'tooltip']);
     },
   },
 };
