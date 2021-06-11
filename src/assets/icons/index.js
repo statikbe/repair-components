@@ -9,6 +9,7 @@ export {
   mdiFormatItalic,
   mdiFormatListBulleted,
   mdiFormatListNumbered,
+  mdiInformationOutline,
   mdiLink,
   mdiMapMarker,
   mdiEarth as contact_website,

@@ -1,8 +1,20 @@
 export { RApp } from './App';
 export { RButton } from './Button';
 export { RContainer } from './Container';
-export { RFormCheckbox, RForm, RFormField, RFormLocation, RFormInput, RFormRadio, RFormWysiwyg } from './Form';
+export {
+  RFormCheckbox,
+  RFormCollection,
+  RForm,
+  RFormField,
+  RFormImages,
+  RFormLocation,
+  RFormInput,
+  RFormRadio,
+  RFormTextarea,
+  RFormWysiwyg,
+} from './Form';
 export { RIcon } from './Icon';
+export { RGallery } from './Gallery';
 export { RGrid, RGridItem } from './Grid';
 export { RLink } from './Link';
 // export { RModal } from './Modal';

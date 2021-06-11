@@ -1,6 +1,6 @@
 <template>
   <r-form-field v-bind="fieldProps">
-    <div v-if="editor" class="p-1 rounded-t border-2 border-solid border-b-0 border-gray-300 bg-gray-100">
+    <div v-if="editor" class="rounded-t border-2 border-solid border-b-0 border-gray-300 bg-gray-100">
       <slot name="toolbar" v-bind="{ editor }">
         <button
           type="button"
@@ -52,6 +52,7 @@
 import { Editor, EditorContent } from '@tiptap/vue-2';
 
 import StarterKit from '@tiptap/starter-kit';
+import Link from '@tiptap/extension-link';
 
 import FormField from '../../mixins/FormField';
 
@@ -87,7 +88,7 @@ export default {
 
   mounted() {
     this.editor = new Editor({
-      extensions: [StarterKit],
+      extensions: [StarterKit, Link],
       content: this.value,
       editorProps: {
         attributes: {

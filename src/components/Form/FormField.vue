@@ -1,15 +1,24 @@
 <template>
   <div class="mb-4">
-    <slot name="label" v-bind="{ id, resettable }">
-      <div class="mb-1">
-        <label :for="id" class="text-base font-medium">{{ label }}</label>
-        <span v-if="resettable" class="text-small">
-          (<a href="javascript:void(0)" class="text-gray-700" @click="$emit('reset')">reset</a>)
-        </span>
-      </div>
+    <slot name="label" v-bind="{ id, resettable, optional }">
+      <label :for="id" class="text-base font-medium flex items-center">
+        <span>{{ label }}</span>
+        <r-icon
+          v-if="tooltip"
+          v-tooltip="tooltip"
+          name="mdiInformationOutline"
+          class="relative text-tiny text-primary ml-1"
+        />
+        <small v-if="optional" class="text-gray-400 ml-1">(Optional)</small>
+      </label>
+      <span v-if="resettable" class="text-small">
+        (<a href="javascript:void(0)" class="text-gray-700" @click="$emit('reset')">reset</a>)
+      </span>
     </slot>
-    <div v-if="infoText" v-html="infoText"></div>
-    <slot name="default" v-bind="{ id }"></slot>
+    <div v-if="info" v-html="info" class="text-small text-gray-400" />
+    <div class="mt-1">
+      <slot name="default" v-bind="{ id }"></slot>
+    </div>
     <div v-if="errors" class="text-tiny text-error font-bold mt-1" v-html="formattedErrors"></div>
   </div>
 </template>
@@ -33,7 +42,15 @@ export default {
       type: Boolean,
       default: () => false,
     },
-    infoText: {
+    optional: {
+      type: Boolean,
+      default: () => false,
+    },
+    info: {
+      type: String,
+      default: () => null,
+    },
+    tooltip: {
       type: String,
       default: () => null,
     },

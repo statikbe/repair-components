@@ -27,14 +27,22 @@ export default {
       type: Boolean,
       default: () => false,
     },
-    infoText: {
+    optional: {
+      type: Boolean,
+      default: () => false,
+    },
+    info: {
+      type: String,
+      default: () => null,
+    },
+    tooltip: {
       type: String,
       default: () => null,
     },
   },
   computed: {
     fieldProps() {
-      return pick(this, ['label', 'errors', 'resettable', 'infoText']);
+      return pick(this, ['label', 'errors', 'resettable', 'optional', 'info', 'tooltip']);
     },
   },
 };

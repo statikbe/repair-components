@@ -72,7 +72,7 @@
         </div>
         <button type="button" @click="$modal.show('modal')">modal</button>
         <r-modal name="modal">
-          <r-form-wysiwyg label="Text " />
+          <r-form-wysiwyg label="Text" tooltip="hallo" info="hallo" optional />
         </r-modal>
       </r-form>
     </r-section>
