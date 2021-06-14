@@ -65,6 +65,9 @@
           <div class="px-2 w-100 md:w-7/12">
             <r-input label="LinkedIn" v-bind="fieldProps('linkedin')" v-on="fieldListeners('linkedin')" />
           </div>
+          <div class="px-2 w-100 md:w-7/12">
+            <r-form-images label="Images" multiple v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
+          </div>
         </div>
         <div class="flex">
           <r-button>Previous</r-button>
@@ -100,6 +103,7 @@ export default {
       facebook: 'statikbe',
       instagram: 'statikbe',
       linkedin: 'statikbe',
+      images: [],
     },
   }),
   computed: {
@@ -122,10 +126,10 @@ export default {
     },
     fieldListeners(key) {
       return {
-        input: ($event) => {
-          this.form[key] = $event.target.value;
+        'update:modelValue': (modelValue) => {
+          this.form[key] = modelValue;
         },
-        reset: () => {
+        'reset': () => {
           this.form[key] = this.originalForm[key];
         },
       };

@@ -18,4 +18,5 @@ export {
   mdiGoogle as contact_google,
   mdiLinkedin as contact_linkedin,
   mdiPhone as contact_phone,
+  mdiTrashCan,
 } from '@mdi/js';
