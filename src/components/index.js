@@ -17,7 +17,7 @@ export { RIcon } from './Icon';
 export { RGallery } from './Gallery';
 export { RGrid, RGridItem } from './Grid';
 export { RLink } from './Link';
-export { RModal } from './Modal';
+// export { RModal } from './Modal';
 export { RPagination } from './Pagination';
 export { RPanel } from './Panel';
 export { RSection } from './Section';
