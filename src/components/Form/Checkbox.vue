@@ -1,11 +1,19 @@
 <template>
   <div>
-    <label :for="htmlId" class="flex mb-1">
-      <input type="checkbox" :id="htmlId" :value="value" :checked="isChecked" class="mr-1" @change="onChange" />
+    <div class="flex items-baseline mb-1">
+      <input type="checkbox" :id="htmlId" :value="value" :checked="isChecked" class="mr-2" @change="onChange" />
       <slot name="label">
-        <span>{{ label }}</span>
+        <span class="text-base font-medium flex items-baseline">
+          <label :for="htmlId">{{ label }}</label>
+          <r-icon
+            v-if="tooltip"
+            v-tooltip="tooltip"
+            name="mdiInformationOutline"
+            class="relative text-tiny text-primary ml-1"
+          />
+        </span>
       </slot>
-    </label>
+    </div>
   </div>
 </template>
 

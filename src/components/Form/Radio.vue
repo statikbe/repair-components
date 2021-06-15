@@ -1,10 +1,10 @@
 <template>
   <div>
-    <label :for="htmlId" class="flex items-start mb-1">
+    <div class="flex items-baseline mb-1">
       <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="mr-2" @change="onChange" />
       <slot name="label">
-        <span class="text-base font-medium flex items-center">
-          <span>{{ label }}</span>
+        <span class="text-base font-medium flex items-baseline">
+          <label :for="htmlId">{{ label }}</label>
           <r-icon
             v-if="tooltip"
             v-tooltip="tooltip"
@@ -13,7 +13,7 @@
           />
         </span>
       </slot>
-    </label>
+    </div>
   </div>
 </template>
 

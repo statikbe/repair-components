@@ -1,9 +1,9 @@
 <template>
   <r-form-field v-bind="fieldProps">
     <template #default="{ id }">
-      <div v-show="modelValue.length" class="mb-3 w-80 max-w-full">
+      <div v-show="thumbnails.length" class="mb-3 w-80 max-w-full">
         <r-grid>
-          <r-grid-item v-for="(url, index) in multiple ? modelValue : [modelValue]" class="w-3/12" :key="index">
+          <r-grid-item v-for="(url, index) in thumbnails" class="w-3/12" :key="index">
             <div
               class="relative aspect-w-1 aspect-h-1 bg-cover bg-no-repeat bg-center"
               :style="`background-image: url(${url});`"
@@ -20,7 +20,7 @@
         </r-grid>
         <input type="file" :id="id" class="sr-only" ref="input" :multiple="multiple" @change="handleChange" />
       </div>
-      <r-button @click="$refs.input.click()"> {{ t('messages.form_image_add') }} </r-button>
+      <r-link icon-before="mdiPlusCircle" @click="$refs.input.click()"> {{ t('messages.form_image_add') }} </r-link>
     </template>
   </r-form-field>
 </template>
@@ -29,15 +29,27 @@
 import FormField from '../../mixins/FormField';
 import { RGrid, RGridItem } from '../Grid';
 import { RIcon } from '../Icon';
+import { RLink } from '../Link';
 
 export default {
   name: 'r-form-image',
   mixins: [FormField],
-  components: { RGrid, RGridItem, RIcon },
+  components: { RGrid, RGridItem, RIcon, RLink },
   props: {
     multiple: {
       type: Boolean,
       default: () => false,
+    },
+  },
+  computed: {
+    thumbnails() {
+      const { modelValue, multiple } = this;
+
+      if (multiple) {
+        return modelValue;
+      } else {
+        return modelValue ? [modelValue] : [];
+      }
     },
   },
   methods: {
@@ -71,7 +83,7 @@ export default {
       if (this.multiple) {
         newValue.splice(index, 1);
       } else {
-        newValue = [];
+        newValue = null;
       }
 
       this.$emit('update:modelValue', newValue);

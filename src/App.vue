@@ -66,7 +66,10 @@
             <r-input label="LinkedIn" v-bind="fieldProps('linkedin')" v-on="fieldListeners('linkedin')" />
           </div>
           <div class="px-2 w-100 md:w-7/12">
-            <r-form-image label="Images" multiple v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
+            <r-radio label="Radio" v-bind="fieldProps('radio')" v-on="fieldListeners('radio')" value="radio" />
+          </div>
+          <div class="px-2 w-100 md:w-7/12">
+            <r-form-image label="Images" v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
           </div>
         </div>
         <div class="flex">
@@ -103,7 +106,8 @@ export default {
       facebook: 'statikbe',
       instagram: 'statikbe',
       linkedin: 'statikbe',
-      images: [],
+      images: null,
+      radio: 'radio',
     },
   }),
   computed: {
