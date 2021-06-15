@@ -70,6 +70,14 @@
             <r-radio label="Radio" v-bind="fieldProps('radio')" v-on="fieldListeners('radio')" value="radio" />
           </div>
           <div class="px-2 w-100 md:w-7/12">
+            <r-checkbox
+              label="Checkbox"
+              v-bind="fieldProps('checkbox')"
+              v-on="fieldListeners('checkbox')"
+              value="checkbox"
+            />
+          </div>
+          <div class="px-2 w-100 md:w-7/12">
             <r-form-image label="Images" v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
           </div>
         </div>
@@ -129,6 +137,7 @@ export default {
       linkedin: 'statikbe',
       images: null,
       radio: 'radio',
+      checkbox: false,
     },
   }),
   computed: {

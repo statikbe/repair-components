@@ -10,7 +10,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
     'all': 'initial', // Make sure inherited styles from parent application get reset
     'display': 'block',
     'fontFamily': theme('fontFamily.base'),
-    'fontWeight': 900,
     'color': theme('colors.primary.DEFAULT'),
     'marginTop': '0.75em',
     'marginBottom': '0.5em',
@@ -22,12 +21,22 @@ module.exports = plugin(function ({ addComponents, theme }) {
     },
   };
 
+  const largeHeadingStyles = {
+    ...sharedHeadingStyles,
+    fontWeight: 900,
+  };
+
+  const smallHeadingStyles = {
+    ...sharedHeadingStyles,
+    fontWeight: 700,
+  };
+
   addComponents({
-    '.text-h1': sharedHeadingStyles,
-    '.text-h2': sharedHeadingStyles,
-    '.text-h3': sharedHeadingStyles,
-    '.text-h4': sharedHeadingStyles,
-    '.text-h5': sharedHeadingStyles,
-    '.text-h6': sharedHeadingStyles,
+    '.text-h1': largeHeadingStyles,
+    '.text-h2': largeHeadingStyles,
+    '.text-h3': largeHeadingStyles,
+    '.text-h4': smallHeadingStyles,
+    '.text-h5': smallHeadingStyles,
+    '.text-h6': smallHeadingStyles,
   });
 });

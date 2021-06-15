@@ -1,4 +1,6 @@
 export {
+  mdiCheckboxBlankOutline,
+  mdiCheckboxMarked,
   mdiChevronDown,
   mdiChevronLeft,
   mdiChevronRight,
@@ -13,6 +15,8 @@ export {
   mdiLink,
   mdiMapMarker,
   mdiPlusCircle,
+  mdiRadioboxBlank,
+  mdiRadioboxMarked,
   mdiTrashCan,
   mdiEarth as contact_website,
   mdiEmail as contact_email,
