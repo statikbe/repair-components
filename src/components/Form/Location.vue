@@ -23,8 +23,6 @@ import VMultiselect from 'vue-multiselect';
 
 import FormField from '../../mixins/FormField';
 
-import 'vue-multiselect/dist/vue-multiselect.min.css';
-
 delete axios.defaults.headers.common['Authorization'];
 
 export default {

@@ -4,7 +4,7 @@ import RFormCollection from './Collection.vue';
 import RFormEditor from './Editor.vue';
 import RFormField from './Field.vue';
 import RFormLocation from './Location.vue';
-import RFormImages from './Images.vue';
+import RFormImage from './Image.vue';
 import RFormInput from './Input.vue';
 import RFormRadio from './Radio.vue';
 import RFormTextarea from './Textarea.vue';
@@ -16,7 +16,7 @@ export {
   RFormEditor,
   RFormField,
   RFormLocation,
-  RFormImages,
+  RFormImage,
   RFormInput,
   RFormRadio,
   RFormTextarea,

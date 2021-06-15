@@ -3,7 +3,7 @@
     <template #default="{ id }">
       <div v-show="modelValue.length" class="mb-3 w-80 max-w-full">
         <r-grid>
-          <r-grid-item v-for="(url, index) in modelValue" class="w-3/12" :key="index">
+          <r-grid-item v-for="(url, index) in multiple ? modelValue : [modelValue]" class="w-3/12" :key="index">
             <div
               class="relative aspect-w-1 aspect-h-1 bg-cover bg-no-repeat bg-center"
               :style="`background-image: url(${url});`"
@@ -31,7 +31,7 @@ import { RGrid, RGridItem } from '../Grid';
 import { RIcon } from '../Icon';
 
 export default {
-  name: 'r-form-images',
+  name: 'r-form-image',
   mixins: [FormField],
   components: { RGrid, RGridItem, RIcon },
   props: {

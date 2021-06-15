@@ -66,7 +66,7 @@
             <r-input label="LinkedIn" v-bind="fieldProps('linkedin')" v-on="fieldListeners('linkedin')" />
           </div>
           <div class="px-2 w-100 md:w-7/12">
-            <r-form-images label="Images" multiple v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
+            <r-form-image label="Images" multiple v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
           </div>
         </div>
         <div class="flex">

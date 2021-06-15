@@ -8,7 +8,7 @@ export {
   RFormEditor,
   RFormField,
   RFormLocation,
-  RFormImages,
+  RFormImage,
   RFormInput,
   RFormRadio,
   RFormTextarea,
