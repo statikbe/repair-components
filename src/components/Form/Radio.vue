@@ -1,9 +1,17 @@
 <template>
   <div>
-    <label :for="htmlId" class="flex mb-1">
-      <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="mr-1" @change="onChange" />
+    <label :for="htmlId" class="flex items-start mb-1">
+      <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="mr-2" @change="onChange" />
       <slot name="label">
-        <span>{{ label }}</span>
+        <span class="text-base font-medium flex items-center">
+          <span>{{ label }}</span>
+          <r-icon
+            v-if="tooltip"
+            v-tooltip="tooltip"
+            name="mdiInformationOutline"
+            class="relative text-tiny text-primary ml-1"
+          />
+        </span>
       </slot>
     </label>
   </div>

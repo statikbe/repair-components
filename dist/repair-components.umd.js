@@ -44627,14 +44627,22 @@ var Input_component = normalizeComponent(
 )
 
 /* harmony default export */ var Input = (Input_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"141e3806-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Radio.vue?vue&type=template&id=1510e1c0&
-var Radiovue_type_template_id_1510e1c0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"flex mb-1",attrs:{"for":_vm.htmlId}},[_c('input',{staticClass:"mr-1",attrs:{"type":"radio","id":_vm.htmlId},domProps:{"value":_vm.value,"checked":_vm.isChecked},on:{"change":_vm.onChange}}),_vm._t("label",[_c('span',[_vm._v(_vm._s(_vm.label))])])],2)])}
-var Radiovue_type_template_id_1510e1c0_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"141e3806-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Radio.vue?vue&type=template&id=57d3361c&
+var Radiovue_type_template_id_57d3361c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('label',{staticClass:"flex items-start mb-1",attrs:{"for":_vm.htmlId}},[_c('input',{staticClass:"mr-2",attrs:{"type":"radio","id":_vm.htmlId},domProps:{"value":_vm.value,"checked":_vm.isChecked},on:{"change":_vm.onChange}}),_vm._t("label",[_c('span',{staticClass:"text-base font-medium flex items-center"},[_c('span',[_vm._v(_vm._s(_vm.label))]),(_vm.tooltip)?_c('r-icon',{directives:[{name:"tooltip",rawName:"v-tooltip",value:(_vm.tooltip),expression:"tooltip"}],staticClass:"relative text-tiny text-primary ml-1",attrs:{"name":"mdiInformationOutline"}}):_vm._e()],1)])],2)])}
+var Radiovue_type_template_id_57d3361c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/Radio.vue?vue&type=template&id=1510e1c0&
+// CONCATENATED MODULE: ./src/components/Form/Radio.vue?vue&type=template&id=57d3361c&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Radio.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -44685,8 +44693,8 @@ var Radiovue_type_template_id_1510e1c0_staticRenderFns = []
 
 var Radio_component = normalizeComponent(
   Form_Radiovue_type_script_lang_js_,
-  Radiovue_type_template_id_1510e1c0_render,
-  Radiovue_type_template_id_1510e1c0_staticRenderFns,
+  Radiovue_type_template_id_57d3361c_render,
+  Radiovue_type_template_id_57d3361c_staticRenderFns,
   false,
   null,
   null,
