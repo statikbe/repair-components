@@ -3,6 +3,11 @@ const defaultColors = require('tailwindcss/colors');
 
 const colors = {
   ...defaultColors,
+  main: {
+    DEFAULT: defaultColors.gray[800],
+    dark: defaultColors.gray[900],
+    contrast: 'white',
+  },
   primary: {
     DEFAULT: '#71b8c5',
     dark: '#5A939D',
@@ -21,8 +26,10 @@ const colors = {
 
 module.exports = {
   purge: {
+    content: ['./tailwind.safelist.js'],
     options: {
       whitelistPatterns: [/^multiselect(.*)/],
+      safelist: require('./tailwind.safelist.js'),
     },
   },
   darkMode: false,
@@ -35,7 +42,7 @@ module.exports = {
       3: '3px',
       4: '4px',
     },
-    borderColor: colors,
+    // borderColor: colors,
     container: {
       center: true,
       padding: defaultTheme.spacing['4'],
@@ -44,19 +51,19 @@ module.exports = {
       base: ['Titillium Web', 'sans-serif'],
     },
     fontSize: {
-      base: ['18px', '25px'],
-      tiny: ['14px', '20px'],
-      small: ['16px', '24px'],
-      large: ['20px', '30px'],
-      huge: ['24px', '32px'],
-      intro: ['20px', '30px'],
-      h1: ['40px', '50px'],
-      h2: ['35px', '40px'],
-      h3: ['28px', '35px'],
-      h4: ['22px', '25px'],
-      h5: ['20px', '25px'],
-      h6: ['18px', '25px'],
-      button: ['18px', 1],
+      base: ['18px', { lineHeight: '25px', letterSpacing: 'normal' }],
+      tiny: ['14px', { lineHeight: '20px', letterSpacing: 'normal' }],
+      small: ['16px', { lineHeight: '24px', letterSpacing: 'normal' }],
+      large: ['20px', { lineHeight: '30px', letterSpacing: 'normal' }],
+      huge: ['24px', { lineHeight: '32px', letterSpacing: 'normal' }],
+      intro: ['20px', { lineHeight: '30px', letterSpacing: 'normal' }],
+      h1: ['40px', { lineHeight: '50px', letterSpacing: 'normal' }],
+      h2: ['35px', { lineHeight: '40px', letterSpacing: 'normal' }],
+      h3: ['28px', { lineHeight: '35px', letterSpacing: 'normal' }],
+      h4: ['22px', { lineHeight: '25px', letterSpacing: 'normal' }],
+      h5: ['20px', { lineHeight: '25px', letterSpacing: 'normal' }],
+      h6: ['18px', { lineHeight: '25px', letterSpacing: 'normal' }],
+      button: ['18px', { lineHeight: 1, letterSpacing: 'normal' }],
     },
     screens: {
       xs: '480px',

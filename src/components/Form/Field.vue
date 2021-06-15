@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4">
     <slot name="label" v-bind="{ id, resettable, required, label, tooltip }">
-      <label :for="id" class="text-base font-medium flex items-center">
+      <label :for="id" class="text-base font-medium flex items-baseline">
         <span>{{ label }}</span>
         <r-icon
           v-if="tooltip"

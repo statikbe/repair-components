@@ -18,9 +18,13 @@ export default {
     RContainer,
   },
   props: {
-    color: {
-      type: String,
-      default: () => null,
+    primary: {
+      type: Boolean,
+      default: () => false,
+    },
+    secondary: {
+      type: Boolean,
+      default: () => false,
     },
     size: {
       type: String,
@@ -33,16 +37,31 @@ export default {
   },
   computed: {
     dynamicClasses() {
-      const { color, size } = this;
+      const { primary, secondary, size } = this;
 
-      const sizeClass = {
-        0: 'py-0',
-        sm: 'py-3',
-        md: 'py-9',
-        lg: 'py-12',
-      }[size];
+      let classes = [];
+      let color = null;
 
-      return [sizeClass, `bg-${color} text-${color}-contrast`];
+      classes.push(
+        {
+          0: 'py-0',
+          sm: 'py-3',
+          md: 'py-9',
+          lg: 'py-12',
+        }[size]
+      );
+
+      if (primary) {
+        color = 'primary';
+      } else if (secondary) {
+        color = 'secondary';
+      }
+
+      if (color) {
+        classes.push(`bg-${color} text-${color}-contrast`);
+      }
+
+      return classes;
     },
   },
 };

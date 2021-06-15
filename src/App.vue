@@ -83,6 +83,26 @@
         </r-modal>
       </r-form>
     </r-section>
+    <r-section>
+      <r-button>Default</r-button>
+      <r-button ghost>Default ghost</r-button>
+      <r-button primary>Primary</r-button>
+      <r-button primary ghost>Primary ghost</r-button>
+      <r-button secondary>Secondary</r-button>
+      <r-button secondary ghost>Secondary ghost</r-button>
+    </r-section>
+    <r-section primary>
+      <r-button contrast>Default contrast</r-button>
+      <r-button contrast ghost>Default ghost contrast</r-button>
+      <r-button contrast primary>Primary contrast</r-button>
+      <r-button contrast primary ghost>Primary ghost contrast</r-button>
+    </r-section>
+    <r-section secondary>
+      <r-button contrast>Default contrast</r-button>
+      <r-button contrast ghost>Default ghost contrast</r-button>
+      <r-button contrast secondary>Secondary contrast</r-button>
+      <r-button contrast secondary ghost>Secondary ghost contrast</r-button>
+    </r-section>
   </r-app>
 </template>
 
