@@ -7,7 +7,7 @@
       <div v-for="(item, index) in value" :key="index" class="flex items-start">
         <slot :item="item" :index="index" :update-item="updateItem(index)"></slot>
         <button
-          :aria-label="labelRemove || 'Remove item'"
+          :aria-label="labelRemove || t('messages.form_collection_item_remove')"
           @click="removeItem(index)"
           @keyup.enter="removeItem(index)"
           type="button"
@@ -18,10 +18,10 @@
       </div>
     </div>
     <div v-else class="mb-3 italic">
-      {{ labelEmpty || 'No items' }}
+      {{ labelEmpty || t('messages.form_collection_empty') }}
     </div>
     <r-button @click="addItem">
-      {{ labelAdd || 'Add item' }}
+      {{ labelAdd || t('messages.form_collection_item_add') }}
     </r-button>
   </div>
 </template>

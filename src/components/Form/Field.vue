@@ -9,7 +9,7 @@
           name="mdiInformationOutline"
           class="relative text-tiny text-primary ml-1"
         />
-        <small v-if="!required" class="text-gray-400 ml-1">(optional)</small>
+        <small v-if="!required" class="text-gray-400 ml-1">{{ t('messages.optional') }}</small>
       </label>
       <span v-if="resettable" class="text-small">
         (<a href="javascript:void(0)" class="text-gray-700" @click="$emit('reset')">reset</a>)

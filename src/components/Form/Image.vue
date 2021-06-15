@@ -20,7 +20,7 @@
         </r-grid>
         <input type="file" :id="id" class="sr-only" ref="input" :multiple="multiple" @change="handleChange" />
       </div>
-      <r-button @click="$refs.input.click()"> Add image </r-button>
+      <r-button @click="$refs.input.click()"> {{ t('messages.form_image_add') }} </r-button>
     </template>
   </r-form-field>
 </template>
