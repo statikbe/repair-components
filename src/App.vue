@@ -68,7 +68,7 @@
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-radio
-              label="Radio"
+              label="Radio with quite a long label text with quite a long label text with quite a long label text with quite a long label text with quite a long label text with quite a long label text with quite a long label text "
               v-bind="fieldProps('radio')"
               v-on="fieldListeners('radio')"
               value="radio"

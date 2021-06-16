@@ -1,19 +1,23 @@
 <template>
-  <div>
-    <div class="flex items-baseline mb-1">
-      <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="sr-only" @change="onChange" />
-      <label :for="htmlId" class="flex items-baseline flex-grow-0 cursor-pointer">
-        <r-icon v-if="isChecked" name="mdiRadioboxMarked" class="mr-2 flex-shrink-0 text-primary" />
-        <r-icon v-else name="mdiRadioboxBlank" class="mr-2 flex-shrink-0" />
-        <span class="text-base font-medium">{{ label }}</span>
-      </label>
-      <r-icon
-        v-if="tooltip"
-        v-tooltip="tooltip"
-        name="mdiInformationOutline"
-        class="relative text-tiny text-primary ml-1"
-      />
-    </div>
+  <div class="mb-1">
+    <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="sr-only" @change="onChange" />
+    <label :for="htmlId" class="cursor-pointer">
+      <div class="flex">
+        <span class="mr-2 flex-shrink-0">
+          <r-icon v-if="isChecked" name="mdiRadioboxMarked" class="text-primary" />
+          <r-icon v-else name="mdiRadioboxBlank" />
+        </span>
+        <div>
+          <span class="text-base font-medium mr-2 align-middle">{{ label }}</span>
+          <r-icon
+            v-if="tooltip"
+            v-tooltip="tooltip"
+            name="mdiInformationOutline"
+            class="relative text-tiny text-primary align-middle"
+          />
+        </div>
+      </div>
+    </label>
   </div>
 </template>
 

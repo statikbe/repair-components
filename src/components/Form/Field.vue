@@ -1,15 +1,15 @@
 <template>
   <div class="mb-4">
     <slot name="label" v-bind="{ id, resettable, required, label, tooltip }">
-      <label :for="id" class="text-base font-medium flex items-baseline">
-        <span>{{ label }}</span>
+      <label :for="id" class="cursor-pointer">
+        <span class="text-base font-medium mr-2">{{ label }}</span>
         <r-icon
           v-if="tooltip"
           v-tooltip="tooltip"
           name="mdiInformationOutline"
-          class="relative text-tiny text-primary ml-1"
+          class="relative text-tiny text-primary mr-2 align-middle"
         />
-        <small v-if="!required" class="text-gray-400 ml-1">{{ t('messages.optional') }}</small>
+        <small v-if="!required" class="text-gray-400 align-baseline mr-2">{{ t('messages.optional') }}</small>
       </label>
       <span v-if="resettable" class="text-small">
         (<a href="javascript:void(0)" class="text-gray-700" @click="$emit('reset')">reset</a>)
