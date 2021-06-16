@@ -7,6 +7,8 @@ import RFormLocation from './Location.vue';
 import RFormImage from './Image.vue';
 import RFormInput from './Input.vue';
 import RFormRadio from './Radio.vue';
+import RFormRecaptcha from './Recaptcha.vue';
+import RFormSelect from './Select.vue';
 import RFormTextarea from './Textarea.vue';
 
 export {
@@ -19,5 +21,7 @@ export {
   RFormImage,
   RFormInput,
   RFormRadio,
+  RFormRecaptcha,
+  RFormSelect,
   RFormTextarea,
 };

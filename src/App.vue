@@ -87,14 +87,21 @@
             <r-form-image label="Images" v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
           </div>
         </div>
-        <div class="flex">
-          <r-button>Previous</r-button>
-          <r-button class="ml-auto">Next</r-button>
-        </div>
         <!-- <button type="button" @click="$modal.show('modal')">modal</button>
         <r-modal name="modal"> -->
         <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="hallo" optional />
         <!-- </r-modal> -->
+        <r-select v-model="form.select" label="Select" :options="['one', 'two']" />
+        <r-recaptcha
+          sitekey="fcvghjn"
+          @verify="
+            () => {
+              console.log('posting...');
+            }
+          "
+        >
+          <r-button>Next</r-button>
+        </r-recaptcha>
       </r-form>
     </r-section>
     <r-section>
@@ -145,6 +152,7 @@ export default {
       radio: 'radio',
       checkbox: false,
       editorContent: 'blaaa',
+      select: [],
     },
   }),
   computed: {
