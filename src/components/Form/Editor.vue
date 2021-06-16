@@ -71,25 +71,25 @@ export default {
   },
 
   watch: {
-    value(value) {
+    modelValue(modelValue) {
       // HTML
-      const isSame = this.editor.getHTML() === value;
+      const isSame = this.editor.getHTML() === modelValue;
 
       // JSON
-      // const isSame = this.editor.getJSON().toString() === value.toString()
+      // const isSame = this.editor.getJSON().toString() === modelValue.toString()
 
       if (isSame) {
         return;
       }
 
-      this.editor.commands.setContent(this.value, false);
+      this.editor.commands.setContent(this.modelValue, false);
     },
   },
 
   mounted() {
     this.editor = new Editor({
       extensions: [StarterKit, Link],
-      content: this.value,
+      content: this.modelValue,
       editorProps: {
         attributes: {
           class:
@@ -98,7 +98,7 @@ export default {
       },
       onUpdate: () => {
         // HTML
-        this.$emit('input', this.editor.getHTML());
+        this.$emit('update:modelValue', this.editor.getHTML());
 
         // JSON
         // this.$emit('input', this.editor.getJSON())

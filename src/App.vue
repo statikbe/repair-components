@@ -91,10 +91,10 @@
           <r-button>Previous</r-button>
           <r-button class="ml-auto">Next</r-button>
         </div>
-        <button type="button" @click="$modal.show('modal')">modal</button>
-        <r-modal name="modal">
-          <r-editor label="Text" tooltip="hallo" info="hallo" optional />
-        </r-modal>
+        <!-- <button type="button" @click="$modal.show('modal')">modal</button>
+        <r-modal name="modal"> -->
+        <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="hallo" optional />
+        <!-- </r-modal> -->
       </r-form>
     </r-section>
     <r-section>
@@ -144,6 +144,7 @@ export default {
       images: null,
       radio: 'radio',
       checkbox: false,
+      editorContent: 'blaaa',
     },
   }),
   computed: {

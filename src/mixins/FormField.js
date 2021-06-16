@@ -12,7 +12,7 @@ export default {
   },
   props: {
     modelValue: {
-      type: [String, Array, Number],
+      type: [String, Array, Number, Boolean],
       default: () => '',
     },
     label: {

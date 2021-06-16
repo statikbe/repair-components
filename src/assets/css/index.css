@@ -1,6 +1,28 @@
-/* Don't include Tailwind base layer, to avoid this application changing possible parent styles (use classes only) */
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+@import '~vue-multiselect/dist/vue-multiselect.min.css';
+
+@layer base {
+  *,
+  :before,
+  :after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+  a {
+    @apply underline;
+  }
+}
 
 .tooltip {
   @apply block z-[10000] font-base;
