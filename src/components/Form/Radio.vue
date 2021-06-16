@@ -2,7 +2,7 @@
   <div>
     <div class="flex items-baseline mb-1">
       <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="sr-only" @change="onChange" />
-      <label :for="htmlId" class="flex items-baseline cursor-pointer">
+      <label :for="htmlId" class="flex items-baseline flex-grow-0 cursor-pointer">
         <r-icon v-if="isChecked" name="mdiRadioboxMarked" class="mr-2 flex-shrink-0 text-primary" />
         <r-icon v-else name="mdiRadioboxBlank" class="mr-2 flex-shrink-0" />
         <span class="text-base font-medium">{{ label }}</span>
