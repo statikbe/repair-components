@@ -18,4 +18,8 @@
   * {
     font-family: 'Titillium Web', sans-serif;
   }
+
+  a {
+    @apply underline;
+  }
 }

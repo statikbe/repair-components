@@ -67,7 +67,13 @@
             <r-input label="LinkedIn" v-bind="fieldProps('linkedin')" v-on="fieldListeners('linkedin')" />
           </div>
           <div class="px-2 w-100 md:w-7/12">
-            <r-radio label="Radio" v-bind="fieldProps('radio')" v-on="fieldListeners('radio')" value="radio" />
+            <r-radio
+              label="Radio"
+              v-bind="fieldProps('radio')"
+              v-on="fieldListeners('radio')"
+              value="radio"
+              tooltip="hallo"
+            />
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-checkbox

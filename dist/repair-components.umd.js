@@ -20424,11 +20424,15 @@ var es_string_includes = __webpack_require__("2532");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
+var es_number_constructor = __webpack_require__("a9e3");
+
 // EXTERNAL MODULE: ./node_modules/lodash.pick/index.js
 var lodash_pick = __webpack_require__("88bc");
 var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
 
 // CONCATENATED MODULE: ./src/mixins/FormField.js
+
 
 
 /* harmony default export */ var FormField = ({
@@ -20441,7 +20445,7 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
   },
   props: {
     modelValue: {
-      type: [String, Array],
+      type: [String, Array, Number],
       default: function _default() {
         return '';
       }
@@ -45088,9 +45092,6 @@ var Paginationvue_type_template_id_3a8e7b12_staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/components/Pagination/Pagination.vue?vue&type=template&id=3a8e7b12&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
-var es_number_constructor = __webpack_require__("a9e3");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"141e3806-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagination/PaginationButton.vue?vue&type=template&id=e20b4ce6&
 var PaginationButtonvue_type_template_id_e20b4ce6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"m-1 px-1 py-0 text-button border-0 font-base font-bold leading-[40px] min-w-[40px] cursor-pointer transition-colors",class:{
