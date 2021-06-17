@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 fieldset[disabled] .multiselect {
   pointer-events: none;
 }
@@ -387,3 +389,5 @@ fieldset[disabled] .multiselect {
     transform: rotate(2turn);
   }
 }
+
+/* purgecss end ignore */

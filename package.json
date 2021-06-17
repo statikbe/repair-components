@@ -37,6 +37,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "lodash.merge": "^4.6.2",
     "postcss": "^7",
+    "postcss-import": "^12",
     "prettier": "^2.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue-template-compiler": "^2.6.11",

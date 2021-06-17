@@ -21,12 +21,12 @@ export default {
   props: {
     height: {
       type: String,
-      default: () => 'auto'
+      default: () => 'auto',
     },
     scrollable: {
       type: Boolean,
-      default: () => true
-    }
+      default: () => true,
+    },
   },
   methods: {
     closeModal() {
@@ -39,7 +39,7 @@ export default {
 
     handleClose() {
       document.body.classList.remove('overflow-hidden');
-    }
-  }
+    },
+  },
 };
 </script>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
-@import '~vue-js-modal/dist/styles.css';
+/* purgecss start ignore */
+@import 'vue-js-modal/dist/styles.css';
 
 @import './vendor/multiselect.css';
 @import './vendor/tooltip.css';
@@ -26,3 +27,5 @@
     @apply underline;
   }
 }
+
+/* purgecss end ignore */

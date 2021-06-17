@@ -9,6 +9,7 @@ const twConfig = require('./tailwind.config');
 module.exports = {
   important: false,
   plugins: [
+    require('postcss-import'),
     tailwindcss(
       merge({}, twConfig, {
         mode: 'jit',
