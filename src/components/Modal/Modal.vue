@@ -1,5 +1,5 @@
 <template>
-  <modal v-bind="{ ...$props, ...$attrs, ...$listeners }" @before-open="handleOpen" @closed="handleClose">
+  <modal v-bind="{ ...$props, ...$attrs, ...$listeners }" @before-open="handleOpen" @close="handleClose">
     <div class="relative">
       <button
         type="button"
@@ -8,7 +8,7 @@
       >
         <r-icon name="mdiClose" />
       </button>
-      <div class="p-6">
+      <div class="p-6 overflow-auto">
         <slot name="default" />
       </div>
     </div>
@@ -21,8 +21,12 @@ export default {
   props: {
     height: {
       type: String,
-      default: () => 'auto',
+      default: () => 'auto'
     },
+    scrollable: {
+      type: Boolean,
+      default: () => true
+    }
   },
   methods: {
     closeModal() {
@@ -35,7 +39,7 @@ export default {
 
     handleClose() {
       document.body.classList.remove('overflow-hidden');
-    },
-  },
+    }
+  }
 };
 </script>
