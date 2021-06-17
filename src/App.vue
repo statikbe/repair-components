@@ -91,7 +91,17 @@
         <r-modal name="modal"> -->
         <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="hallo" optional />
         <!-- </r-modal> -->
-        <r-select v-model="form.select" label="Select" :options="['one', 'two']" />
+        <r-select
+          v-model="form.select"
+          label="Select"
+          label-by="name"
+          track-by="value"
+          :options="[
+            { name: 'one', value: 1 },
+            { name: 'two', value: 2 },
+          ]"
+          :multiple="true"
+        />
         <r-recaptcha
           sitekey="fcvghjn"
           @verify="
@@ -152,7 +162,7 @@ export default {
       radio: 'radio',
       checkbox: false,
       editorContent: 'blaaa',
-      select: [],
+      select: [1, 2],
     },
   }),
   computed: {

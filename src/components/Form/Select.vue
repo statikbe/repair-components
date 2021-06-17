@@ -1,21 +1,16 @@
 <template>
   <r-form-field v-bind="fieldProps">
     <v-multiselect
-      v-bind="{
-        placeholder: t('messages.form_select_placeholder'),
-        showLabels: false,
-        searchable: false,
-        hideSelected: true,
-        allowEmpty: !fieldProps.required,
-        ...$attrs,
-        value: modelValue,
-      }"
-      v-on="filteredListeners"
-    >
-      <template #option="{ option }">
-        <div>{{ option }}</div>
-      </template>
-    </v-multiselect>
+      v-bind="$attrs"
+      v-on="$listeners"
+      :placeholder="t('messages.form_select_placeholder')"
+      :label="labelBy"
+      :show-labels="false"
+      :searchable="false"
+      :value="internalValue"
+      :allow-empty="!fieldProps.required"
+      @input="handleInput"
+    />
   </r-form-field>
 </template>
 
@@ -29,14 +24,57 @@ export default {
   components: {
     VMultiselect,
   },
-  computed: {
-    filteredListeners() {
-      return {
-        ...this.$listeners,
-        input: (value) => {
-          this.$emit('update:modelValue', value);
-        },
-      };
+  props: {
+    labelBy: {
+      type: String,
+      default: () => '',
+    },
+    trackBy: {
+      type: String,
+      default: () => '',
+    },
+  },
+  data: () => ({
+    internalValue: null,
+  }),
+  watch: {
+    modelValue() {
+      this.setInternalValue();
+    },
+  },
+  created() {
+    this.setInternalValue();
+  },
+  methods: {
+    setInternalValue() {
+      const {
+        trackBy,
+        modelValue,
+        $attrs: { options, multiple },
+      } = this;
+
+      if (!trackBy) {
+        this.internalValue = modelValue;
+      }
+
+      if (!multiple) {
+        this.internalValue = options.find((option) => option[trackBy] == modelValue) || null;
+      } else {
+        this.internalValue = options.filter((option) => modelValue.includes(option[trackBy])) || null;
+      }
+    },
+    handleInput(value) {
+      const {
+        trackBy,
+        $attrs: { multiple },
+      } = this;
+
+      if (!multiple) {
+        this.$emit('update:modelValue', trackBy ? value[trackBy] : value);
+      } else {
+        this.$emit('update:modelValue', trackBy ? value.map((option) => option[trackBy]) : value);
+        // something is wrong with multiple select
+      }
     },
   },
 };
