@@ -20664,12 +20664,12 @@ var Checkbox_component = normalizeComponent(
 )
 
 /* harmony default export */ var Checkbox = (Checkbox_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2bd78762-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Collection.vue?vue&type=template&id=5a4a6c07&
-var Collectionvue_type_template_id_5a4a6c07_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-form-field',_vm._b({},'r-form-field',_vm.fieldProps,false),[(_vm.modelValue.length)?_c('div',_vm._l((_vm.modelValue),function(item,index){return _c('div',{key:index,staticClass:"flex items-start"},[_c('div',{staticClass:"flex-grow"},[_vm._t("default",null,{"item":item,"index":index,"updateItem":_vm.updateItem(index)})],2),_c('button',{staticClass:"ml-3 text-primary bg-white bg-opacity-0 border-0",attrs:{"aria-label":_vm.labelRemove || _vm.t('messages.form_collection_item_remove'),"type":"button"},on:{"click":function($event){return _vm.removeItem(index)},"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.removeItem(index)}}},[_c('r-icon',{attrs:{"name":"mdiClose"}})],1)])}),0):_c('div',{staticClass:"mb-3 italic"},[_vm._v(" "+_vm._s(_vm.labelEmpty || _vm.t('messages.form_collection_empty'))+" ")]),_c('r-button',{on:{"click":_vm.addItem}},[_vm._v(" "+_vm._s(_vm.labelAdd || _vm.t('messages.form_collection_item_add'))+" ")])],1)}
-var Collectionvue_type_template_id_5a4a6c07_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2bd78762-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Collection.vue?vue&type=template&id=44851326&
+var Collectionvue_type_template_id_44851326_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-form-field',_vm._b({},'r-form-field',_vm.fieldProps,false),[(_vm.modelValue.length)?_c('div',_vm._l((_vm.modelValue),function(item,index){return _c('div',{key:index,staticClass:"flex items-start"},[_c('div',{staticClass:"flex-grow"},[_vm._t("default",null,{"item":item,"index":index,"updateItem":_vm.updateItem(index)})],2),_c('button',{staticClass:"ml-3 text-primary bg-white bg-opacity-0 border-0",attrs:{"aria-label":_vm.labelRemove || _vm.t('messages.form_collection_item_remove'),"type":"button"},on:{"click":function($event){return _vm.removeItem(index)},"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.removeItem(index)}}},[_c('r-icon',{attrs:{"name":"mdiClose"}})],1)])}),0):(_vm.labelEmpty)?_c('div',{staticClass:"mb-3 italic"},[_vm._v(" "+_vm._s(_vm.labelEmpty)+" ")]):_vm._e(),_c('r-link',{attrs:{"color":"primary","icon-before":"mdiPlusCircle"},on:{"click":_vm.addItem}},[_vm._v(" "+_vm._s(_vm.labelAdd || _vm.t('messages.form_collection_item_add'))+" ")])],1)}
+var Collectionvue_type_template_id_44851326_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/Collection.vue?vue&type=template&id=5a4a6c07&
+// CONCATENATED MODULE: ./src/components/Form/Collection.vue?vue&type=template&id=44851326&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Collection.vue?vue&type=script&lang=js&
 
@@ -20775,8 +20775,8 @@ var Collectionvue_type_template_id_5a4a6c07_staticRenderFns = []
 
 var Collection_component = normalizeComponent(
   Form_Collectionvue_type_script_lang_js_,
-  Collectionvue_type_template_id_5a4a6c07_render,
-  Collectionvue_type_template_id_5a4a6c07_staticRenderFns,
+  Collectionvue_type_template_id_44851326_render,
+  Collectionvue_type_template_id_44851326_staticRenderFns,
   false,
   null,
   null,

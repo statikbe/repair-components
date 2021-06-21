@@ -16,12 +16,12 @@
         </button>
       </div>
     </div>
-    <div v-else class="mb-3 italic">
-      {{ labelEmpty || t('messages.form_collection_empty') }}
+    <div v-else-if="labelEmpty" class="mb-3 italic">
+      {{ labelEmpty }}
     </div>
-    <r-button @click="addItem">
+    <r-link color="primary" icon-before="mdiPlusCircle" @click="addItem">
       {{ labelAdd || t('messages.form_collection_item_add') }}
-    </r-button>
+    </r-link>
   </r-form-field>
 </template>
 
