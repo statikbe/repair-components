@@ -67,11 +67,11 @@ export default {
       this.$emit('update:modelValue', [...this.modelValue.slice(0, index), ...this.modelValue.slice(index + 1)]);
     },
 
-    updateItem(index, key) {
+    updateItem(index) {
       return (value) => {
         const newValue = [...this.modelValue];
 
-        newValue[index][key] = value;
+        newValue[index] = value;
 
         this.$emit('update:modelValue', newValue);
       };
