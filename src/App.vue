@@ -87,10 +87,7 @@
             <r-form-image label="Images" v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
           </div>
         </div>
-        <!-- <button type="button" @click="$modal.show('modal')">modal</button>
-        <r-modal name="modal"> -->
         <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="hallo" optional />
-        <!-- </r-modal> -->
         <r-select
           v-model="form.select"
           label="Select"
@@ -102,16 +99,23 @@
           ]"
           :multiple="true"
         />
-        <r-recaptcha
-          sitekey="fcvghjn"
-          @verify="
-            () => {
-              console.log('posting...');
-            }
-          "
-        >
-          <r-button>Next</r-button>
-        </r-recaptcha>
+        <r-form-collection v-model="form.notes" label="Collection">
+          <template #default="{ item, updateItem }">
+            <div>
+              <small>{{ item.person }} - {{ item.date }}</small>
+              <r-editor
+                :model-value="item.text"
+                required
+                @update:model-value="
+                  updateItem({
+                    ...item,
+                    text: $event,
+                  })
+                "
+              />
+            </div>
+          </template>
+        </r-form-collection>
       </r-form>
     </r-section>
     <r-section>
@@ -163,6 +167,13 @@ export default {
       checkbox: false,
       editorContent: 'blaaa',
       select: [1, 2],
+      notes: [
+        {
+          person: 'Kristof S.',
+          date: '17/06/2021',
+          text: '<p>Hallo daar</p>',
+        },
+      ],
     },
   }),
   computed: {

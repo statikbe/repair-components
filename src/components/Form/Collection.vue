@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <h3 class="text-h3 text-primary" v-if="title">
-      {{ title }}
-    </h3>
-    <div v-if="value.length">
-      <div v-for="(item, index) in value" :key="index" class="flex items-start">
-        <slot :item="item" :index="index" :update-item="updateItem(index)"></slot>
+  <r-form-field v-bind="fieldProps">
+    <div v-if="modelValue.length">
+      <div v-for="(item, index) in modelValue" :key="index" class="flex items-start">
+        <div class="flex-grow">
+          <slot :item="item" :index="index" :update-item="updateItem(index)"></slot>
+        </div>
         <button
           :aria-label="labelRemove || t('messages.form_collection_item_remove')"
           @click="removeItem(index)"
@@ -13,7 +12,7 @@
           type="button"
           class="ml-3 text-primary bg-white bg-opacity-0 border-0"
         >
-          <v-icon>mdi-close</v-icon>
+          <r-icon name="mdiClose" />
         </button>
       </div>
     </div>
@@ -23,21 +22,16 @@
     <r-button @click="addItem">
       {{ labelAdd || t('messages.form_collection_item_add') }}
     </r-button>
-  </div>
+  </r-form-field>
 </template>
 
 <script>
+import FormField from '../../mixins/FormField';
+
 export default {
   name: 'r-form-collection',
-  model: {
-    prop: 'modelValue',
-    event: 'modelValue:update',
-  },
+  mixins: [FormField],
   props: {
-    title: {
-      type: String,
-      default: () => null,
-    },
     modelValue: {
       type: Array,
       default: () => [],
@@ -66,11 +60,11 @@ export default {
   },
   methods: {
     addItem() {
-      this.$emit('input', [...this.modelValue, null]);
+      this.$emit('update:modelValue', [...this.modelValue, {}]);
     },
 
     removeItem(index) {
-      this.$emit('input', [...this.modelValue.slice(0, index), ...this.modelValue.slice(index + 1)]);
+      this.$emit('update:modelValue', [...this.modelValue.slice(0, index), ...this.modelValue.slice(index + 1)]);
     },
 
     updateItem(index, key) {
