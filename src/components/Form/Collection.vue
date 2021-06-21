@@ -73,7 +73,7 @@ export default {
 
         newValue[index][key] = value;
 
-        this.$emit('input', newValue);
+        this.$emit('update:modelValue', newValue);
       };
     },
   },
