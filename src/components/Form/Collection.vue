@@ -6,6 +6,7 @@
           <slot :item="item" :index="index" :update-item="updateItem(index)"></slot>
         </div>
         <button
+          v-if="!item.disabled"
           :aria-label="labelRemove || t('messages.form_collection_item_remove')"
           @click="removeItem(index)"
           @keyup.enter="removeItem(index)"

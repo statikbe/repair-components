@@ -1,5 +1,5 @@
 <template>
-  <r-form-field v-bind="{ label }">
+  <r-form-field v-bind="fieldProps">
     <template #default="{}">
       <v-multiselect
         v-model="selected"

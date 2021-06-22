@@ -116,6 +116,14 @@
             </div>
           </template>
         </r-form-collection>
+        <r-gallery
+          class="block max-w-xs"
+          :items="[
+            'http://placekitten.com/1000/800',
+            'http://placekitten.com/800/1000',
+            'http://placekitten.com/700/700',
+          ]"
+        />
       </r-form>
     </r-section>
     <r-section>

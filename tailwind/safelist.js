@@ -13,4 +13,5 @@ module.exports = [
   'text-secondary',
   'hover:bg-secondary-dark',
   'hover:text-secondary-contrast',
+  'transform',
 ];
