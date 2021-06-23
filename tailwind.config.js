@@ -103,5 +103,9 @@ module.exports = {
   // variants: {
   //   extend: {},
   // },
-  plugins: [require('./tailwind/plugins/typography'), require('@tailwindcss/aspect-ratio')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('./tailwind/plugins/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

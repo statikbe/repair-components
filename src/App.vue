@@ -18,16 +18,14 @@
             class="m-2"
           />
         </div>
-        <r-tabs :tabs="form.selectedLocales" class="my-4">
-          <template #default="{ activeTab }">
-            <div v-for="locale in form.selectedLocales" :key="locale" v-show="activeTab === locale">
-              <r-input
-                label="Name of the initiative"
-                v-bind="fieldProps(`name_${locale}`)"
-                v-on="fieldListeners(`name_${locale}`)"
-              />
-            </div>
-          </template>
+        <r-tabs v-model="tab" :values="form.selectedLocales" class="my-6">
+          <div v-for="locale in form.selectedLocales" :key="locale">
+            <r-input
+              label="Name of the initiative"
+              v-bind="fieldProps(`name_${locale}`)"
+              v-on="fieldListeners(`name_${locale}`)"
+            />
+          </div>
         </r-tabs>
         <div class="flex flex-wrap -mx-2">
           <div class="px-2 w-100 md:w-8/12">
@@ -152,6 +150,7 @@
 <script>
 export default {
   data: () => ({
+    tab: 'NL',
     form: {
       selectedLocales: ['NL'],
       name_NL: 'Statik',

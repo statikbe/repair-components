@@ -93,7 +93,7 @@ export default {
       editorProps: {
         attributes: {
           class:
-            'text-small block w-full rounded-b border-gray-300 border-2 border-solid bg-white px-3 py-2 box-border prose prose-sm sm:prose lg:prose-lg xl:prose-2xl focus:outline-none',
+            'text-small block w-full rounded-b border-gray-300 border-2 border-solid bg-white px-3 py-2 box-border prose max-w-none focus:outline-none',
         },
       },
       onUpdate: () => {

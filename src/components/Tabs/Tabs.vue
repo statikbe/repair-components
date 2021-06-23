@@ -1,24 +1,24 @@
 <template>
   <div>
-    <div class="relative z-10 border-b-1">
+    <div class="border-0 border-b-1 border-solid border-gray-300">
       <button
         type="button"
-        v-for="tab in tabs"
-        :key="tab"
+        v-for="value in values"
+        :key="value"
         class="p-0 border-1 border-b-0 border-solid cursor-pointer"
-        :class="isTabActive(tab) ? 'bg-[transparent] border-gray-300' : 'bg-gray-100 border-gray-100'"
-        @click="activeTab = tab"
+        :class="isActive(value) ? 'bg-[transparent] border-gray-300' : 'bg-gray-100 border-gray-100'"
+        @click="$emit('update:modelValue', value)"
       >
         <div
-          class="p-2 border-0 border-b-1 border-solid min-w-[100px] text-small"
-          :class="isTabActive(tab) ? 'border-white' : 'border-gray-300'"
+          class="relative top-[1px] p-2 border-0 border-b-1 border-solid min-w-[100px] text-small"
+          :class="isActive(value) ? 'border-white' : 'border-gray-300'"
         >
-          {{ tab }}
+          {{ (labels && labels[value]) || value }}
         </div>
       </button>
     </div>
-    <div class="relative top-[-1px] bg-white p-4 border-1 border-solid border-gray-300">
-      <slot v-bind="{ activeTab }" />
+    <div class="bg-white p-6 border-1 border-t-0 border-b-0 border-solid border-gray-300">
+      <slot />
     </div>
   </div>
 </template>
@@ -26,18 +26,30 @@
 <script>
 export default {
   name: 'r-tabs',
+  model: {
+    prop: 'modelValue',
+    event: 'update:modelValue',
+  },
   props: {
-    tabs: {
+    modelValue: {
+      type: String,
+      default: () => null,
+    },
+    values: {
       type: Array,
       required: true,
+    },
+    labels: {
+      type: Object,
+      default: () => {},
     },
   },
   data: () => ({
     activeTab: null,
   }),
   watch: {
-    tabs(tabs) {
-      if (!tabs.includes(this.activeTab)) {
+    values(values) {
+      if (!values.includes(this.activeTab)) {
         this.resetTabs();
       }
     },
@@ -47,10 +59,10 @@ export default {
   },
   methods: {
     resetTabs() {
-      this.activeTab = this.tabs[0];
+      this.$emit('update:modelValue', this.values[0]);
     },
-    isTabActive(tab) {
-      return this.activeTab === tab;
+    isActive(value) {
+      return this.modelValue === value;
     },
   },
 };
