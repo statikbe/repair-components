@@ -2,7 +2,7 @@
   <div class="mb-4">
     <slot name="label" v-bind="{ id, resettable, required, label, tooltip }">
       <label :for="id" class="cursor-pointer">
-        <span v-if="label" class="text-base font-medium mr-2">{{ label }}</span>
+        <span v-if="label" class="text-base font-bold mr-2">{{ label }}</span>
         <r-icon
           v-if="tooltip"
           v-tooltip="tooltip"
