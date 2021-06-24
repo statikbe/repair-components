@@ -13374,13 +13374,15 @@ var colors = _objectSpread(_objectSpread({}, defaultColors), {}, {
 });
 
 module.exports = {
-  purge: {
-    content: ['./tailwind.safelist.js'],
-    options: {
-      whitelistPatterns: [/^multiselect(.*)/],
-      safelist: __webpack_require__("dee1")
-    }
-  },
+  mode: 'jit',
+  purge: ['./src/**/*.{vue,js}', './safelist.txt'],
+  // purge: {
+  //   content: ['**/*.{vue,md,js}'],
+  //   options: {
+  //     whitelistPatterns: [/^multiselect(.*)/],
+  //     safelist: require('./tailwind.safelist.js'),
+  //   },
+  // },
   darkMode: false,
   theme: {
     borderWidth: {
@@ -13400,58 +13402,19 @@ module.exports = {
       base: ['Titillium Web', 'sans-serif']
     },
     fontSize: {
-      base: ['18px', {
-        lineHeight: '25px',
-        letterSpacing: 'normal'
-      }],
-      tiny: ['14px', {
-        lineHeight: '20px',
-        letterSpacing: 'normal'
-      }],
-      small: ['16px', {
-        lineHeight: '24px',
-        letterSpacing: 'normal'
-      }],
-      large: ['20px', {
-        lineHeight: '30px',
-        letterSpacing: 'normal'
-      }],
-      huge: ['24px', {
-        lineHeight: '32px',
-        letterSpacing: 'normal'
-      }],
-      intro: ['20px', {
-        lineHeight: '30px',
-        letterSpacing: 'normal'
-      }],
-      h1: ['40px', {
-        lineHeight: '50px',
-        letterSpacing: 'normal'
-      }],
-      h2: ['35px', {
-        lineHeight: '40px',
-        letterSpacing: 'normal'
-      }],
-      h3: ['28px', {
-        lineHeight: '35px',
-        letterSpacing: 'normal'
-      }],
-      h4: ['22px', {
-        lineHeight: '25px',
-        letterSpacing: 'normal'
-      }],
-      h5: ['20px', {
-        lineHeight: '25px',
-        letterSpacing: 'normal'
-      }],
-      h6: ['18px', {
-        lineHeight: '25px',
-        letterSpacing: 'normal'
-      }],
-      button: ['18px', {
-        lineHeight: 1,
-        letterSpacing: 'normal'
-      }]
+      base: ['18px', '25px'],
+      tiny: ['14px', '20px'],
+      small: ['16px', '24px'],
+      large: ['20px', '30px'],
+      huge: ['24px', '32px'],
+      intro: ['20px', '30px'],
+      h1: ['40px', '50px'],
+      h2: ['35px', '40px'],
+      h3: ['28px', '35px'],
+      h4: ['22px', '25px'],
+      h5: ['20px', '25px'],
+      h6: ['18px', '25px'],
+      button: ['18px', 1]
     },
     screens: {
       xs: '480px',
@@ -13460,7 +13423,59 @@ module.exports = {
       lg: '980px',
       xl: '1200px'
     },
-    colors: colors // aspectRatio: {
+    colors: colors,
+    extend: {
+      typography: function typography(theme) {
+        return {
+          DEFAULT: {
+            css: {
+              'color': theme('colors.main'),
+              'h1, h2, h3, h4, h5, h6': {
+                color: theme('colors.primary.DEFAULT'),
+                marginTop: '0.75em',
+                marginBottom: '0.5em'
+              },
+              'h1, h2, h3': {
+                fontWeight: 900
+              },
+              'h4, h5, h6': {
+                fontWeight: 700
+              },
+              'h1': {
+                fontSize: theme('fontSize.h1.0'),
+                lineHeight: theme('fontSize.h1.1')
+              },
+              'h2': {
+                fontSize: theme('fontSize.h2.0'),
+                lineHeight: theme('fontSize.h2.1')
+              },
+              'h3': {
+                fontSize: theme('fontSize.h3.0'),
+                lineHeight: theme('fontSize.h3.1')
+              },
+              'h4': {
+                fontSize: theme('fontSize.h4.0'),
+                lineHeight: theme('fontSize.h4.1')
+              },
+              'h5': {
+                fontSize: theme('fontSize.h5.0'),
+                lineHeight: theme('fontSize.h5.1')
+              },
+              'h6': {
+                fontSize: theme('fontSize.h6.0'),
+                lineHeight: theme('fontSize.h6.1')
+              },
+              'ul > li:before': {
+                backgroundColor: theme('colors.primary.DEFAULT')
+              },
+              'ol > li:before': {
+                color: theme('colors.primary.DEFAULT')
+              }
+            }
+          }
+        };
+      }
+    } // aspectRatio: {
     //   'none': 0,
     //   'square': [1, 1],
     //   '16/9': [16, 9],
@@ -16013,13 +16028,6 @@ function _objectSpread2(target) {
 
 module.exports = _objectSpread2;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "dee1":
-/***/ (function(module, exports) {
-
-module.exports = ['text-main-contrast', 'bg-main', 'border-main', 'hover:bg-main-dark', 'hover:border-main-dark', 'text-main', 'hover:text-main-contrast', 'hover:border-main', 'bg-main-contrast', 'border-main-contrast', 'hover:text-main', 'text-primary-contrast', 'bg-primary', 'border-primary', 'hover:bg-primary-dark', 'hover:border-primary-dark', 'text-primary', 'hover:text-primary-contrast', 'hover:border-primary', 'bg-primary-contrast', 'border-primary-contrast', 'hover:text-primary', 'text-secondary-contrast', 'bg-secondary', 'border-secondary', 'hover:bg-secondary-dark', 'hover:border-secondary-dark', 'text-secondary', 'hover:text-secondary-contrast', 'hover:border-secondary', 'bg-secondary-contrast', 'border-secondary-contrast', 'hover:text-secondary'];
 
 /***/ }),
 
@@ -24230,12 +24238,12 @@ var ssr_nocss_default = /*#__PURE__*/__webpack_require__.n(ssr_nocss);
 // EXTERNAL MODULE: ./node_modules/v-tooltip/dist/v-tooltip.esm.js
 var v_tooltip_esm = __webpack_require__("e37d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"34e05ddf-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/App/App.vue?vue&type=template&id=47fb6f74&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"font-base text-base"},[_vm._t("default")],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"34e05ddf-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/App/App.vue?vue&type=template&id=7db50ded&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"font-base text-base text-main"},[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/App/App.vue?vue&type=template&id=47fb6f74&
+// CONCATENATED MODULE: ./src/components/App/App.vue?vue&type=template&id=7db50ded&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/App/App.vue?vue&type=script&lang=js&
 //
@@ -50308,12 +50316,12 @@ var Section_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/Section/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"34e05ddf-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Tabs/Tabs.vue?vue&type=template&id=4bc232c5&
-var Tabsvue_type_template_id_4bc232c5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"border-0 border-b-1 border-solid border-gray-300"},_vm._l((_vm.values),function(value){return _c('button',{key:value,staticClass:"p-0 border-1 border-b-0 border-solid cursor-pointer",class:_vm.isActive(value) ? 'bg-[transparent] border-gray-300' : 'bg-gray-100 border-gray-100',attrs:{"type":"button"},on:{"click":function($event){return _vm.$emit('update:modelValue', value)}}},[_c('div',{staticClass:"relative top-[1px] p-2 border-0 border-b-1 border-solid min-w-[100px] text-small",class:_vm.isActive(value) ? 'border-white' : 'border-gray-300'},[_vm._v(" "+_vm._s((_vm.labels && _vm.labels[value]) || value)+" ")])])}),0),_c('div',{staticClass:"bg-white p-6 pb-0 border-1 border-t-0 border-b-0 border-solid border-gray-300"},[_vm._t("default",null,null,{ value: _vm.value })],2)])}
-var Tabsvue_type_template_id_4bc232c5_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"34e05ddf-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Tabs/Tabs.vue?vue&type=template&id=3de8b723&
+var Tabsvue_type_template_id_3de8b723_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"border-0 border-b-1 border-solid border-gray-300"},_vm._l((_vm.values),function(value){return _c('button',{key:value,staticClass:"p-0 border-1 border-b-0 border-solid cursor-pointer",class:_vm.isActive(value) ? 'bg-[transparent] border-gray-300' : 'bg-gray-100 border-gray-100',attrs:{"type":"button"},on:{"click":function($event){return _vm.$emit('update:modelValue', value)}}},[_c('div',{staticClass:"relative top-[1px] p-2 border-0 border-b-1 border-solid min-w-[100px] text-small",class:_vm.isActive(value) ? 'border-white' : 'border-gray-300'},[_vm._v(" "+_vm._s((_vm.labels && _vm.labels[value]) || value)+" ")])])}),0),_c('div',{staticClass:"bg-white p-6 pb-0 border-1 border-t-0 border-b-0 border-solid border-gray-300"},[_vm._t("default",null,null,{ value: _vm.value })],2)])}
+var Tabsvue_type_template_id_3de8b723_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Tabs/Tabs.vue?vue&type=template&id=4bc232c5&
+// CONCATENATED MODULE: ./src/components/Tabs/Tabs.vue?vue&type=template&id=3de8b723&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Tabs/Tabs.vue?vue&type=script&lang=js&
 
@@ -50406,8 +50414,8 @@ var Tabsvue_type_template_id_4bc232c5_staticRenderFns = []
 
 var Tabs_component = normalizeComponent(
   Tabs_Tabsvue_type_script_lang_js_,
-  Tabsvue_type_template_id_4bc232c5_render,
-  Tabsvue_type_template_id_4bc232c5_staticRenderFns,
+  Tabsvue_type_template_id_3de8b723_render,
+  Tabsvue_type_template_id_3de8b723_staticRenderFns,
   false,
   null,
   null,

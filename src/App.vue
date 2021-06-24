@@ -144,6 +144,24 @@
       <r-button contrast secondary>Secondary contrast</r-button>
       <r-button contrast secondary ghost>Secondary ghost contrast</r-button>
     </r-section>
+    <r-section>
+      <div class="prose">
+        <h1>Prose example</h1>
+        <p>Let's try some things</p>
+        <h2>Unordered list</h2>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ul>
+        <h2>Ordered list</h2>
+        <ol>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ol>
+      </div>
+    </r-section>
   </r-app>
 </template>
 

@@ -26,6 +26,10 @@
   a {
     @apply underline;
   }
+
+  dt {
+    @apply font-bold mb-1;
+  }
 }
 
 @layer components {
