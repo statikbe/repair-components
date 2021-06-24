@@ -17,8 +17,8 @@
         </div>
       </button>
     </div>
-    <div class="bg-white p-6 border-1 border-t-0 border-b-0 border-solid border-gray-300">
-      <slot />
+    <div class="bg-white p-6 pb-0 border-1 border-t-0 border-b-0 border-solid border-gray-300">
+      <slot v-bind="{ value }"/>
     </div>
   </div>
 </template>
@@ -55,7 +55,9 @@ export default {
     },
   },
   created() {
-    this.resetTabs();
+    if (!this.modelValue) {
+      this.resetTabs();
+    }
   },
   methods: {
     resetTabs() {

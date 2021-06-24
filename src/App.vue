@@ -19,13 +19,13 @@
           />
         </div>
         <r-tabs v-model="tab" :values="form.selectedLocales" class="my-6">
-          <div v-for="locale in form.selectedLocales" :key="locale">
+          <template #default="{ value }">
             <r-input
               label="Name of the initiative"
-              v-bind="fieldProps(`name_${locale}`)"
-              v-on="fieldListeners(`name_${locale}`)"
+              v-bind="fieldProps(`name_${value}`)"
+              v-on="fieldListeners(`name_${value}`)"
             />
-          </div>
+          </template>
         </r-tabs>
         <div class="flex flex-wrap -mx-2">
           <div class="px-2 w-100 md:w-8/12">

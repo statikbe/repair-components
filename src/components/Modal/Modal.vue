@@ -1,6 +1,6 @@
 <template>
   <modal v-bind="{ ...$props, ...$attrs, ...$listeners }" @before-open="handleOpen" @closed="handleClose">
-    <div class="relative h-full">
+    <div class="relative h-full overflow-auto">
       <button
         type="button"
         class="p-3 bg-white bg-opacity-50 hover:bg-opacity-100 text-black border-none cursor-pointer absolute top-0 right-0 rounded-bl transition-colors"
@@ -9,7 +9,7 @@
         <r-icon name="mdiClose" />
       </button>
       <slot name="content">
-        <div class="p-6 overflow-auto">
+        <div class="p-6">
           <slot name="default" />
         </div>
       </slot>
