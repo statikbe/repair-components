@@ -1,5 +1,5 @@
 <template>
-  <div :class="dynamicClasses">
+  <div class="py-6" :class="color && `bg-${color} text-${color}-contrast`">
     <r-container v-if="container">
       <slot />
     </r-container>
@@ -18,50 +18,13 @@ export default {
     RContainer,
   },
   props: {
-    primary: {
-      type: Boolean,
-      default: () => false,
-    },
-    secondary: {
-      type: Boolean,
-      default: () => false,
-    },
-    size: {
+    color: {
       type: String,
-      default: () => 'md',
+      default: () => null,
     },
     container: {
       type: Boolean,
       default: () => true,
-    },
-  },
-  computed: {
-    dynamicClasses() {
-      const { primary, secondary, size } = this;
-
-      let classes = [];
-      let color = null;
-
-      classes.push(
-        {
-          0: 'py-0',
-          sm: 'py-3',
-          md: 'py-9',
-          lg: 'py-12',
-        }[size]
-      );
-
-      if (primary) {
-        color = 'primary';
-      } else if (secondary) {
-        color = 'secondary';
-      }
-
-      if (color) {
-        classes.push(`bg-${color} text-${color}-contrast`);
-      }
-
-      return classes;
     },
   },
 };

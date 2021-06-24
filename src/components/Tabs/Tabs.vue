@@ -11,13 +11,13 @@
       >
         <div
           class="relative top-[1px] p-2 border-0 border-b-1 border-solid min-w-[100px] text-small"
-          :class="isActive(value) ? 'border-white' : 'border-gray-300'"
+          :class="isActive(value) ? `border-${bg}` : 'border-gray-300'"
         >
           {{ (labels && labels[value]) || value }}
         </div>
       </button>
     </div>
-    <div class="bg-white p-6 pb-0 border-1 border-t-0 border-b-0 border-solid border-gray-300">
+    <div class="p-6 pb-0 border-1 border-t-0 border-b-0 border-solid border-gray-300" :class="`bg-${bg}`">
       <slot v-bind="{ value }" />
     </div>
   </div>
@@ -42,6 +42,10 @@ export default {
     labels: {
       type: Object,
       default: () => {},
+    },
+    bg: {
+      type: String,
+      default: () => 'white',
     },
   },
   data: () => ({

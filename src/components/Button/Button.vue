@@ -1,9 +1,7 @@
 <template>
   <component
-    v-on="$listeners"
-    :is="link ? 'a' : 'button'"
-    :type="link ? undefined : 'button'"
-    class="inline-flex align-center rounded-full border-2 border-solid font-base font-bold text-button tracking-wider cursor-pointer transition-colors"
+    :is="component"
+    class="px-4 py-2 inline-flex align-center rounded-full border-2 border-solid font-base font-bold text-button tracking-wider cursor-pointer transition-colors"
     :class="dynamicClasses"
   >
     <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" />
@@ -21,21 +19,17 @@ export default {
     RIcon,
   },
   props: {
-    link: {
+    inertia: {
       type: Boolean,
       default: () => false,
     },
-    size: {
+    nuxt: {
+      type: Boolean,
+      default: () => false,
+    },
+    color: {
       type: String,
-      default: () => 'DEFAULT',
-    },
-    primary: {
-      type: Boolean,
-      default: () => false,
-    },
-    secondary: {
-      type: Boolean,
-      default: () => false,
+      default: () => 'primary',
     },
     contrast: {
       type: Boolean,
@@ -55,17 +49,21 @@ export default {
     },
   },
   computed: {
+    component() {
+      if (this.inertia) {
+        return 'inertia-link';
+      } else if (this.nuxt) {
+        return 'nuxt-link';
+      } else if (this.link) {
+        return 'a';
+      }
+
+      return 'button';
+    },
     dynamicClasses() {
-      const { primary, secondary, ghost, contrast, size } = this;
+      const { color, ghost, contrast } = this;
 
       let classes;
-      let color = 'main';
-
-      if (primary) {
-        color = 'primary';
-      } else if (secondary) {
-        color = 'secondary';
-      }
 
       if (!contrast) {
         if (!ghost) {
@@ -81,11 +79,9 @@ export default {
         }
       }
 
-      classes += {
-        small: ' px-3 py-1 text-small',
-        DEFAULT: ' px-4 py-2 text-button',
-        large: ' px-5 py-3 text-large',
-      }[size];
+      if (this.$attrs.disabled) {
+        classes += 'opacity-50 cursor-not-allowed';
+      }
 
       return classes;
     },

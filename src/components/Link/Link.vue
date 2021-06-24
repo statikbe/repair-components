@@ -1,8 +1,7 @@
 <template>
   <component
     v-on="$listeners"
-    :is="button ? 'button' : 'a'"
-    :type="button ? 'button' : undefined"
+    :is="component"
     class="inline-flex items-center font-base font-bold text-base text-black cursor-pointer transition-colors underline hover:no-underline"
   >
     <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" :class="`text-${color}`" />
@@ -20,6 +19,14 @@ export default {
     RIcon,
   },
   props: {
+    inertia: {
+      type: Boolean,
+      default: () => false,
+    },
+    nuxt: {
+      type: Boolean,
+      default: () => false,
+    },
     button: {
       type: Boolean,
       default: () => false,
@@ -35,6 +42,19 @@ export default {
     iconAfter: {
       type: String,
       default: () => null,
+    },
+  },
+  computed: {
+    component() {
+      if (this.inertia) {
+        return 'inertia-link';
+      } else if (this.nuxt) {
+        return 'nuxt-link';
+      } else if (this.button) {
+        return 'button';
+      }
+
+      return 'a';
     },
   },
 };
