@@ -13,6 +13,7 @@ export {
   mdiFormatListNumbered,
   mdiInformationOutline,
   mdiLink,
+  mdiLoading,
   mdiMapMarker,
   mdiPlusCircle,
   mdiRadioboxBlank,

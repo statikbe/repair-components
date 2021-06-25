@@ -132,16 +132,56 @@
         <r-button color="secondary" ghost>Secondary ghost</r-button>
       </div>
     </r-section>
+    <r-section>
+      <div class="flex justify-between">
+        <r-button disabled>Primary</r-button>
+        <r-button disabled ghost>Primary ghost</r-button>
+        <r-button disabled color="secondary">Secondary</r-button>
+        <r-button disabled color="secondary" ghost>Secondary ghost</r-button>
+      </div>
+    </r-section>
+    <r-section>
+      <div class="flex justify-between">
+        <r-button loading>Primary</r-button>
+        <r-button loading ghost>Primary ghost</r-button>
+        <r-button loading color="secondary">Secondary</r-button>
+        <r-button loading color="secondary" ghost>Secondary ghost</r-button>
+      </div>
+    </r-section>
     <r-section color="primary">
       <div class="flex justify-between">
         <r-button contrast>Primary contrast</r-button>
         <r-button contrast ghost>Primary ghost contrast</r-button>
       </div>
     </r-section>
+    <r-section color="primary">
+      <div class="flex justify-between">
+        <r-button disabled contrast>Primary contrast</r-button>
+        <r-button disabled contrast ghost>Primary ghost contrast</r-button>
+      </div>
+    </r-section>
+    <r-section color="primary">
+      <div class="flex justify-between">
+        <r-button loading contrast>Primary contrast</r-button>
+        <r-button loading contrast ghost>Primary ghost contrast</r-button>
+      </div>
+    </r-section>
     <r-section color="secondary">
       <div class="flex justify-between">
         <r-button contrast color="secondary">Secondary contrast</r-button>
         <r-button contrast color="secondary" ghost>Secondary ghost contrast</r-button>
+      </div>
+    </r-section>
+    <r-section color="secondary">
+      <div class="flex justify-between">
+        <r-button disabled contrast color="secondary">Secondary contrast</r-button>
+        <r-button disabled contrast color="secondary" ghost>Secondary ghost contrast</r-button>
+      </div>
+    </r-section>
+    <r-section color="secondary">
+      <div class="flex justify-between">
+        <r-button loading contrast color="secondary">Secondary contrast</r-button>
+        <r-button loading contrast color="secondary" ghost>Secondary ghost contrast</r-button>
       </div>
     </r-section>
     <r-section>
