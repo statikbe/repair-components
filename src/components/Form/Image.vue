@@ -1,5 +1,5 @@
 <template>
-  <r-form-field v-bind="fieldProps">
+  <r-form-field v-bind="fieldProps" v-on="fieldListeners">
     <template #default="{ id }">
       <div v-show="thumbnails.length" class="mb-3 w-80 max-w-full">
         <r-grid>
@@ -9,6 +9,7 @@
               :style="`background-image: url(${url});`"
             >
               <a
+                v-if="!disabled"
                 href="javascript:void(0)"
                 class="absolute inset-0 flex items-center justify-center text-white bg-error bg-opacity-0 text-opacity-0 hover:text-opacity-100 hover:bg-opacity-90 transition-all"
                 @click="removeImage(index)"
@@ -18,9 +19,19 @@
             </div>
           </r-grid-item>
         </r-grid>
-        <input type="file" :id="id" class="sr-only" ref="input" :multiple="multiple" @change="handleChange" />
+        <input
+          type="file"
+          :id="id"
+          class="sr-only"
+          ref="input"
+          :multiple="multiple"
+          :disabled="disabled"
+          @change="handleChange"
+        />
       </div>
-      <r-link icon-before="mdiPlusCircle" @click="$refs.input.click()"> {{ t('messages.form_image_add') }} </r-link>
+      <r-link v-if="!disabled" icon-before="mdiPlusCircle" @click="$refs.input.click()">
+        {{ t('messages.form_image_add') }}
+      </r-link>
     </template>
   </r-form-field>
 </template>

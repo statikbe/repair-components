@@ -2,7 +2,8 @@
   <component
     v-on="$listeners"
     :is="component"
-    class="inline-flex items-center font-base font-bold text-base text-black cursor-pointer transition-colors underline hover:no-underline"
+    class="inline-flex items-center font-base font-bold text-base text-black transition-colors underline"
+    :class="{ 'cursor-pointer hover:no-underline': !disabled, 'opacity-60 cursor-not-allowed': disabled }"
   >
     <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" :class="`text-${color}`" />
     <slot />
@@ -28,6 +29,10 @@ export default {
       default: () => false,
     },
     button: {
+      type: Boolean,
+      default: () => false,
+    },
+    disabled: {
       type: Boolean,
       default: () => false,
     },

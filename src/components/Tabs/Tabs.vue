@@ -18,7 +18,7 @@
       </button>
     </div>
     <div class="p-6 pb-0 border-1 border-t-0 border-b-0 border-solid border-gray-300" :class="`bg-${bg}`">
-      <slot v-bind="{ value }" />
+      <slot v-bind="{ value: modelValue }" />
     </div>
   </div>
 </template>

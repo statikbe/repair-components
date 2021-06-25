@@ -19,6 +19,7 @@ export {
   mdiRadioboxBlank,
   mdiRadioboxMarked,
   mdiTrashCan,
+  mdiUndo,
   mdiEarth as contact_website,
   mdiEmail as contact_email,
   mdiFacebook as contact_facebook,

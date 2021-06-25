@@ -3,6 +3,7 @@
     :is="component"
     class="relative px-4 py-2 inline-block rounded-full border-2 border-solid font-base font-bold text-button tracking-wider transition-colors"
     :class="dynamicClasses"
+    :disabled="$attrs.disabled || loading"
   >
     <div class="flex align-center" :class="{ 'opacity-0': loading }">
       <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" />

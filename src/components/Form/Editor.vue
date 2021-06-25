@@ -1,5 +1,5 @@
 <template>
-  <r-form-field v-bind="fieldProps">
+  <r-form-field v-bind="fieldProps" v-on="fieldListeners">
     <div v-if="editor" class="rounded-t border-2 border-solid border-b-0 border-gray-300 bg-gray-100">
       <slot name="toolbar" v-bind="{ editor }">
         <button
@@ -44,7 +44,8 @@
         </button>
       </slot>
     </div>
-    <editor-content :editor="editor" />
+    <editor-content v-if="!disabled" :editor="editor" />
+    <div v-else v-html="modelValue" :class="`${fieldClass} prose`" />
   </r-form-field>
 </template>
 
@@ -87,13 +88,14 @@ export default {
   },
 
   mounted() {
+    if (this.disabled) return;
+
     this.editor = new Editor({
       extensions: [StarterKit, Link],
       content: this.modelValue,
       editorProps: {
         attributes: {
-          class:
-            'text-small block w-full rounded-b border-gray-300 border-2 border-solid bg-white px-3 py-2 box-border prose max-w-none focus:outline-none',
+          class: `${this.fieldClass} prose focus:outline-none rounded-t-none`,
         },
       },
       onUpdate: () => {
@@ -107,6 +109,7 @@ export default {
   },
 
   beforeDestroy() {
+    if (this.disabled) return;
     this.editor.destroy();
   },
 

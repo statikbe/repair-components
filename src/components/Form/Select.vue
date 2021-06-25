@@ -1,5 +1,5 @@
 <template>
-  <r-form-field v-bind="fieldProps">
+  <r-form-field v-bind="fieldProps" v-on="fieldListeners">
     <v-multiselect
       v-bind="$attrs"
       v-on="$listeners"
@@ -9,6 +9,7 @@
       :searchable="false"
       :value="internalValue"
       :allow-empty="!fieldProps.required"
+      :disabled="disabled"
       @input="handleInput"
     />
   </r-form-field>

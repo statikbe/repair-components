@@ -1,11 +1,12 @@
 <template>
-  <r-form-field v-bind="fieldProps">
+  <r-form-field v-bind="fieldProps" v-on="fieldListeners">
     <template #default="{ id }">
       <input
         :id="id"
         :value="modelValue"
         type="text"
-        class="text-small block w-full px-3 py-2 rounded border-gray-300 border-2 border-solid bg-white"
+        :class="fieldClass"
+        :disabled="disabled"
         @input="$emit('update:modelValue', $event.target.value)"
       />
     </template>

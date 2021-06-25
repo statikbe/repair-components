@@ -1,12 +1,12 @@
 <template>
-  <r-form-field v-bind="fieldProps">
+  <r-form-field v-bind="fieldProps" v-on="fieldListeners">
     <div v-if="modelValue.length">
       <div v-for="(item, index) in modelValue" :key="index" class="flex items-start">
         <div class="flex-grow">
-          <slot :item="item" :index="index" :update-item="updateItem(index)"></slot>
+          <slot v-bind="{ item, index, disabled, updateItem: updateItem(index) }" />
         </div>
         <button
-          v-if="!item.disabled"
+          v-if="!disabled && !item.disabled"
           :aria-label="labelRemove || t('messages.form_collection_item_remove')"
           @click="removeItem(index)"
           @keyup.enter="removeItem(index)"
@@ -20,7 +20,7 @@
     <div v-else-if="labelEmpty" class="mb-3 italic">
       {{ labelEmpty }}
     </div>
-    <r-link color="primary" icon-before="mdiPlusCircle" @click="addItem">
+    <r-link v-if="!disabled" color="primary" icon-before="mdiPlusCircle" @click="addItem">
       {{ labelAdd || t('messages.form_collection_item_add') }}
     </r-link>
   </r-form-field>

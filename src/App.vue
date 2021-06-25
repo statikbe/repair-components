@@ -98,12 +98,13 @@
           :multiple="true"
         />
         <r-form-collection v-model="form.notes" label="Collection">
-          <template #default="{ item, updateItem }">
+          <template #default="{ item, updateItem, disabled }">
             <div>
               <small>{{ item.person }} - {{ item.date }}</small>
               <r-editor
                 :model-value="item.text"
                 required
+                :disabled="disabled"
                 @update:model-value="
                   updateItem({
                     ...item,

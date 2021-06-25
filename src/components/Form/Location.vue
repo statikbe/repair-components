@@ -1,11 +1,12 @@
 <template>
-  <r-form-field v-bind="fieldProps">
+  <r-form-field v-bind="fieldProps" v-on="fieldListeners">
     <template #default="{}">
       <v-multiselect
         v-model="selected"
         :options="options"
         :loading="isLoading"
         :placeholder="null"
+        :disabled="disabled"
         @search-change="onSearchChange"
       >
         <template #option="{ option }">

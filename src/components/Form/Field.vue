@@ -1,6 +1,6 @@
 <template>
   <div class="mb-4">
-    <slot name="label" v-bind="{ id, resettable, required, label, tooltip }">
+    <slot name="label" v-bind="{ id, canReset, required, label, tooltip }">
       <label :for="id" class="cursor-pointer">
         <span v-if="label" class="text-base font-bold mr-2">{{ label }}</span>
         <r-icon
@@ -11,9 +11,15 @@
         />
         <small v-if="!required" class="text-gray-400 align-baseline mr-2">{{ t('messages.optional') }}</small>
       </label>
-      <span v-if="resettable" class="text-small">
-        (<a href="javascript:void(0)" class="text-gray-700" @click="$emit('reset')">reset</a>)
-      </span>
+      <a
+        v-if="canReset"
+        href="javascript:void(0)"
+        class="text-small ml-a text-primary"
+        @click="$emit('reset')"
+        v-tooltip="t('messages.reset')"
+      >
+        <r-icon name="mdiUndo" />
+      </a>
     </slot>
     <div v-if="info" v-html="info" class="text-small text-gray-400" />
     <div class="mt-1">
@@ -38,7 +44,7 @@ export default {
       type: [String, Array],
       default: () => '',
     },
-    resettable: {
+    canReset: {
       type: Boolean,
       default: () => false,
     },
