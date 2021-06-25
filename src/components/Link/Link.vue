@@ -2,6 +2,7 @@
   <component
     v-on="$listeners"
     :is="component"
+    :href="href"
     class="inline-flex items-center font-base font-bold text-base text-black transition-colors underline"
     :class="[
       { 'cursor-pointer hover:no-underline': !disabled, 'opacity-60 cursor-not-allowed': disabled },
@@ -34,6 +35,10 @@ export default {
     button: {
       type: Boolean,
       default: () => false,
+    },
+    href: {
+      type: String,
+      default: () => 'javascript:void(0)',
     },
     disabled: {
       type: Boolean,

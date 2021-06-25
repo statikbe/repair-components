@@ -17,7 +17,7 @@
 import FormField from '../../mixins/FormField';
 
 export default {
-  name: 'r-form-textarea',
+  name: 'r-textarea',
   mixins: [FormField],
 };
 </script>
