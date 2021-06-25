@@ -203,6 +203,9 @@
         </ol>
       </div>
     </r-section>
+    <r-section>
+      <r-pagination v-model="page" :pages="78" />
+    </r-section>
   </r-app>
 </template>
 
@@ -210,6 +213,7 @@
 export default {
   data: () => ({
     tab: 'NL',
+    page: 2,
     form: {
       selectedLocales: ['NL'],
       name_NL: 'Statik',

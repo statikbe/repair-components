@@ -8,11 +8,11 @@
           'text-primary hover:text-primary-dark': !isFirstPage,
         }"
         :disabled="isFirstPage"
-        @click="$emit('update:modelValue', modelValue - 1)"
+        @click.native="$emit('update:modelValue', modelValue - 1)"
       >
         <r-icon name="mdiChevronLeft" />
       </r-pagination-button>
-      <r-pagination-button :is-active="isActive(1)" @click="$emit('update:modelValue', 1)">
+      <r-pagination-button :is-active="isActive(1)" @click.native="$emit('update:modelValue', 1)">
         {{ 1 }}
       </r-pagination-button>
       <span v-if="modelValue > 4" class="mx-1"> <r-icon name="mdiDotsHorizontal" /> </span>
@@ -20,12 +20,12 @@
         v-for="page in visiblePages"
         :is-active="isActive(page)"
         :key="page"
-        @click="$emit('update:modelValue', page)"
+        @click.native="$emit('update:modelValue', page)"
       >
         {{ page }}
       </r-pagination-button>
       <span v-if="modelValue < pages - 3" class="mx-1"> <r-icon name="mdiDotsHorizontal" /> </span>
-      <r-pagination-button :is-active="isActive(pages)" @click="$emit('update:modelValue', pages)">
+      <r-pagination-button :is-active="isActive(pages)" @click.native="$emit('update:modelValue', pages)">
         {{ pages }}
       </r-pagination-button>
       <r-pagination-button
@@ -35,7 +35,7 @@
           'text-primary hover:text-primary-dark': !isLastPage,
         }"
         :disabled="isLastPage"
-        @click="$emit('update:modelValue', modelValue + 1)"
+        @click.native="$emit('update:modelValue', modelValue + 1)"
       >
         <r-icon name="mdiChevronRight" />
       </r-pagination-button>
