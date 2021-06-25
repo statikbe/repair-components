@@ -82,7 +82,10 @@
             />
           </div>
           <div class="px-2 w-100 md:w-7/12">
-            <r-form-image label="Images" v-bind="fieldProps('images')" v-on="fieldListeners('images')" />
+            <r-form-image label="Image" v-bind="fieldProps('image')" v-on="fieldListeners('image')" />
+          </div>
+          <div class="px-2 w-100 md:w-7/12">
+            <r-form-image label="Images" v-bind="fieldProps('images')" v-on="fieldListeners('images')" multiple />
           </div>
         </div>
         <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="hallo" optional />
@@ -232,7 +235,8 @@ export default {
       facebook: 'statikbe',
       instagram: 'statikbe',
       linkedin: 'statikbe',
-      images: null,
+      image: 'http://placekitten.com/700/700',
+      images: [],
       radio: 'radio',
       checkbox: false,
       editorContent: 'blaaa',

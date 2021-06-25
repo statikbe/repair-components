@@ -8,7 +8,7 @@
           <r-icon v-else name="mdiRadioboxBlank" />
         </span>
         <div>
-          <span class="text-base font-medium mr-2 align-middle">{{ label }}</span>
+          <span class="text-base font-medium mr-2 align-middle" v-html="label" />
           <r-icon
             v-if="tooltip"
             v-tooltip="tooltip"

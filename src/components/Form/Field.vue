@@ -21,7 +21,7 @@
         <r-icon name="mdiUndo" />
       </a>
     </slot>
-    <div v-if="info" v-html="info" class="text-small text-gray-400" />
+    <div v-if="info" v-html="info" class="text-small text-gray-500" />
     <div class="mt-1">
       <slot name="default" v-bind="{ id }"></slot>
     </div>
