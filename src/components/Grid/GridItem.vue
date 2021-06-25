@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3 mt-3 box-border">
+  <div class="px-3 mt-6 w-full box-border">
     <slot />
   </div>
 </template>

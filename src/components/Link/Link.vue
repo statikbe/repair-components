@@ -3,7 +3,10 @@
     v-on="$listeners"
     :is="component"
     class="inline-flex items-center font-base font-bold text-base text-black transition-colors underline"
-    :class="{ 'cursor-pointer hover:no-underline': !disabled, 'opacity-60 cursor-not-allowed': disabled }"
+    :class="[
+      { 'cursor-pointer hover:no-underline': !disabled, 'opacity-60 cursor-not-allowed': disabled },
+      color ? `hover:text-${color}` : '',
+    ]"
   >
     <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" :class="`text-${color}`" />
     <slot />
