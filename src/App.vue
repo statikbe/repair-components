@@ -50,7 +50,12 @@
             <r-input label="Mobile" v-bind="fieldProps('mobile')" v-on="fieldListeners('mobile')" />
           </div>
           <div class="px-2 w-100 md:w-6/12">
-            <r-input label="Phone" v-bind="fieldProps('phone')" v-on="fieldListeners('phone')" />
+            <r-input
+              label="Phone"
+              v-bind="fieldProps('phone')"
+              v-on="fieldListeners('phone')"
+              :errors="['Error 1', 'Error 2']"
+            />
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-input label="Website" v-bind="fieldProps('website')" v-on="fieldListeners('website')" />

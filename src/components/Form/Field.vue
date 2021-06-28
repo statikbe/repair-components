@@ -9,7 +9,7 @@
           name="mdiInformationOutline"
           class="relative text-tiny text-primary mr-2 align-middle"
         />
-        <small v-if="!required" class="text-gray-400 align-baseline mr-2">{{ t('messages.optional') }}</small>
+        <small v-if="!required" class="text-gray-500 align-baseline mr-2">{{ t('messages.optional') }}</small>
       </label>
       <a
         v-if="canReset"
@@ -25,7 +25,7 @@
     <div class="mt-1">
       <slot name="default" v-bind="{ id }"></slot>
     </div>
-    <div v-if="errors" class="text-tiny text-error font-bold mt-1" v-html="formattedErrors"></div>
+    <div v-if="errors" class="text-small text-error font-bold mt-1" v-html="formattedErrors"></div>
   </div>
 </template>
 
