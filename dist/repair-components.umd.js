@@ -49503,12 +49503,12 @@ var Radio_component = normalizeComponent(
 )
 
 /* harmony default export */ var Radio = (Radio_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=template&id=d85fe922&
-var Recaptchavue_type_template_id_d85fe922_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"recaptcha",staticClass:"g-recaptcha",attrs:{"id":"recaptcha","data-sitekey":_vm.sitekey,"data-callback":"onRecaptchaSubmit","data-expired-callback":"onRecaptchaExpire","data-error-callback":"onRecaptchaError","data-size":"invisible"}})}
-var Recaptchavue_type_template_id_d85fe922_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=template&id=7821284a&
+var Recaptchavue_type_template_id_7821284a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"recaptcha",staticClass:"g-recaptcha",attrs:{"id":"recaptcha","data-sitekey":_vm.sitekey,"data-callback":"onRecaptchaSubmit","data-expired-callback":"onRecaptchaExpire","data-error-callback":"onRecaptchaError","data-size":"invisible"}})}
+var Recaptchavue_type_template_id_7821284a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/Recaptcha.vue?vue&type=template&id=d85fe922&
+// CONCATENATED MODULE: ./src/components/Form/Recaptcha.vue?vue&type=template&id=7821284a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=script&lang=js&
 //
@@ -49547,7 +49547,9 @@ var Recaptchavue_type_template_id_d85fe922_staticRenderFns = []
       };
 
       window.onRecaptchaSubmit = function (token) {
-        window.dispatchEvent(new CustomEvent('recaptcha:submit', token));
+        window.dispatchEvent(new CustomEvent('recaptcha:submit', {
+          token: token
+        }));
       };
 
       window.onRecaptchaError = function () {
@@ -49555,8 +49557,8 @@ var Recaptchavue_type_template_id_d85fe922_staticRenderFns = []
       };
     }
 
-    window.addEventListener('recaptcha:submit', function (token) {
-      _this.$emit('update:modelValue', token);
+    window.addEventListener('recaptcha:submit', function (event) {
+      _this.$emit('update:modelValue', event.token);
 
       _this.$emit('submit');
     });
@@ -49588,8 +49590,8 @@ var Recaptchavue_type_template_id_d85fe922_staticRenderFns = []
 
 var Recaptcha_component = normalizeComponent(
   Form_Recaptchavue_type_script_lang_js_,
-  Recaptchavue_type_template_id_d85fe922_render,
-  Recaptchavue_type_template_id_d85fe922_staticRenderFns,
+  Recaptchavue_type_template_id_7821284a_render,
+  Recaptchavue_type_template_id_7821284a_staticRenderFns,
   false,
   null,
   null,
