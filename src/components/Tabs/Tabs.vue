@@ -17,7 +17,11 @@
         </div>
       </button>
     </div>
-    <div class="p-6 pb-0 border-2 border-t-0 border-b-0 border-solid border-gray-300" :class="`bg-${bg}`">
+    <div
+      v-if="$slots.default"
+      class="p-6 pb-0 border-2 border-t-0 border-b-0 border-solid border-gray-300"
+      :class="`bg-${bg}`"
+    >
       <slot v-bind="{ value: modelValue }" />
     </div>
   </div>

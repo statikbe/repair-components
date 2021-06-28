@@ -33,3 +33,6 @@ hover:border-secondary
 bg-secondary-contrast
 border-secondary-contrast
 hover:text-secondary
+
+border-gray-100
+border-white
