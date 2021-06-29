@@ -32,7 +32,7 @@ export default {
     }
 
     window.onRecaptchaSubmit = (token) => {
-      window.dispatchEvent(new CustomEvent('recaptcha:submit', { token }));
+      window.dispatchEvent(new CustomEvent('recaptcha:submit', { detail: token }));
     };
 
     window.onRecaptchaExpire = () => {
@@ -44,7 +44,7 @@ export default {
     };
 
     window.addEventListener('recaptcha:submit', (event) => {
-      this.$emit('update:modelValue', event.token);
+      this.$emit('update:modelValue', event.detail);
       this.$emit('submit');
     });
 
