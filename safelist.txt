@@ -1,3 +1,5 @@
+# Buttons
+
 text-main-contrast
 bg-main
 border-main
@@ -34,5 +36,10 @@ bg-secondary-contrast
 border-secondary-contrast
 hover:text-secondary
 
-border-gray-100
+
+# Tabs
+
 border-white
+border-gray-100
+bg-white
+bg-gray-100

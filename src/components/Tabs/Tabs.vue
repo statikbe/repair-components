@@ -6,7 +6,7 @@
         v-for="value in values"
         :key="value"
         class="p-0 border-2 border-b-0 border-solid cursor-pointer"
-        :class="isActive(value) ? 'bg-[transparent] border-gray-300' : 'bg-gray-100 border-gray-100'"
+        :class="isActive(value) ? `bg-${bg} border-gray-300` : 'bg-gray-100 border-gray-100'"
         @click="$emit('update:modelValue', value)"
       >
         <div
