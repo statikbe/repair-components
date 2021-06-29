@@ -6,7 +6,9 @@
           <r-grid-item v-for="(url, index) in thumbnails" class="w-3/12" :key="index">
             <div
               class="relative aspect-w-1 aspect-h-1 bg-cover bg-no-repeat bg-center"
-              :style="`background-image: url(${url});`"
+              :style="{
+                backgroundImage: `url('${url}')`,
+              }"
             >
               <a
                 v-if="!disabled"

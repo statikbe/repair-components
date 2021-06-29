@@ -48940,14 +48940,16 @@ var Location_component = normalizeComponent(
 )
 
 /* harmony default export */ var Location = (Location_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Image.vue?vue&type=template&id=8608e8b4&
-var Imagevue_type_template_id_8608e8b4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-form-field',_vm._g(_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Image.vue?vue&type=template&id=1918ccf4&
+var Imagevue_type_template_id_1918ccf4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-form-field',_vm._g(_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(ref){
 var id = ref.id;
-return [_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.thumbnails.length),expression:"thumbnails.length"}],staticClass:"mb-3 w-80 max-w-full"},[_c('r-grid',_vm._l((_vm.thumbnails),function(url,index){return _c('r-grid-item',{key:index,staticClass:"w-3/12"},[_c('div',{staticClass:"relative aspect-w-1 aspect-h-1 bg-cover bg-no-repeat bg-center",style:(("background-image: url(" + url + ");"))},[(!_vm.disabled)?_c('a',{staticClass:"absolute inset-0 flex items-center justify-center text-white bg-error bg-opacity-0 text-opacity-0 hover:text-opacity-100 hover:bg-opacity-90 transition-all",attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.removeImage(index)}}},[_c('r-icon',{attrs:{"name":"mdiTrashCan"}})],1):_vm._e()])])}),1),_c('input',{ref:"input",staticClass:"sr-only",attrs:{"type":"file","id":id,"multiple":_vm.multiple,"disabled":_vm.disabled},on:{"change":_vm.handleChange}})],1),(!_vm.disabled)?_c('r-link',{attrs:{"icon-before":"mdiPlusCircle"},on:{"click":function($event){return _vm.$refs.input.click()}}},[_vm._v(" "+_vm._s(_vm.t('messages.form_image_add'))+" ")]):_vm._e()]}}])},'r-form-field',_vm.fieldProps,false),_vm.fieldListeners))}
-var Imagevue_type_template_id_8608e8b4_staticRenderFns = []
+return [_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.thumbnails.length),expression:"thumbnails.length"}],staticClass:"mb-3 w-80 max-w-full"},[_c('r-grid',_vm._l((_vm.thumbnails),function(url,index){return _c('r-grid-item',{key:index,staticClass:"w-3/12"},[_c('div',{staticClass:"relative aspect-w-1 aspect-h-1 bg-cover bg-no-repeat bg-center",style:({
+              backgroundImage: ("url('" + url + "')"),
+            })},[(!_vm.disabled)?_c('a',{staticClass:"absolute inset-0 flex items-center justify-center text-white bg-error bg-opacity-0 text-opacity-0 hover:text-opacity-100 hover:bg-opacity-90 transition-all",attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.removeImage(index)}}},[_c('r-icon',{attrs:{"name":"mdiTrashCan"}})],1):_vm._e()])])}),1),_c('input',{ref:"input",staticClass:"sr-only",attrs:{"type":"file","id":id,"multiple":_vm.multiple,"disabled":_vm.disabled},on:{"change":_vm.handleChange}})],1),(!_vm.disabled)?_c('r-link',{attrs:{"icon-before":"mdiPlusCircle"},on:{"click":function($event){return _vm.$refs.input.click()}}},[_vm._v(" "+_vm._s(_vm.t('messages.form_image_add'))+" ")]):_vm._e()]}}])},'r-form-field',_vm.fieldProps,false),_vm.fieldListeners))}
+var Imagevue_type_template_id_1918ccf4_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/Image.vue?vue&type=template&id=8608e8b4&
+// CONCATENATED MODULE: ./src/components/Form/Image.vue?vue&type=template&id=1918ccf4&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
 var es_promise = __webpack_require__("e6cf");
@@ -49248,6 +49250,8 @@ var Link_component = normalizeComponent(
 //
 //
 //
+//
+//
 
 
 
@@ -49352,8 +49356,8 @@ var Link_component = normalizeComponent(
 
 var Image_component = normalizeComponent(
   Form_Imagevue_type_script_lang_js_,
-  Imagevue_type_template_id_8608e8b4_render,
-  Imagevue_type_template_id_8608e8b4_staticRenderFns,
+  Imagevue_type_template_id_1918ccf4_render,
+  Imagevue_type_template_id_1918ccf4_staticRenderFns,
   false,
   null,
   null,
