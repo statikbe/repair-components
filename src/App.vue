@@ -251,6 +251,8 @@ export default {
           person: 'Kristof S.',
           date: '17/06/2021',
           text: '<p>Hallo daar</p>',
+          blaaa: 'vghtawdgjyakw',
+          disabled: true,
         },
       ],
     },

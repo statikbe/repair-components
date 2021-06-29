@@ -29,19 +29,19 @@ export default {
       script.src = 'https://www.google.com/recaptcha/api.js';
 
       document.body.appendChild(script);
-
-      window.onRecaptchaExpire = () => {
-        window.dispatchEvent(new Event('recaptcha:expire'));
-      };
-
-      window.onRecaptchaSubmit = (token) => {
-        window.dispatchEvent(new CustomEvent('recaptcha:submit', { token }));
-      };
-
-      window.onRecaptchaError = () => {
-        window.dispatchEvent(new Event('recaptcha:error'));
-      };
     }
+
+    window.onRecaptchaSubmit = (token) => {
+      window.dispatchEvent(new CustomEvent('recaptcha:submit', { token }));
+    };
+
+    window.onRecaptchaExpire = () => {
+      window.dispatchEvent(new Event('recaptcha:expire'));
+    };
+
+    window.onRecaptchaError = () => {
+      window.dispatchEvent(new Event('recaptcha:error'));
+    };
 
     window.addEventListener('recaptcha:submit', (event) => {
       this.$emit('update:modelValue', event.token);
