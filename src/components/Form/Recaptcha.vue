@@ -1,14 +1,17 @@
 <template>
-  <div
-    :id="id"
-    class="g-recaptcha"
-    :data-sitekey="sitekey"
-    data-callback="onRecaptchaSubmit"
-    data-expired-callback="onRecaptchaExpire"
-    data-error-callback="onRecaptchaError"
-    data-size="invisible"
-    ref="recaptcha"
-  ></div>
+  <div>
+    <div
+      :id="id"
+      class="g-recaptcha"
+      :data-sitekey="sitekey"
+      data-callback="onRecaptchaSubmit"
+      data-expired-callback="onRecaptchaExpire"
+      data-error-callback="onRecaptchaError"
+      data-size="invisible"
+      ref="recaptcha"
+    ></div>
+    <div v-if="errors" class="text-small text-error font-bold mt-1" v-html="formattedErrors"></div>
+  </div>
 </template>
 
 <script>
@@ -25,6 +28,11 @@ export default {
     sitekey: {
       type: String,
       default: null,
+    },
+  },
+  computed: {
+    formattedErrors() {
+      return Array.isArray(this.errors) ? this.errors.join('<br/>') : this.errors;
     },
   },
   created() {

@@ -49498,14 +49498,18 @@ var Radio_component = normalizeComponent(
 )
 
 /* harmony default export */ var Radio = (Radio_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=template&id=f2f6d34c&
-var Recaptchavue_type_template_id_f2f6d34c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"recaptcha",staticClass:"g-recaptcha",attrs:{"id":_vm.id,"data-sitekey":_vm.sitekey,"data-callback":"onRecaptchaSubmit","data-expired-callback":"onRecaptchaExpire","data-error-callback":"onRecaptchaError","data-size":"invisible"}})}
-var Recaptchavue_type_template_id_f2f6d34c_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=template&id=066e8589&
+var Recaptchavue_type_template_id_066e8589_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{ref:"recaptcha",staticClass:"g-recaptcha",attrs:{"id":_vm.id,"data-sitekey":_vm.sitekey,"data-callback":"onRecaptchaSubmit","data-expired-callback":"onRecaptchaExpire","data-error-callback":"onRecaptchaError","data-size":"invisible"}}),(_vm.errors)?_c('div',{staticClass:"text-small text-error font-bold mt-1",domProps:{"innerHTML":_vm._s(_vm.formattedErrors)}}):_vm._e()])}
+var Recaptchavue_type_template_id_066e8589_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/Recaptcha.vue?vue&type=template&id=f2f6d34c&
+// CONCATENATED MODULE: ./src/components/Form/Recaptcha.vue?vue&type=template&id=066e8589&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=script&lang=js&
+
+//
+//
+//
 //
 //
 //
@@ -49531,6 +49535,11 @@ var Recaptchavue_type_template_id_f2f6d34c_staticRenderFns = []
     sitekey: {
       type: String,
       default: null
+    }
+  },
+  computed: {
+    formattedErrors: function formattedErrors() {
+      return Array.isArray(this.errors) ? this.errors.join('<br/>') : this.errors;
     }
   },
   created: function created() {
@@ -49589,8 +49598,8 @@ var Recaptchavue_type_template_id_f2f6d34c_staticRenderFns = []
 
 var Recaptcha_component = normalizeComponent(
   Form_Recaptchavue_type_script_lang_js_,
-  Recaptchavue_type_template_id_f2f6d34c_render,
-  Recaptchavue_type_template_id_f2f6d34c_staticRenderFns,
+  Recaptchavue_type_template_id_066e8589_render,
+  Recaptchavue_type_template_id_066e8589_staticRenderFns,
   false,
   null,
   null,
