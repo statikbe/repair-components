@@ -49498,12 +49498,12 @@ var Radio_component = normalizeComponent(
 )
 
 /* harmony default export */ var Radio = (Radio_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=template&id=63c8e272&
-var Recaptchavue_type_template_id_63c8e272_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"recaptcha",staticClass:"g-recaptcha",attrs:{"id":"recaptcha","data-sitekey":_vm.sitekey,"data-callback":"onRecaptchaSubmit","data-expired-callback":"onRecaptchaExpire","data-error-callback":"onRecaptchaError","data-size":"invisible"}})}
-var Recaptchavue_type_template_id_63c8e272_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"46b79c8a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=template&id=f2f6d34c&
+var Recaptchavue_type_template_id_f2f6d34c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"recaptcha",staticClass:"g-recaptcha",attrs:{"id":_vm.id,"data-sitekey":_vm.sitekey,"data-callback":"onRecaptchaSubmit","data-expired-callback":"onRecaptchaExpire","data-error-callback":"onRecaptchaError","data-size":"invisible"}})}
+var Recaptchavue_type_template_id_f2f6d34c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/Recaptcha.vue?vue&type=template&id=63c8e272&
+// CONCATENATED MODULE: ./src/components/Form/Recaptcha.vue?vue&type=template&id=f2f6d34c&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Recaptcha.vue?vue&type=script&lang=js&
 //
@@ -49524,6 +49524,10 @@ var Recaptchavue_type_template_id_63c8e272_staticRenderFns = []
   name: 'r-recaptcha',
   mixins: [FormField],
   props: {
+    id: {
+      type: String,
+      required: true
+    },
     sitekey: {
       type: String,
       default: null
@@ -49585,8 +49589,8 @@ var Recaptchavue_type_template_id_63c8e272_staticRenderFns = []
 
 var Recaptcha_component = normalizeComponent(
   Form_Recaptchavue_type_script_lang_js_,
-  Recaptchavue_type_template_id_63c8e272_render,
-  Recaptchavue_type_template_id_63c8e272_staticRenderFns,
+  Recaptchavue_type_template_id_f2f6d34c_render,
+  Recaptchavue_type_template_id_f2f6d34c_staticRenderFns,
   false,
   null,
   null,
