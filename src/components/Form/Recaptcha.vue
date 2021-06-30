@@ -1,7 +1,6 @@
 <template>
   <div>
     <div
-      :id="id"
       class="g-recaptcha"
       :data-sitekey="sitekey"
       data-callback="onRecaptchaSubmit"
@@ -21,10 +20,6 @@ export default {
   name: 'r-recaptcha',
   mixins: [FormField],
   props: {
-    id: {
-      type: String,
-      required: true,
-    },
     sitekey: {
       type: String,
       default: null,
