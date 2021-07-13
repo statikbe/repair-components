@@ -13341,8 +13341,7 @@ module.exports = plugin(function (_ref) {
       theme = _ref.theme;
   //  Extend 'text-h#' classes with shared heading styles
   var sharedHeadingStyles = {
-    'all': 'initial',
-    // Make sure inherited styles from parent application get reset
+    // 'all': 'initial', // Make sure inherited styles from parent application get reset
     'display': 'block',
     'fontFamily': theme('fontFamily.base'),
     'color': theme('colors.primary.DEFAULT'),
