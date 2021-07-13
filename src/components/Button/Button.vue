@@ -1,6 +1,7 @@
 <template>
   <component
     :is="component"
+    :href="href"
     class="relative px-4 py-2 inline-block rounded-full border-2 border-solid font-base font-bold text-button tracking-wider transition-colors"
     :class="dynamicClasses"
     :disabled="$attrs.disabled || loading"
@@ -34,6 +35,10 @@ export default {
     nuxt: {
       type: Boolean,
       default: () => false,
+    },
+    href: {
+      type: String,
+      default: () => 'javascript:void(0)',
     },
     loading: {
       type: Boolean,
