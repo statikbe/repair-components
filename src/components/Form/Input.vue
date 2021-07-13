@@ -4,7 +4,7 @@
       <input
         :id="id"
         :value="modelValue"
-        type="text"
+        :type="type"
         :class="fieldClass"
         :disabled="disabled"
         @input="$emit('update:modelValue', $event.target.value)"
@@ -19,5 +19,11 @@ import FormField from '../../mixins/FormField';
 export default {
   name: 'r-input',
   mixins: [FormField],
+  props: {
+    type: {
+      type: String,
+      default: () => 'text',
+    },
+  },
 };
 </script>
