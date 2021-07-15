@@ -7,6 +7,8 @@
         :type="type"
         :class="fieldClass"
         :disabled="disabled"
+        :placeholder="placeholder"
+        :required="required"
         @input="$emit('update:modelValue', $event.target.value)"
       />
     </template>
