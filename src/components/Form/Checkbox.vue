@@ -10,10 +10,10 @@
       :disabled="disabled"
     />
     <label :for="htmlId" class="cursor-pointer">
-      <div class="flex" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
-        <span class="mr-2 flex-shrink-0">
-          <r-icon v-if="isChecked" name="mdiCheckboxMarked" class="text-primary" />
-          <r-icon v-else name="mdiCheckboxBlankOutline" />
+      <div class="flex items-start" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
+        <span class="mr-2 flex-shrink-0 flex items-center mt-1" :class="{ 'text-huge': toggle }">
+          <r-icon v-if="isChecked" :name="toggle ? 'mdiToggleSwitch' : 'mdiCheckboxMarked'" class="text-primary" />
+          <r-icon v-else :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'" />
         </span>
         <div>
           <span class="text-base font-medium mr-2 align-middle" v-html="label" />
@@ -45,6 +45,10 @@ export default {
       default: () => true,
     },
     falseValue: {
+      default: () => false,
+    },
+    toggle: {
+      type: Boolean,
       default: () => false,
     },
   },

@@ -2,8 +2,8 @@
   <div class="mb-1">
     <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="sr-only" @change="onChange" />
     <label :for="htmlId" class="cursor-pointer">
-      <div class="flex" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
-        <span class="mr-2 flex-shrink-0">
+      <div class="flex items-start" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
+        <span class="mr-2 flex-shrink-0 flex items-center mt-1">
           <r-icon v-if="isChecked" name="mdiRadioboxMarked" class="text-primary" />
           <r-icon v-else name="mdiRadioboxBlank" />
         </span>

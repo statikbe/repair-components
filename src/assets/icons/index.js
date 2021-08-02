@@ -18,6 +18,8 @@ export {
   mdiPlusCircle,
   mdiRadioboxBlank,
   mdiRadioboxMarked,
+  mdiToggleSwitchOff,
+  mdiToggleSwitch,
   mdiTrashCan,
   mdiUndo,
   mdiEarth as contact_website,

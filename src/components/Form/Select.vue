@@ -11,7 +11,10 @@
       :allow-empty="!fieldProps.required"
       :disabled="disabled"
       @input="handleInput"
-    />
+    >
+      <slot v-if="$slots.option" name="option" />
+      <slot v-if="$slots.singleLabel" name="singleLabel" />
+    </v-multiselect>
   </r-form-field>
 </template>
 

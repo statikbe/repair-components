@@ -80,11 +80,15 @@
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-checkbox
-              label="Checkbox"
-              v-bind="fieldProps('checkbox')"
-              v-on="fieldListeners('checkbox')"
-              value="checkbox"
+              v-model="form.checkbox"
+              label="Checkbox with quite a long label text with quite a long label text with quite a long label text with quite a long label text with quite a long label text with quite a long label text with quite a long label text "
             />
+          </div>
+          <div class="px-2 w-100 md:w-7/12">
+            <r-checkbox v-model="form.checkbox" label="Checkbox" />
+          </div>
+          <div class="px-2 w-100 md:w-7/12">
+            <r-checkbox v-model="form.checkbox" label="Toggle" toggle />
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-form-image label="Image" v-bind="fieldProps('image')" v-on="fieldListeners('image')" />
