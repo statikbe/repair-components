@@ -13367,7 +13367,7 @@ module.exports = plugin(function (_ref) {
     '.text-h1': largeHeadingStyles,
     '.text-h2': largeHeadingStyles,
     '.text-h3': largeHeadingStyles,
-    '.text-h4': smallHeadingStyles,
+    '.text-h4': largeHeadingStyles,
     '.text-h5': smallHeadingStyles,
     '.text-h6': smallHeadingStyles
   });
