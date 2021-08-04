@@ -5,8 +5,8 @@
       v-on="$listeners"
       :placeholder="t('messages.form_select_placeholder')"
       :label="labelBy"
-      :show-labels="false"
-      :searchable="false"
+      :show-labels="showLabels"
+      :searchable="searchable"
       :value="internalValue"
       :allow-empty="!fieldProps.required"
       :disabled="disabled"
@@ -36,6 +36,14 @@ export default {
     trackBy: {
       type: String,
       default: () => '',
+    },
+    searchable: {
+      type: Boolean,
+      default: () => false,
+    },
+    showLabels: {
+      type: Boolean,
+      default: () => false,
     },
   },
   data: () => ({
