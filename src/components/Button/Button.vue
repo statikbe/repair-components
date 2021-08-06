@@ -2,6 +2,7 @@
   <component
     :is="component"
     :href="href"
+    :to="to"
     class="relative px-4 py-2 inline-block rounded-full border-2 border-solid font-base font-bold text-button tracking-wider transition-colors no-underline"
     :class="dynamicClasses"
     :disabled="$attrs.disabled || loading"
@@ -39,6 +40,10 @@ export default {
     href: {
       type: String,
       default: () => 'javascript:void(0)',
+    },
+    to: {
+      type: [String, Object],
+      default: () => undefined,
     },
     loading: {
       type: Boolean,

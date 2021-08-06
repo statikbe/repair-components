@@ -11,7 +11,7 @@
     />
     <label :for="htmlId" class="cursor-pointer">
       <div class="flex items-start" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
-        <span class="mr-2 flex-shrink-0 flex items-center mt-1" :class="{ 'text-huge': toggle }">
+        <span class="mr-2 flex-shrink-0 flex-grow-0 flex items-center mt-1" :class="{ 'text-huge': toggle }">
           <r-icon v-if="isChecked" :name="toggle ? 'mdiToggleSwitch' : 'mdiCheckboxMarked'" class="text-primary" />
           <r-icon v-else :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'" />
         </span>
