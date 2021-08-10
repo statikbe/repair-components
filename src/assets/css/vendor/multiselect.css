@@ -5,8 +5,8 @@ fieldset[disabled] .multiselect {
 }
 .multiselect__spinner {
   position: absolute;
-  right: 1px;
-  top: 1px;
+  right: 2px;
+  top: 2px;
   width: 48px;
   height: 35px;
   background: #fff;
@@ -388,7 +388,7 @@ fieldset[disabled] .multiselect {
 }
 [dir='rtl'] .multiselect__spinner {
   right: auto;
-  left: 1px;
+  left: 2px;
 }
 @keyframes spinning {
   0% {
