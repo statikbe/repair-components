@@ -25871,7 +25871,6 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
 
 
 
-
 /* harmony default export */ var FormField = ({
   components: {
     RFormField: Field
@@ -25882,7 +25881,6 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
   },
   props: {
     modelValue: {
-      type: [String, Array, Number, Boolean],
       default: function _default() {
         return '';
       }

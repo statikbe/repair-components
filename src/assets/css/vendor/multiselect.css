@@ -99,7 +99,8 @@ fieldset[disabled] .multiselect {
 }
 .multiselect__input,
 .multiselect__single {
-  @apply px-0 py-1;
+  @apply px-0;
+  padding: 2px 0;
   position: relative;
   display: inline-block;
   /* min-height: 20px;
