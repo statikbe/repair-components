@@ -72,7 +72,7 @@ export default {
 
       this.options = features.map((entry) => {
         const label = entry.place_name;
-        const data = JSON.stringify(entry);
+        const data = entry;
         return { data, label };
       });
 
