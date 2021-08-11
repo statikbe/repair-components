@@ -7,13 +7,13 @@ export {
   RFormCollection,
   RFormEditor,
   RFormField,
-  RFormLocation,
   RFormImage,
   RFormInput,
   RFormRadio,
   RFormRecaptcha,
   RFormSelect,
   RFormTextarea,
+  RMapboxSearch,
 } from './Form';
 export { RIcon } from './Icon';
 export { RGallery } from './Gallery';
