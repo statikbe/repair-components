@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3 mt-6 w-full box-border flex flex-col items-stretch">
+  <div class="px-3 mt-6 w-full box-border flex flex-col items-stretch flex-grow-0">
     <slot />
   </div>
 </template>
