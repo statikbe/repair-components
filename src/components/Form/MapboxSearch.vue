@@ -1,5 +1,6 @@
 <template>
   <r-select
+    v-bind="$attrs"
     :model-value="modelValue"
     :options="options"
     :loading="isLoading"
