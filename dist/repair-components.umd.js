@@ -25897,10 +25897,9 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
         return '';
       }
     },
-    resettable: {
-      type: Boolean,
+    resetValue: {
       default: function _default() {
-        return false;
+        return undefined;
       }
     },
     required: {
@@ -25934,14 +25933,9 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
       }
     }
   },
-  data: function data() {
-    return {
-      originalModelValue: null
-    };
-  },
   computed: {
     canReset: function canReset() {
-      return this.resettable && this.modelValue !== this.originalModelValue;
+      return typeof this.resetValue !== 'undefined' && this.modelValue !== this.resetValue;
     },
     fieldProps: function fieldProps() {
       return lodash_pick_default()(this, ['label', 'errors', 'required', 'disabled', 'placeholder', 'info', 'tooltip', 'canReset']);
@@ -25951,16 +25945,13 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
 
       return {
         reset: function reset() {
-          _this.$emit('update:modelValue', _this.originalModelValue);
+          _this.$emit('update:modelValue', _this.resetValue);
         }
       };
     },
     fieldClass: function fieldClass() {
       return "text-small block w-full rounded border-gray-300 border-2 border-solid px-3 py-2 box-border max-w-none ".concat(this.disabled ? 'text-gray-400 bg-gray-50 cursor-not-allowed' : 'text-main bg-white', " ").concat(this.errors.length ? 'border-red-500' : 'border-gray-300');
     }
-  },
-  created: function created() {
-    this.originalModelValue = this.modelValue;
   }
 });
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Checkbox.vue?vue&type=script&lang=js&

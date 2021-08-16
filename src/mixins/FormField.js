@@ -22,9 +22,8 @@ export default {
       type: [String, Array],
       default: () => '',
     },
-    resettable: {
-      type: Boolean,
-      default: () => false,
+    resetValue: {
+      default: () => undefined,
     },
     required: {
       type: Boolean,
@@ -47,12 +46,9 @@ export default {
       default: () => null,
     },
   },
-  data: () => ({
-    originalModelValue: null,
-  }),
   computed: {
     canReset() {
-      return this.resettable && this.modelValue !== this.originalModelValue;
+      return typeof this.resetValue !== 'undefined' && this.modelValue !== this.resetValue;
     },
     fieldProps() {
       return pick(this, ['label', 'errors', 'required', 'disabled', 'placeholder', 'info', 'tooltip', 'canReset']);
@@ -60,7 +56,7 @@ export default {
     fieldListeners() {
       return {
         reset: () => {
-          this.$emit('update:modelValue', this.originalModelValue);
+          this.$emit('update:modelValue', this.resetValue);
         },
       };
     },
@@ -69,8 +65,5 @@ export default {
         this.disabled ? 'text-gray-400 bg-gray-50 cursor-not-allowed' : 'text-main bg-white'
       } ${this.errors.length ? 'border-red-500' : 'border-gray-300'}`;
     },
-  },
-  created() {
-    this.originalModelValue = this.modelValue;
   },
 };
