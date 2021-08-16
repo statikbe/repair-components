@@ -18,7 +18,7 @@
       </button>
     </div>
     <div
-      v-if="$slots.default"
+      v-if="hasContent"
       class="p-6 pb-0 border-2 border-t-0 border-b-0 border-solid border-gray-300"
       :class="`bg-${bg}`"
     >
@@ -38,6 +38,10 @@ export default {
     modelValue: {
       type: String,
       default: () => null,
+    },
+    hasContent: {
+      type: Boolean,
+      default: () => true,
     },
     values: {
       type: Array,
