@@ -32,9 +32,12 @@
 <script>
 import Uuid from '../../mixins/Uuid';
 
+import { RIcon } from '..';
+
 export default {
   name: 'r-form-field',
   mixins: [Uuid],
+  components: { RIcon },
   props: {
     label: {
       type: String,

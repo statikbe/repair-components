@@ -28,10 +28,15 @@
 
 <script>
 import FormField from '../../mixins/FormField';
+import { RIcon, RLink } from '..';
 
 export default {
   name: 'r-form-collection',
   mixins: [FormField],
+  components: {
+    RIcon,
+    RLink,
+  },
   props: {
     modelValue: {
       type: Array,

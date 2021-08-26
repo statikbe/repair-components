@@ -16,8 +16,13 @@
 import axios from 'axios';
 import qs from 'qs';
 
+import { RSelect } from '..';
+
 export default {
   name: 'r-mapbox-search',
+  components: {
+    RSelect,
+  },
   model: {
     prop: 'modelValue',
     event: 'update:modelValue',

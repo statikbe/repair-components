@@ -25,9 +25,14 @@
 import FormField from '../../mixins/FormField';
 import Uuid from '../../mixins/Uuid';
 
+import { RIcon } from '..';
+
 export default {
   mixins: [FormField, Uuid],
   name: 'r-radio',
+  components: {
+    RIcon,
+  },
   model: {
     prop: 'modelValue',
     event: 'update:modelValue',

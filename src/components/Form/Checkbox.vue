@@ -2,12 +2,12 @@
   <div class="mb-1">
     <input
       type="checkbox"
+      class="sr-only"
       :id="htmlId"
       :value="value"
       :checked="isChecked"
-      class="sr-only"
-      @change="onChange"
       :disabled="disabled"
+      @change="onChange"
     />
     <label :for="htmlId" class="cursor-pointer">
       <div class="flex items-start" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
@@ -33,9 +33,14 @@
 import FormField from '../../mixins/FormField';
 import Uuid from '../../mixins/Uuid';
 
+import { RIcon } from '..';
+
 export default {
   mixins: [FormField, Uuid],
   name: 'r-checkbox',
+  components: {
+    RIcon,
+  },
   props: {
     value: {
       type: [String, Boolean, Number],

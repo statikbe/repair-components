@@ -56,6 +56,7 @@ import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 
 import FormField from '../../mixins/FormField';
+import { RIcon } from '..';
 
 export default {
   name: 'r-editor',
@@ -63,6 +64,7 @@ export default {
 
   components: {
     EditorContent,
+    RIcon,
   },
 
   data() {
