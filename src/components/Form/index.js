@@ -1,27 +1,27 @@
 import RForm from './Form.vue';
-import RFormCheckbox from './Checkbox.vue';
+import RCheckbox from './Checkbox.vue';
 import RFormCollection from './Collection.vue';
-import RFormEditor from './Editor.vue';
+import REditor from './Editor.vue';
 import RFormField from './Field.vue';
 import RFormImage from './Image.vue';
-import RFormInput from './Input.vue';
-import RFormRadio from './Radio.vue';
-import RFormRecaptcha from './Recaptcha.vue';
-import RFormSelect from './Select.vue';
-import RFormTextarea from './Textarea.vue';
+import RInput from './Input.vue';
+import RRadio from './Radio.vue';
+import RRecaptcha from './Recaptcha.vue';
+import RSelect from './Select.vue';
+import RTextarea from './Textarea.vue';
 import RMapboxSearch from './MapboxSearch.vue';
 
 export {
   RForm,
-  RFormCheckbox,
+  RCheckbox,
   RFormCollection,
-  RFormEditor,
+  REditor,
   RFormField,
   RFormImage,
-  RFormInput,
-  RFormRadio,
-  RFormRecaptcha,
-  RFormSelect,
-  RFormTextarea,
+  RInput,
+  RRadio,
+  RRecaptcha,
+  RSelect,
+  RTextarea,
   RMapboxSearch,
 };

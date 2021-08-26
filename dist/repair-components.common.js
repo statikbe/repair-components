@@ -25035,16 +25035,16 @@ __webpack_require__.d(__webpack_exports__, "RApp", function() { return /* reexpo
 __webpack_require__.d(__webpack_exports__, "RButton", function() { return /* reexport */ Button; });
 __webpack_require__.d(__webpack_exports__, "RContainer", function() { return /* reexport */ Container; });
 __webpack_require__.d(__webpack_exports__, "RForm", function() { return /* reexport */ Form; });
-__webpack_require__.d(__webpack_exports__, "RFormCheckbox", function() { return /* reexport */ Checkbox; });
+__webpack_require__.d(__webpack_exports__, "RCheckbox", function() { return /* reexport */ Checkbox; });
 __webpack_require__.d(__webpack_exports__, "RFormCollection", function() { return /* reexport */ Collection; });
-__webpack_require__.d(__webpack_exports__, "RFormEditor", function() { return /* reexport */ Form_Editor; });
+__webpack_require__.d(__webpack_exports__, "REditor", function() { return /* reexport */ Form_Editor; });
 __webpack_require__.d(__webpack_exports__, "RFormField", function() { return /* reexport */ Field; });
 __webpack_require__.d(__webpack_exports__, "RFormImage", function() { return /* reexport */ Image; });
-__webpack_require__.d(__webpack_exports__, "RFormInput", function() { return /* reexport */ Input; });
-__webpack_require__.d(__webpack_exports__, "RFormRadio", function() { return /* reexport */ Radio; });
-__webpack_require__.d(__webpack_exports__, "RFormRecaptcha", function() { return /* reexport */ Recaptcha; });
-__webpack_require__.d(__webpack_exports__, "RFormSelect", function() { return /* reexport */ Select; });
-__webpack_require__.d(__webpack_exports__, "RFormTextarea", function() { return /* reexport */ Textarea; });
+__webpack_require__.d(__webpack_exports__, "RInput", function() { return /* reexport */ Input; });
+__webpack_require__.d(__webpack_exports__, "RRadio", function() { return /* reexport */ Radio; });
+__webpack_require__.d(__webpack_exports__, "RRecaptcha", function() { return /* reexport */ Recaptcha; });
+__webpack_require__.d(__webpack_exports__, "RSelect", function() { return /* reexport */ Select; });
+__webpack_require__.d(__webpack_exports__, "RTextarea", function() { return /* reexport */ Textarea; });
 __webpack_require__.d(__webpack_exports__, "RMapboxSearch", function() { return /* reexport */ MapboxSearch; });
 __webpack_require__.d(__webpack_exports__, "RGallery", function() { return /* reexport */ Gallery; });
 __webpack_require__.d(__webpack_exports__, "RGrid", function() { return /* reexport */ Grid; });
@@ -25067,16 +25067,16 @@ __webpack_require__.d(components_namespaceObject, "RApp", function() { return Ap
 __webpack_require__.d(components_namespaceObject, "RButton", function() { return Button; });
 __webpack_require__.d(components_namespaceObject, "RContainer", function() { return Container; });
 __webpack_require__.d(components_namespaceObject, "RForm", function() { return Form; });
-__webpack_require__.d(components_namespaceObject, "RFormCheckbox", function() { return Checkbox; });
+__webpack_require__.d(components_namespaceObject, "RCheckbox", function() { return Checkbox; });
 __webpack_require__.d(components_namespaceObject, "RFormCollection", function() { return Collection; });
-__webpack_require__.d(components_namespaceObject, "RFormEditor", function() { return Form_Editor; });
+__webpack_require__.d(components_namespaceObject, "REditor", function() { return Form_Editor; });
 __webpack_require__.d(components_namespaceObject, "RFormField", function() { return Field; });
 __webpack_require__.d(components_namespaceObject, "RFormImage", function() { return Image; });
-__webpack_require__.d(components_namespaceObject, "RFormInput", function() { return Input; });
-__webpack_require__.d(components_namespaceObject, "RFormRadio", function() { return Radio; });
-__webpack_require__.d(components_namespaceObject, "RFormRecaptcha", function() { return Recaptcha; });
-__webpack_require__.d(components_namespaceObject, "RFormSelect", function() { return Select; });
-__webpack_require__.d(components_namespaceObject, "RFormTextarea", function() { return Textarea; });
+__webpack_require__.d(components_namespaceObject, "RInput", function() { return Input; });
+__webpack_require__.d(components_namespaceObject, "RRadio", function() { return Radio; });
+__webpack_require__.d(components_namespaceObject, "RRecaptcha", function() { return Recaptcha; });
+__webpack_require__.d(components_namespaceObject, "RSelect", function() { return Select; });
+__webpack_require__.d(components_namespaceObject, "RTextarea", function() { return Textarea; });
 __webpack_require__.d(components_namespaceObject, "RMapboxSearch", function() { return MapboxSearch; });
 __webpack_require__.d(components_namespaceObject, "RGallery", function() { return Gallery; });
 __webpack_require__.d(components_namespaceObject, "RGrid", function() { return Grid; });
@@ -50518,7 +50518,7 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 /* harmony default export */ var MapboxSearchvue_type_script_lang_js_ = ({
   name: 'r-mapbox-search',
   components: {
-    RSelect: /* Cannot get final name for export "RSelect" in "./src/components/index.js" (known exports: , known reexports: RApp RButton RContainer RForm RFormCheckbox RFormCollection RFormEditor RFormField RFormImage RFormInput RFormRadio RFormRecaptcha RFormSelect RFormTextarea RMapboxSearch RGallery RGrid RGridItem RIcon RLink RLoader RModal RPagination RPanel RSection RTabs) */ undefined
+    RSelect: Select
   },
   model: {
     prop: 'modelValue',

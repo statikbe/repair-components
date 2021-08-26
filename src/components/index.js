@@ -3,16 +3,16 @@ export { RButton } from './Button';
 export { RContainer } from './Container';
 export {
   RForm,
-  RFormCheckbox,
+  RCheckbox,
   RFormCollection,
-  RFormEditor,
+  REditor,
   RFormField,
   RFormImage,
-  RFormInput,
-  RFormRadio,
-  RFormRecaptcha,
-  RFormSelect,
-  RFormTextarea,
+  RInput,
+  RRadio,
+  RRecaptcha,
+  RSelect,
+  RTextarea,
   RMapboxSearch,
 } from './Form';
 export { RGallery } from './Gallery';
