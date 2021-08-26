@@ -37,6 +37,10 @@ export default {
       type: Boolean,
       default: () => false,
     },
+    link: {
+      type: Boolean,
+      default: () => false,
+    },
     href: {
       type: String,
       default: () => 'javascript:void(0)',
