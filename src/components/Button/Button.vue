@@ -1,9 +1,8 @@
 <template>
   <component
-    :is="component"
-    :href="href"
-    :to="to"
     class="relative px-4 py-2 inline-block rounded-full border-2 border-solid font-base font-bold text-button tracking-wider transition-colors no-underline"
+    :is="component"
+    :to="to"
     :class="dynamicClasses"
     :disabled="$attrs.disabled || loading"
   >
@@ -40,10 +39,6 @@ export default {
     link: {
       type: Boolean,
       default: () => false,
-    },
-    href: {
-      type: String,
-      default: () => 'javascript:void(0)',
     },
     to: {
       type: [String, Object],
