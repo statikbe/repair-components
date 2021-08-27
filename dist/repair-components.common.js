@@ -59785,15 +59785,13 @@ var ComponentLibrary = {
     Vue.use(ssr_nocss_default.a);
 
     if (!Vue.prototype.i18n) {
-      Vue.use(vue_i18n_esm, {
-        messages: i18n
-      });
-    } else {
-      Vue.prototype.i18n.mergeLocaleMessage('de', i18n.de);
-      Vue.prototype.i18n.mergeLocaleMessage('en', i18n.en);
-      Vue.prototype.i18n.mergeLocaleMessage('fr', i18n.fr);
-      Vue.prototype.i18n.mergeLocaleMessage('nl', i18n.nl);
+      Vue.use(vue_i18n_esm);
     }
+
+    Vue.prototype.i18n.mergeLocaleMessage('de', i18n.de);
+    Vue.prototype.i18n.mergeLocaleMessage('en', i18n.en);
+    Vue.prototype.i18n.mergeLocaleMessage('fr', i18n.fr);
+    Vue.prototype.i18n.mergeLocaleMessage('nl', i18n.nl);
   }
 };
 
