@@ -9,14 +9,14 @@
           name="mdiInformationOutline"
           class="relative text-tiny text-primary mr-2 align-middle"
         />
-        <small v-if="!required" class="text-gray-500 align-baseline mr-2">{{ t('messages.optional') }}</small>
+        <small v-if="!required" class="text-gray-500 align-baseline mr-2">{{ $t('form_field_optional') }}</small>
       </label>
       <a
         v-if="canReset"
         href="javascript:void(0)"
         class="text-small ml-a text-primary"
         @click="$emit('reset')"
-        v-tooltip="t('messages.reset')"
+        v-tooltip="$t('form_field_reset')"
       >
         <r-icon name="mdiUndo" />
       </a>

@@ -7,7 +7,7 @@
         </div>
         <button
           v-if="!disabled && !item.disabled"
-          :aria-label="labelRemove || t('messages.form_collection_item_remove')"
+          :aria-label="labelRemove || $t('form_collection_item_remove')"
           @click="removeItem(index)"
           @keyup.enter="removeItem(index)"
           type="button"
@@ -21,7 +21,7 @@
       {{ labelEmpty }}
     </div>
     <r-link v-if="!disabled" color="primary" icon-before="mdiPlusCircle" @click="addItem">
-      {{ labelAdd || t('messages.form_collection_item_add') }}
+      {{ labelAdd || $t('form_collection_item_add') }}
     </r-link>
   </r-form-field>
 </template>

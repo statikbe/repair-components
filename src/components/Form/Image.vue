@@ -32,7 +32,7 @@
         />
       </div>
       <r-link v-if="!disabled" icon-before="mdiPlusCircle" @click="$refs.input.click()">
-        {{ t('messages.form_image_add') }}
+        {{ $t('form_image_add') }}
       </r-link>
     </template>
   </r-form-field>
