@@ -33,7 +33,7 @@
 import FormField from '../../mixins/FormField';
 import Uuid from '../../mixins/Uuid';
 
-import { RIcon } from '..';
+import { RIcon } from '../Icon';
 
 export default {
   mixins: [FormField, Uuid],

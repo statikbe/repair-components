@@ -17,7 +17,7 @@
 import axios from 'axios';
 import qs from 'qs';
 
-import { RSelect } from '..';
+import { RSelect } from '../Form';
 
 export default {
   name: 'r-mapbox-search',

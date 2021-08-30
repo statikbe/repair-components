@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { RIcon } from '..';
+import { RIcon } from '../Icon';
 
 export default {
   name: 'r-loader',

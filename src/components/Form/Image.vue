@@ -40,7 +40,10 @@
 
 <script>
 import FormField from '../../mixins/FormField';
-import { RGrid, RGridItem, RIcon, RLink } from '..';
+
+import { RGrid, RGridItem } from '../Grid';
+import { RIcon } from '../Icon';
+import { RLink } from '../Link';
 
 export default {
   name: 'r-form-image',

@@ -53,6 +53,7 @@
 
 <script>
 import Uuid from '../../mixins/Uuid';
+
 import { RGrid, RGridItem } from '../Grid';
 import { RModal } from '../Modal';
 

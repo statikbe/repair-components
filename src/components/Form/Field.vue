@@ -32,7 +32,7 @@
 <script>
 import Uuid from '../../mixins/Uuid';
 
-import { RIcon } from '..';
+import { RIcon } from '../Icon';
 
 export default {
   name: 'r-form-field',

@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { RIcon } from '..';
+import { RIcon } from '../Icon';
 import RPaginationButton from './PaginationButton';
 
 export default {

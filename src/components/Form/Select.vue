@@ -20,6 +20,7 @@
 
 <script>
 import VMultiselect from 'vue-multiselect';
+
 import FormField from '../../mixins/FormField';
 
 export default {

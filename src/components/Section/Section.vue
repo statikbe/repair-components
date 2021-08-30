@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { RContainer } from '..';
+import { RContainer } from '../Container';
 
 export default {
   name: 'r-section',

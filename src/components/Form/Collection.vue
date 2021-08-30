@@ -28,7 +28,9 @@
 
 <script>
 import FormField from '../../mixins/FormField';
-import { RIcon, RLink } from '..';
+
+import { RIcon } from '../Icon';
+import { RLink } from '../Link';
 
 export default {
   name: 'r-form-collection',
