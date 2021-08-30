@@ -25005,7 +25005,7 @@ module.exports = initCloneObject;
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "i18n", function() { return /* reexport */ main_i18n; });
+__webpack_require__.d(__webpack_exports__, "i18n", function() { return /* reexport */ _i18n; });
 __webpack_require__.d(__webpack_exports__, "RApp", function() { return /* reexport */ App; });
 __webpack_require__.d(__webpack_exports__, "RButton", function() { return /* reexport */ Button; });
 __webpack_require__.d(__webpack_exports__, "RContainer", function() { return /* reexport */ Container; });
@@ -59728,7 +59728,7 @@ var mdiZodiacVirgo = "M18.5,19.13C20,17.77 20,15.18 20,14A4,4 0 0,0 16,10C15.3,1
 
 
 
-/* harmony default export */ var i18n = ({
+/* harmony default export */ var src_i18n = ({
   de: de,
   en: en,
   fr: fr,
@@ -59748,22 +59748,26 @@ var tailwind_config_default = /*#__PURE__*/__webpack_require__.n(tailwind_config
 
 
 var main_isBrowser = typeof window !== 'undefined';
-var main_i18n;
-var ComponentLibrary = {
-  install: function install(Vue) {
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
-      icons: {}
-    };
-    var icons = options.icons;
+
+var _i18n;
+
+var main_Plugin = {
+  install: function install(Vue, options) {
+    var icons = options.icons,
+        i18n = options.i18n;
     Vue.use(vue_i18n_esm);
     Vue.use(v_tooltip_esm["a" /* default */]);
     Vue.use(ssr_nocss_default.a);
-    Vue.prototype.$icons = _objectSpread2(_objectSpread2({}, icons_namespaceObject), icons);
-    main_i18n = new vue_i18n_esm();
-    main_i18n.mergeLocaleMessage('de', i18n.de);
-    main_i18n.mergeLocaleMessage('en', i18n.en);
-    main_i18n.mergeLocaleMessage('fr', i18n.fr);
-    main_i18n.mergeLocaleMessage('nl', i18n.nl);
+    Vue.prototype.$icons = _objectSpread2(_objectSpread2({}, icons_namespaceObject), icons || {});
+    _i18n = i18n || new vue_i18n_esm();
+
+    _i18n.mergeLocaleMessage('de', src_i18n.de);
+
+    _i18n.mergeLocaleMessage('en', src_i18n.en);
+
+    _i18n.mergeLocaleMessage('fr', src_i18n.fr);
+
+    _i18n.mergeLocaleMessage('nl', src_i18n.nl);
 
     for (var componentName in components_namespaceObject) {
       var component = components_namespaceObject[componentName];
@@ -59776,10 +59780,10 @@ var ComponentLibrary = {
 
 
 
-/* harmony default export */ var lib_main = (ComponentLibrary);
+/* harmony default export */ var lib_main = (main_Plugin);
 
 if (main_isBrowser && window.Vue) {
-  window.Vue.use(ComponentLibrary);
+  window.Vue.use(main_Plugin);
 }
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
