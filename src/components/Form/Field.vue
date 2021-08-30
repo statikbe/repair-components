@@ -7,21 +7,21 @@
           v-if="tooltip"
           v-tooltip="tooltip"
           name="mdiInformationOutline"
-          class="relative text-tiny text-primary mr-2 align-middle"
+          class="relative text-tiny mr-2 align-middle"
         />
-        <small v-if="!required" class="text-gray-500 align-baseline mr-2">{{ $t('form_field_optional') }}</small>
+        <small v-if="!required" class="opacity-50 align-baseline mr-2">{{ $t('form_field_optional') }}</small>
       </label>
       <a
         v-if="canReset"
         href="javascript:void(0)"
-        class="text-small ml-a text-primary"
+        class="text-small ml-a"
         @click="$emit('reset')"
         v-tooltip="$t('form_field_reset')"
       >
         <r-icon name="mdiUndo" />
       </a>
     </slot>
-    <div v-if="info" v-html="info" class="text-small text-gray-500" />
+    <div v-if="info" v-html="info" class="text-small opacity-50" />
     <div class="mt-1">
       <slot name="default" v-bind="{ id }"></slot>
     </div>

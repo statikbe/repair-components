@@ -4,7 +4,7 @@
     <label :for="htmlId" class="cursor-pointer">
       <div class="flex items-start" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
         <span class="mr-2 flex-shrink-0 flex-grow-0 flex items-center mt-1">
-          <r-icon v-if="isChecked" name="mdiRadioboxMarked" class="text-primary" />
+          <r-icon v-if="isChecked" name="mdiRadioboxMarked" />
           <r-icon v-else name="mdiRadioboxBlank" />
         </span>
         <div>
@@ -13,7 +13,7 @@
             v-if="tooltip"
             v-tooltip="tooltip"
             name="mdiInformationOutline"
-            class="relative text-tiny text-primary align-middle"
+            class="relative text-tiny align-middle"
           />
         </div>
       </div>

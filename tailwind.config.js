@@ -8,16 +8,6 @@ const colors = {
     dark: defaultColors.gray[900],
     contrast: 'white',
   },
-  primary: {
-    DEFAULT: '#71b8c5',
-    dark: '#5A939D',
-    contrast: 'white',
-  },
-  secondary: {
-    DEFAULT: '#9C7A97',
-    dark: '#7C6178',
-    contrast: 'white',
-  },
   info: defaultColors.yellow[500],
   success: defaultColors.green[500],
   warning: defaultColors.blue[500],
@@ -27,13 +17,6 @@ const colors = {
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{vue,js}', './safelist.txt'],
-  // purge: {
-  //   content: ['**/*.{vue,md,js}'],
-  //   options: {
-  //     whitelistPatterns: [/^multiselect(.*)/],
-  //     safelist: require('./tailwind.safelist.js'),
-  //   },
-  // },
   darkMode: false,
   theme: {
     borderWidth: {
@@ -44,7 +27,6 @@ module.exports = {
       3: '3px',
       4: '4px',
     },
-    // borderColor: colors,
     container: {
       center: true,
       padding: defaultTheme.spacing['4'],
@@ -77,6 +59,18 @@ module.exports = {
     colors,
 
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: 'var(--repair-primary, #71b8c5)',
+          dark: 'var(--repair-primary-dark, #5A939D)',
+          contrast: 'var(--repair-primary-contrast, white)',
+        },
+        secondary: {
+          DEFAULT: 'var(--repair-secondary, #9C7A97)',
+          dark: 'var(--repair-secondary-dark, #7C6178)',
+          contrast: 'var(--repair-secondary-contrast, white)',
+        },
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -126,37 +120,7 @@ module.exports = {
         },
       }),
     },
-
-    // aspectRatio: {
-    //   'none': 0,
-    //   'square': [1, 1],
-    //   '16/9': [16, 9],
-    //   '4/3': [4, 3],
-    //   '21/9': [21, 9],
-    // },
-    // extend: {
-    //   maxWidth: {
-    //     flyout: '280px',
-    //     modal: '50vw',
-    //     logo: '150px',
-    //   },
-    //   zIndex: {
-    //     99: '99',
-    //     100: '100',
-    //     999: '999',
-    //   },
-    //   boxShadow: {
-    //     card: '0 0 30px 0 rgba(0,0,0,0.15)',
-    //     focus: '0 0 0 3px rgba(238,71,55,0.5)',
-    //   },
-    //   inset: {
-    //     '1/2': '50%',
-    //   },
-    // },
   },
-  // variants: {
-  //   extend: {},
-  // },
   plugins: [
     require('@tailwindcss/typography'),
     require('./tailwind/plugins/typography'),
