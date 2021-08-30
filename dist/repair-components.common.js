@@ -14659,7 +14659,7 @@ module.exports = {
         secondary: {
           DEFAULT: 'var(--repair-secondary, #9C7A97)',
           dark: 'var(--repair-secondary-dark, #7C6178)',
-          contrast: 'var(--repair-secondary-contrast , white)'
+          contrast: 'var(--repair-secondary-contrast, white)'
         }
       },
       typography: function typography(theme) {
@@ -52600,12 +52600,12 @@ var Textarea_component = normalizeComponent(
 )
 
 /* harmony default export */ var Textarea = (Textarea_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d9ba2b2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/MapboxSearch.vue?vue&type=template&id=09629cf3&
-var MapboxSearchvue_type_template_id_09629cf3_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-select',_vm._b({attrs:{"model-value":_vm.modelValue,"options":_vm.options,"loading":_vm.isLoading,"label-by":"label","track-by":"data","searchable":""},on:{"update:modelValue":function($event){return _vm.$emit('update:modelValue', $event)},"search-change":_vm.search}},'r-select',_vm.$attrs,false))}
-var MapboxSearchvue_type_template_id_09629cf3_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d9ba2b2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/MapboxSearch.vue?vue&type=template&id=a65bf0b6&
+var MapboxSearchvue_type_template_id_a65bf0b6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('r-select',_vm._b({attrs:{"model-value":_vm.modelValue,"options":_vm.options,"loading":_vm.isLoading,"placeholder":_vm.$t('form_location_search'),"label-by":"label","track-by":"data","searchable":""},on:{"update:modelValue":function($event){return _vm.$emit('update:modelValue', $event)},"search-change":_vm.search}},'r-select',_vm.$attrs,false))}
+var MapboxSearchvue_type_template_id_a65bf0b6_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Form/MapboxSearch.vue?vue&type=template&id=09629cf3&
+// CONCATENATED MODULE: ./src/components/Form/MapboxSearch.vue?vue&type=template&id=a65bf0b6&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
 var es_object_assign = __webpack_require__("cca6");
@@ -52632,6 +52632,7 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 
 
+//
 //
 //
 //
@@ -52754,8 +52755,8 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 var MapboxSearch_component = normalizeComponent(
   Form_MapboxSearchvue_type_script_lang_js_,
-  MapboxSearchvue_type_template_id_09629cf3_render,
-  MapboxSearchvue_type_template_id_09629cf3_staticRenderFns,
+  MapboxSearchvue_type_template_id_a65bf0b6_render,
+  MapboxSearchvue_type_template_id_a65bf0b6_staticRenderFns,
   false,
   null,
   null,
@@ -59680,6 +59681,7 @@ var mdiZodiacVirgo = "M18.5,19.13C20,17.77 20,15.18 20,14A4,4 0 0,0 16,10C15.3,1
   form_field_optional: 'Optional',
   form_field_reset: 'Auf ursprünglichen Wert zurücksetzen',
   form_image_add: 'Bild hinzufügen',
+  form_location_search: 'Einen Standort finden',
   form_select_placeholder: 'Klicke um auszuwählen'
 });
 // CONCATENATED MODULE: ./src/i18n/en.js
@@ -59689,6 +59691,7 @@ var mdiZodiacVirgo = "M18.5,19.13C20,17.77 20,15.18 20,14A4,4 0 0,0 16,10C15.3,1
   form_field_optional: 'Optional',
   form_field_reset: 'Reset to original value',
   form_image_add: 'Add image(s)',
+  form_location_search: 'Find a location',
   form_select_placeholder: 'Click to select'
 });
 // CONCATENATED MODULE: ./src/i18n/fr.js
@@ -59698,6 +59701,7 @@ var mdiZodiacVirgo = "M18.5,19.13C20,17.77 20,15.18 20,14A4,4 0 0,0 16,10C15.3,1
   form_field_optional: 'Optionnel',
   form_field_reset: "Restaurer la valeur d'origine",
   form_image_add: 'Ajouter image(s)',
+  form_location_search: 'Chercher une location',
   form_select_placeholder: 'Cliquez pour sélectionner'
 });
 // CONCATENATED MODULE: ./src/i18n/nl.js
@@ -59707,6 +59711,7 @@ var mdiZodiacVirgo = "M18.5,19.13C20,17.77 20,15.18 20,14A4,4 0 0,0 16,10C15.3,1
   form_field_optional: 'Optioneel',
   form_field_reset: 'Originele waarde herstellen',
   form_image_add: 'Afbeelding(en) toevoegen',
+  form_location_search: 'Zoek een plaats',
   form_select_placeholder: 'Klik om te selecteren'
 });
 // CONCATENATED MODULE: ./src/i18n/index.js

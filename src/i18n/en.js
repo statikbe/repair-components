@@ -4,5 +4,6 @@ export default {
   form_field_optional: 'Optional',
   form_field_reset: 'Reset to original value',
   form_image_add: 'Add image(s)',
+  form_location_search: 'Find a location',
   form_select_placeholder: 'Click to select',
 };

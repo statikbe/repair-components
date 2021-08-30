@@ -4,5 +4,6 @@ export default {
   form_field_optional: 'Optioneel',
   form_field_reset: 'Originele waarde herstellen',
   form_image_add: 'Afbeelding(en) toevoegen',
+  form_location_search: 'Zoek een plaats',
   form_select_placeholder: 'Klik om te selecteren',
 };
