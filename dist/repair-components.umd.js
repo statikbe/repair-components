@@ -25040,6 +25040,7 @@ module.exports = initCloneObject;
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+__webpack_require__.d(__webpack_exports__, "i18n", function() { return /* reexport */ main_i18n; });
 __webpack_require__.d(__webpack_exports__, "RApp", function() { return /* reexport */ App; });
 __webpack_require__.d(__webpack_exports__, "RButton", function() { return /* reexport */ Button; });
 __webpack_require__.d(__webpack_exports__, "RContainer", function() { return /* reexport */ Container; });
@@ -59777,32 +59778,30 @@ var tailwind_config_default = /*#__PURE__*/__webpack_require__.n(tailwind_config
 
 
 var main_isBrowser = typeof window !== 'undefined';
+var main_i18n;
 var ComponentLibrary = {
   install: function install(Vue) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
       icons: {}
     };
     var icons = options.icons;
+    Vue.use(vue_i18n_esm);
+    Vue.use(v_tooltip_esm["a" /* default */]);
+    Vue.use(ssr_nocss_default.a);
+    Vue.prototype.$icons = _objectSpread2(_objectSpread2({}, icons_namespaceObject), icons);
+    main_i18n = new vue_i18n_esm();
+    main_i18n.mergeLocaleMessage('de', i18n.de);
+    main_i18n.mergeLocaleMessage('en', i18n.en);
+    main_i18n.mergeLocaleMessage('fr', i18n.fr);
+    main_i18n.mergeLocaleMessage('nl', i18n.nl);
 
     for (var componentName in components_namespaceObject) {
       var component = components_namespaceObject[componentName];
       Vue.component(component.name, component);
     }
-
-    Vue.prototype.$icons = _objectSpread2(_objectSpread2({}, icons_namespaceObject), icons);
-    Vue.use(v_tooltip_esm["a" /* default */]);
-    Vue.use(ssr_nocss_default.a);
-
-    if (!Vue.prototype.i18n) {
-      Vue.use(vue_i18n_esm);
-    }
-
-    Vue.prototype.i18n.mergeLocaleMessage('de', i18n.de);
-    Vue.prototype.i18n.mergeLocaleMessage('en', i18n.en);
-    Vue.prototype.i18n.mergeLocaleMessage('fr', i18n.fr);
-    Vue.prototype.i18n.mergeLocaleMessage('nl', i18n.nl);
   }
 };
+
 
 
 
