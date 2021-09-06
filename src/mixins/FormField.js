@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     canReset() {
-      return typeof this.resetValue !== 'undefined' && this.modelValue !== this.resetValue;
+      return typeof this.originalValue !== 'undefined' && this.modelValue !== this.originalValue;
     },
     fieldProps() {
       return pick(this, ['label', 'errors', 'required', 'disabled', 'placeholder', 'info', 'tooltip', 'canReset']);
@@ -56,7 +56,7 @@ export default {
     fieldListeners() {
       return {
         reset: () => {
-          this.$emit('update:modelValue', this.resetValue);
+          this.$emit('update:modelValue', this.originalValue);
         },
       };
     },
@@ -65,5 +65,8 @@ export default {
         this.disabled ? 'text-gray-400 bg-gray-50 cursor-not-allowed' : 'text-main bg-white'
       } ${this.errors.length ? 'border-red-500' : 'border-gray-300'}`;
     },
+  },
+  created() {
+    this.originalValue = Object.assign({ originalValue: this.resetValue }).originalValue;
   },
 };

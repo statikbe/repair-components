@@ -27990,11 +27990,15 @@ var es_string_includes = __webpack_require__("2532");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
 var es_array_splice = __webpack_require__("a434");
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
+var es_object_assign = __webpack_require__("cca6");
+
 // EXTERNAL MODULE: ./node_modules/lodash.pick/index.js
 var lodash_pick = __webpack_require__("88bc");
 var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
 
 // CONCATENATED MODULE: ./src/mixins/FormField.js
+
 
 
 
@@ -28062,7 +28066,7 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
   },
   computed: {
     canReset: function canReset() {
-      return typeof this.resetValue !== 'undefined' && this.modelValue !== this.resetValue;
+      return typeof this.originalValue !== 'undefined' && this.modelValue !== this.originalValue;
     },
     fieldProps: function fieldProps() {
       return lodash_pick_default()(this, ['label', 'errors', 'required', 'disabled', 'placeholder', 'info', 'tooltip', 'canReset']);
@@ -28072,13 +28076,18 @@ var lodash_pick_default = /*#__PURE__*/__webpack_require__.n(lodash_pick);
 
       return {
         reset: function reset() {
-          _this.$emit('update:modelValue', _this.resetValue);
+          _this.$emit('update:modelValue', _this.originalValue);
         }
       };
     },
     fieldClass: function fieldClass() {
       return "text-small block w-full rounded border-gray-300 border-2 border-solid px-3 py-2 box-border max-w-none ".concat(this.disabled ? 'text-gray-400 bg-gray-50 cursor-not-allowed' : 'text-main bg-white', " ").concat(this.errors.length ? 'border-red-500' : 'border-gray-300');
     }
+  },
+  created: function created() {
+    this.originalValue = Object.assign({
+      originalValue: this.resetValue
+    }).originalValue;
   }
 });
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form/Checkbox.vue?vue&type=script&lang=js&
@@ -52813,9 +52822,6 @@ var MapboxSearchvue_type_template_id_fb37a27c_staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/components/Form/MapboxSearch.vue?vue&type=template&id=fb37a27c&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
-var es_object_assign = __webpack_require__("cca6");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
 var es_regexp_exec = __webpack_require__("ac1f");
