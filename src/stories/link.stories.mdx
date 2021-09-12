@@ -1,0 +1,20 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { RLink } from '../components';
+
+<Meta title="Link" component={RLink} />
+
+# Link
+
+<ArgsTable of={RLink} />
+
+Default
+
+<Canvas>
+  <Story name="Index">
+    {{
+      components: { RLink },
+      template: '<r-app><r-link>Default</r-link></r-app>',
+    }}
+  </Story>
+</Canvas>

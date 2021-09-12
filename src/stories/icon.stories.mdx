@@ -1,0 +1,20 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { RIcon } from '../components';
+
+<Meta title="Icon" component={RIcon} />
+
+# Icon
+
+<ArgsTable of={RIcon} />
+
+Default
+
+<Canvas>
+  <Story name="Index">
+    {{
+      components: { RIcon },
+      template: '<r-app><r-icon>Default</r-icon></r-app>',
+    }}
+  </Story>
+</Canvas>

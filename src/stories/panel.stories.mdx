@@ -1,0 +1,20 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { RPanel } from '../components';
+
+<Meta title="Panel" component={RPanel} />
+
+# Panel
+
+<ArgsTable of={RPanel} />
+
+Default
+
+<Canvas>
+  <Story name="Index">
+    {{
+      components: { RPanel },
+      template: '<r-app><r-panel>Default</r-panel></r-app>',
+    }}
+  </Story>
+</Canvas>

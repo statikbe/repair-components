@@ -1,0 +1,20 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { RApp } from '../components';
+
+<Meta title="App" component={RApp} />
+
+# App
+
+<ArgsTable of={RApp} />
+
+Default
+
+<Canvas>
+  <Story name="Index">
+    {{
+      components: { RApp },
+      template: '<r-app><r-app>Default</r-app></r-app>',
+    }}
+  </Story>
+</Canvas>

@@ -1,0 +1,20 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { RForm } from '../components';
+
+<Meta title="Form" component={RForm} />
+
+# Form
+
+<ArgsTable of={RForm} />
+
+Default
+
+<Canvas>
+  <Story name="Index">
+    {{
+      components: { RForm },
+      template: '<r-app><r-form>Default</r-form></r-app>',
+    }}
+  </Story>
+</Canvas>
