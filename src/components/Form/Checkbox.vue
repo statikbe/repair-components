@@ -16,7 +16,11 @@
           <r-icon v-else :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'" />
         </span>
         <div>
-          <span class="text-base font-medium mr-2 align-middle" v-html="label" />
+          <span class="text-base font-medium mr-2 align-middle" />
+            <slot name="label" v-bind="{ label }">
+              <div v-html="label"></div>
+            </slot>
+          </span>
           <r-icon
             v-if="tooltip"
             v-tooltip="tooltip"
