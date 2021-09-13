@@ -12,6 +12,7 @@
     "yalc": "yarn build && yalc push"
   },
   "main": "./lib/main.js",
+  "type": "module",
   "dependencies": {
     "@tiptap/core": "^2.0.0-beta.81",
     "@tiptap/extension-link": "^2.0.0-beta.18",
