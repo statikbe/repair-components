@@ -16,7 +16,7 @@
           <r-icon v-else :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'" />
         </span>
         <div>
-          <span class="text-base font-medium mr-2 align-middle" />
+          <span class="text-base font-medium mr-2 align-middle">
             <slot name="label" v-bind="{ label }">
               <div v-html="label"></div>
             </slot>

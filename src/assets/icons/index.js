@@ -28,4 +28,4 @@ export {
   mdiGoogle as contact_google,
   mdiLinkedin as contact_linkedin,
   mdiPhone as contact_phone,
-} from '@mdi/js';
+} from 'mdi-es';
