@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "main": "./dist/repair-components.umd.js",
   "files": [
-    "./dist/**",
-    "./src/assets/**"
+    "**"
   ],
   "scripts": {
     "build": "vue-cli-service build --mode=production --target lib lib/main.js",
