@@ -1,6 +1,11 @@
 {
-  "name": "repair-components",
+  "name": "@statikbe/repair-components",
   "version": "0.1.0",
+  "main": "./dist/repair-components.umd.js",
+  "files": [
+    "./dist/**",
+    "./src/assets/**"
+  ],
   "scripts": {
     "build": "vue-cli-service build --mode=production --target lib lib/main.js",
     "lint": "vue-cli-service lint",
@@ -9,9 +14,9 @@
     "docs:dev": "vuepress dev docs",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "yalc": "yarn build && yalc push"
+    "yalc": "yarn build && yalc push",
+    "test": "echo \"No test specified\""
   },
-  "main": "./dist/repair-components.umd.js",
   "dependencies": {
     "@tiptap/core": "^2.0.0-beta.81",
     "@tiptap/extension-link": "^2.0.0-beta.18",
