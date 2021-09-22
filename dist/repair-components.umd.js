@@ -17421,7 +17421,7 @@ module.exports = plugin(function (_ref) {
     // 'all': 'initial', // Make sure inherited styles from parent application get reset
     'display': 'block',
     'fontFamily': theme('fontFamily.base'),
-    'color': theme('colors.primary.DEFAULT'),
+    // 'color': theme('colors.primary.DEFAULT'),
     'marginTop': '0.75em',
     'marginBottom': '0.5em',
     '&:first-child': {

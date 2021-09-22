@@ -5,7 +5,7 @@
 You can either install the full component library:
 
 ```js
-import RepairComponents from 'repair-components';
+import RepairComponents from '@statikbe/repair-components';
 
 Vue.use(RepairComponents, {
   // options (see below)
@@ -16,7 +16,7 @@ Vue.use(RepairComponents, {
 
 ```vue
 <script>
-import { RButton, RSection } from 'repair-components';
+import { RButton, RSection } from '@statikbe/repair-components';
 
 export default {
   components: {
