@@ -275,7 +275,7 @@ export default {
     },
     fieldProps(key) {
       return {
-        resettable: this.form[key] !== this.originalForm[key],
+        resetValue: this.originalForm[key],
         modelValue: this.form[key],
       };
     },
