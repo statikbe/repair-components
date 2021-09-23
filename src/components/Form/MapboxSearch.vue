@@ -4,7 +4,7 @@
     :model-value="modelValue"
     :options="options"
     :loading="isLoading"
-    :placeholder="$t('form_location_search')"
+    :placeholder="$attrs.placeholder || $t('form_location_search')"
     label-by="label"
     track-by="data"
     searchable
