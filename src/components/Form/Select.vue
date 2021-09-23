@@ -3,7 +3,7 @@
     <v-multiselect
       v-bind="$attrs"
       v-on="$listeners"
-      :placeholder="$t('form_select_placeholder')"
+      :placeholder="placeholder || $t('form_select_placeholder')"
       :label="labelBy"
       :show-labels="showLabels"
       :searchable="searchable"
