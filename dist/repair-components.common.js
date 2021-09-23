@@ -31173,7 +31173,7 @@ var lodash_isequal_default = /*#__PURE__*/__webpack_require__.n(lodash_isequal);
   },
   computed: {
     canReset: function canReset() {
-      return typeof this.originalValue !== 'undefined' && lodash_isequal_default()(this.modelValue, this.originalValue);
+      return typeof this.originalValue !== 'undefined' && !lodash_isequal_default()(this.modelValue, this.originalValue);
     },
     fieldProps: function fieldProps() {
       return lodash_pick_default()(this, ['label', 'errors', 'required', 'disabled', 'placeholder', 'info', 'tooltip', 'canReset']);

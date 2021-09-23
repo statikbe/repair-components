@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     canReset() {
-      return typeof this.originalValue !== 'undefined' && isEqual(this.modelValue, this.originalValue);
+      return typeof this.originalValue !== 'undefined' && !isEqual(this.modelValue, this.originalValue);
     },
     fieldProps() {
       return pick(this, ['label', 'errors', 'required', 'disabled', 'placeholder', 'info', 'tooltip', 'canReset']);
