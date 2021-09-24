@@ -218,6 +218,7 @@
     <r-section>
       <r-pagination v-model="page" :pages="78" />
     </r-section>
+    <r-cookies policy-url="/cookies" />
   </r-app>
 </template>
 

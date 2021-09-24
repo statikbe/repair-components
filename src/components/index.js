@@ -1,6 +1,7 @@
 export { RApp } from './App';
 export { RButton } from './Button';
 export { RContainer } from './Container';
+export { RCookies } from './Cookies';
 export {
   RForm,
   RCheckbox,

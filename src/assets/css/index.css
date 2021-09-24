@@ -34,27 +34,27 @@
 
 @layer components {
   .wysiwyg h1 {
-    @apply text-h1;
+    @apply text-h1 text-primary;
   }
 
   .wysiwyg h2 {
-    @apply text-h2;
+    @apply text-h2 text-primary;
   }
 
   .wysiwyg h3 {
-    @apply text-h3;
+    @apply text-h3 text-primary;
   }
 
   .wysiwyg h4 {
-    @apply text-h4;
+    @apply text-h4 text-primary;
   }
 
   .wysiwyg h5 {
-    @apply text-h5;
+    @apply text-h5 text-primary;
   }
 
   .wysiwyg h6 {
-    @apply text-h6;
+    @apply text-h6 text-primary;
   }
 
   .wysiwyg ol {

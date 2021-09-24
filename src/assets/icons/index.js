@@ -11,6 +11,7 @@ export {
   mdiFormatItalic,
   mdiFormatListBulleted,
   mdiFormatListNumbered,
+  mdiCog,
   mdiInformationOutline,
   mdiLink,
   mdiLoading,
