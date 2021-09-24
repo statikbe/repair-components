@@ -63,7 +63,7 @@ export default {
     },
   },
   mounted() {
-    if (this.isCookieSet) {
+    if (this.isCookieSet && !window.location.pathname.includes(this.policyUrl)) {
       this.$modal.show('cookie-banner');
     }
   },
