@@ -1,6 +1,6 @@
 <template>
   <div>
-    <r-modal name="cookie-banner" :dismissable="isCookieSet">
+    <r-modal name="cookie-banner" :dismissable="isCookieSet || isDismissable">
       <h2 class="text-h2 text-primary">{{ $t('cookie_banner_title') }}</h2>
       <p class="mb-6">
         {{ $t('cookie_banner_text') }}
@@ -43,6 +43,7 @@ export default {
     },
   },
   data: () => ({
+    isDismissable: false,
     settings: {
       essential: true,
       marketing: false,
@@ -71,6 +72,8 @@ export default {
     acceptCookies() {
       this.setCookie(true);
 
+      this.isDismissable = true;
+
       this.$modal.hide('cookie-settings');
       this.$modal.hide('cookie-banner');
     },
@@ -89,6 +92,8 @@ export default {
       }
 
       this.setCookie(cookieValue);
+
+      this.isDismissable = true;
     },
     handleSettingsSave() {
       this.handleSettingsUpdate();
