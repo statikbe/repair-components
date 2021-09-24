@@ -31092,12 +31092,12 @@ var Container_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/Container/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"19fc74ec-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cookies/Cookies.vue?vue&type=template&id=795ce398&
-var Cookiesvue_type_template_id_795ce398_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('r-modal',{attrs:{"name":"cookie-banner","dismissable":_vm.isCookieSet}},[_c('h2',{staticClass:"text-h2 text-primary"},[_vm._v(_vm._s(_vm.$t('cookie_banner_title')))]),_c('p',{staticClass:"mb-6"},[_vm._v(" "+_vm._s(_vm.$t('cookie_banner_text'))+" ")]),_c('div',{staticClass:"flex items-center"},[_c('r-link',{staticClass:"no-underline",attrs:{"icon-before":"mdiCog"},on:{"click":function($event){return _vm.$modal.show('cookie-settings')}}},[_vm._v(" "+_vm._s(_vm.$t('cookie_banner_settings'))+" ")]),_c('r-button',{staticClass:"ml-auto",nativeOn:{"click":function($event){return _vm.acceptCookies($event)}}},[_vm._v(_vm._s(_vm.$t('cookie_banner_agree')))])],1)]),_c('r-modal',{attrs:{"name":"cookie-settings"}},[_c('h2',{staticClass:"text-h2 text-primary"},[_vm._v(_vm._s(_vm.$t('cookie_settings_title')))]),_c('p',{staticClass:"mb-6",domProps:{"innerHTML":_vm._s(_vm.$t('cookie_settings_text', { policyUrl: _vm.policyUrl }))}}),_c('div',{staticClass:"mb-6"},[_c('r-checkbox',{attrs:{"label":_vm.$t('cookies_essential_label'),"toggle":"","disabled":""},model:{value:(_vm.settings.essential),callback:function ($$v) {_vm.$set(_vm.settings, "essential", $$v)},expression:"settings.essential"}}),_c('p',{staticClass:"mb-6"},[_vm._v(_vm._s(_vm.$t('cookies_essential_text')))]),_c('r-checkbox',{attrs:{"label":_vm.$t('cookies_analytics_label'),"toggle":""},model:{value:(_vm.settings.analytics),callback:function ($$v) {_vm.$set(_vm.settings, "analytics", $$v)},expression:"settings.analytics"}}),_c('p',{staticClass:"mb-6"},[_vm._v(_vm._s(_vm.$t('cookies_analytics_text')))]),_c('r-checkbox',{attrs:{"label":_vm.$t('cookies_marketing_label'),"toggle":""},model:{value:(_vm.settings.marketing),callback:function ($$v) {_vm.$set(_vm.settings, "marketing", $$v)},expression:"settings.marketing"}}),_c('p',{staticClass:"mb-6"},[_vm._v(_vm._s(_vm.$t('cookies_marketing_text')))])],1),_c('r-button',{nativeOn:{"click":function($event){return _vm.handleSettingsSave($event)}}},[_vm._v(_vm._s(_vm.$t('cookie_settings_save')))])],1)],1)}
-var Cookiesvue_type_template_id_795ce398_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"19fc74ec-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cookies/Cookies.vue?vue&type=template&id=2f5ca90b&
+var Cookiesvue_type_template_id_2f5ca90b_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('r-modal',{attrs:{"name":"cookie-banner","dismissable":_vm.isCookieSet}},[_c('h2',{staticClass:"text-h2 text-primary"},[_vm._v(_vm._s(_vm.$t('cookie_banner_title')))]),_c('p',{staticClass:"mb-6"},[_vm._v(" "+_vm._s(_vm.$t('cookie_banner_text'))+" ")]),_c('div',{staticClass:"flex items-center"},[_c('r-link',{staticClass:"no-underline",attrs:{"icon-before":"mdiCog"},on:{"click":function($event){return _vm.$modal.show('cookie-settings')}}},[_vm._v(" "+_vm._s(_vm.$t('cookie_banner_settings'))+" ")]),_c('r-button',{staticClass:"ml-auto",nativeOn:{"click":function($event){return _vm.acceptCookies($event)}}},[_vm._v(_vm._s(_vm.$t('cookie_banner_agree')))])],1)]),_c('r-modal',{attrs:{"name":"cookie-settings"}},[_c('h2',{staticClass:"text-h2 text-primary"},[_vm._v(_vm._s(_vm.$t('cookie_settings_title')))]),_c('p',{staticClass:"mb-6",domProps:{"innerHTML":_vm._s(_vm.$t('cookie_settings_text', { policyUrl: _vm.policyUrl }))}}),_c('div',{staticClass:"mb-6"},[_c('r-checkbox',{attrs:{"label":_vm.$t('cookies_essential_label'),"toggle":"","disabled":""},model:{value:(_vm.settings.essential),callback:function ($$v) {_vm.$set(_vm.settings, "essential", $$v)},expression:"settings.essential"}}),_c('p',{staticClass:"mb-6"},[_vm._v(_vm._s(_vm.$t('cookies_essential_text')))]),_c('r-checkbox',{attrs:{"label":_vm.$t('cookies_analytics_label'),"toggle":""},model:{value:(_vm.settings.analytics),callback:function ($$v) {_vm.$set(_vm.settings, "analytics", $$v)},expression:"settings.analytics"}}),_c('p',{staticClass:"mb-6"},[_vm._v(_vm._s(_vm.$t('cookies_analytics_text')))]),_c('r-checkbox',{attrs:{"label":_vm.$t('cookies_marketing_label'),"toggle":""},model:{value:(_vm.settings.marketing),callback:function ($$v) {_vm.$set(_vm.settings, "marketing", $$v)},expression:"settings.marketing"}}),_c('p',{staticClass:"mb-6"},[_vm._v(_vm._s(_vm.$t('cookies_marketing_text')))])],1),_c('r-button',{nativeOn:{"click":function($event){return _vm.handleSettingsSave($event)}}},[_vm._v(_vm._s(_vm.$t('cookie_settings_save')))])],1)],1)}
+var Cookiesvue_type_template_id_2f5ca90b_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Cookies/Cookies.vue?vue&type=template&id=795ce398&
+// CONCATENATED MODULE: ./src/components/Cookies/Cookies.vue?vue&type=template&id=2f5ca90b&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
 var es_array_includes = __webpack_require__("caad");
@@ -31164,7 +31164,7 @@ var es_string_includes = __webpack_require__("2532");
   },
   computed: {
     isCookieSet: function isCookieSet() {
-      return this.$cookies.get(this.cookieName) === null;
+      return this.$cookies.get(this.cookieName) !== null;
     }
   },
   watch: {
@@ -31176,7 +31176,7 @@ var es_string_includes = __webpack_require__("2532");
     }
   },
   mounted: function mounted() {
-    if (this.isCookieSet && !window.location.pathname.includes(this.policyUrl)) {
+    if (!this.isCookieSet && !window.location.pathname.includes(this.policyUrl)) {
       this.$modal.show('cookie-banner');
     }
   },
@@ -31230,8 +31230,8 @@ var es_string_includes = __webpack_require__("2532");
 
 var Cookies_component = normalizeComponent(
   Cookies_Cookiesvue_type_script_lang_js_,
-  Cookiesvue_type_template_id_795ce398_render,
-  Cookiesvue_type_template_id_795ce398_staticRenderFns,
+  Cookiesvue_type_template_id_2f5ca90b_render,
+  Cookiesvue_type_template_id_2f5ca90b_staticRenderFns,
   false,
   null,
   null,

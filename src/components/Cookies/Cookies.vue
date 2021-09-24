@@ -51,7 +51,7 @@ export default {
   }),
   computed: {
     isCookieSet() {
-      return this.$cookies.get(this.cookieName) === null;
+      return this.$cookies.get(this.cookieName) !== null;
     },
   },
   watch: {
@@ -63,7 +63,7 @@ export default {
     },
   },
   mounted() {
-    if (this.isCookieSet && !window.location.pathname.includes(this.policyUrl)) {
+    if (!this.isCookieSet && !window.location.pathname.includes(this.policyUrl)) {
       this.$modal.show('cookie-banner');
     }
   },
