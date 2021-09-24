@@ -1,6 +1,6 @@
 <template>
   <div>
-    <r-modal name="cookie-banner" :dismissable="isCookieSet || isDismissable">
+    <r-modal name="cookie-banner" :dismissable="isCookieSet">
       <h2 class="text-h2 text-primary">{{ $t('cookie_banner_title') }}</h2>
       <p class="mb-6">
         {{ $t('cookie_banner_text') }}
@@ -52,7 +52,7 @@ export default {
   }),
   computed: {
     isCookieSet() {
-      return this.$cookies.get(this.cookieName) !== null;
+      return this.isDismissable || this.$cookies.get(this.cookieName) !== null;
     },
   },
   watch: {
@@ -72,10 +72,7 @@ export default {
     acceptCookies() {
       this.setCookie(true);
 
-      this.isDismissable = true;
-
-      this.$modal.hide('cookie-settings');
-      this.$modal.hide('cookie-banner');
+      this.closeAll();
     },
     handleSettingsUpdate(settings) {
       const s = settings || this.settings;
@@ -92,21 +89,26 @@ export default {
       }
 
       this.setCookie(cookieValue);
-
-      this.isDismissable = true;
     },
     handleSettingsSave() {
       this.handleSettingsUpdate();
 
-      this.$modal.hide('cookie-settings');
-      this.$modal.hide('cookie-banner');
+      this.closeAll();
     },
     setCookie(value) {
       this.$cookies.set(this.cookieName, value, '365d');
 
+      this.isDismissable = true;
+
       if (window.dataLayer) {
         window.dataLayer.push({ event: 'cookie_refresh' });
       }
+    },
+    closeAll() {
+      setTimeout(() => {
+        this.$modal.hide('cookie-settings');
+        this.$modal.hide('cookie-banner');
+      }, 100);
     },
   },
 };
