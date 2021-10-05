@@ -2,30 +2,53 @@
 
 This package contains Vue components for Repair projects, styled with TailwindCSS.
 
-## Getting started
+## Installation
 
 Install the package to your Repair project:
 
 ```
-@todo
+yarn add @statikbe/repair-components
 ```
 
-## Local development
+Then install the plugin:
 
-For local development, it is highly recommended to use `yalc` to link up this package to your Repair projects.
+```js
+import RepairComponents from '@statikbe/repair-components';
 
-After cloning this repository, publish it to the `yalc` repository:
-
-```
-yalc publish
+Vue.use(RepairComponents);
 ```
 
-Then, in your Repair projects, link your local build like so:
+Make sure to add the vue-i18n instance to your Vue initialization to make translations work:
 
+```js
+import { i18n } from '@statikbe/repair-components';
+
+new Vue({
+  i18n,
+}).$mount('#app');
 ```
-yalc link repair-components
+
+Alternatively, if using Nuxt, make sure to pass the existing i18n instance from the nuxt-i18n module, will get extended with the necessary translations:
+
+```js
+@todo check repmap
 ```
 
-Now, if you make changes in your local components repository, you can quickly build and push the package to every local Repair project using `yarn build && yalc push` (or `yarn yalc` for short).
+### Options
 
-**Note:** After installing or removing Yarn packages in your Repair project, the components package has to be pushed again with `yalc push`.
+You can pass some options:
+
+```js
+Vue.use(RepairComponents, {
+  i18n, // for Nuxt, see above
+  icons: {
+    myIcon: '...',
+    // key = identifier (as passed to r-icon name prop)
+    // value = SVG path "d" attribute as string
+  },
+});
+```
+
+## Documentation
+
+Check out the components and their props at the Storybook [documentation](https://statikbe.github.io/repair-components/).
