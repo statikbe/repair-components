@@ -57443,7 +57443,9 @@ var main_Plugin = {
     var icons = options.icons,
         i18n = options.i18n;
     Vue.use(vue_i18n_esm);
-    Vue.use(v_tooltip_esm["a" /* default */]);
+    Vue.use(v_tooltip_esm["a" /* default */], {
+      boundariesElement: document.body
+    });
     Vue.use(ssr_nocss_default.a);
     Vue.use(vue_cookies_default.a);
     Vue.prototype.$icons = _objectSpread2(_objectSpread2({}, icons_namespaceObject), icons || {});

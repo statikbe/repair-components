@@ -139,7 +139,12 @@
     </r-section>
     <r-section>
       <div class="flex justify-between">
-        <r-button>Primary</r-button>
+        <r-button
+          v-tooltip="
+            'Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long. Tooltip very long.'
+          "
+          >Primary</r-button
+        >
         <r-button ghost>Primary ghost</r-button>
         <r-button color="secondary">Secondary</r-button>
         <r-button color="secondary" ghost>Secondary ghost</r-button>
