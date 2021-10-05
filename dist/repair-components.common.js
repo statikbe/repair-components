@@ -57436,7 +57436,7 @@ var tailwind_config_default = /*#__PURE__*/__webpack_require__.n(tailwind_config
 
 
 var main_isBrowser = typeof window !== 'undefined';
-var i18nInstance;
+var i18nInstance = new vue_i18n_esm();
 var main_Plugin = {
   install: function install(Vue) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -57447,7 +57447,7 @@ var main_Plugin = {
     Vue.use(ssr_nocss_default.a);
     Vue.use(vue_cookies_default.a);
     Vue.prototype.$icons = _objectSpread2(_objectSpread2({}, icons_namespaceObject), icons || {});
-    i18nInstance = i18n || new vue_i18n_esm();
+    i18nInstance = i18n || i18nInstance;
     i18nInstance.mergeLocaleMessage('de', src_i18n.de);
     i18nInstance.mergeLocaleMessage('en', src_i18n.en);
     i18nInstance.mergeLocaleMessage('fr', src_i18n.fr);
