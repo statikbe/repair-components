@@ -3,8 +3,9 @@
     <v-multiselect
       v-bind="$attrs"
       v-on="$listeners"
-      :placeholder="placeholder || $t('form_select_placeholder')"
+      :placeholder="placeholder || defaultPlaceholder"
       :label="labelBy"
+      :track-by="trackBy"
       :show-labels="showLabels"
       :searchable="searchable"
       :value="internalValue"
@@ -50,6 +51,11 @@ export default {
   data: () => ({
     internalValue: null,
   }),
+  computed: {
+    defaultPlaceholder() {
+      return this.searchable ? this.$t('form_select_placeholder') : this.$t('form_select_search_placeholder');
+    },
+  },
   watch: {
     modelValue() {
       this.setInternalValue();

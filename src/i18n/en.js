@@ -23,4 +23,5 @@ export default {
   form_image_add: 'Add image(s)',
   form_location_search: 'Find a location',
   form_select_placeholder: 'Click to select',
+  form_select_search_placeholder: 'Type to search',
 };

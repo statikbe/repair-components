@@ -24,4 +24,5 @@ export default {
   form_image_add: 'Afbeelding(en) toevoegen',
   form_location_search: 'Zoek een plaats',
   form_select_placeholder: 'Klik om te selecteren',
+  form_select_search_placeholder: 'Typ om te zoeken',
 };

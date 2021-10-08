@@ -24,4 +24,5 @@ export default {
   form_image_add: 'Bild hinzufügen',
   form_location_search: 'Einen Standort finden',
   form_select_placeholder: 'Klicke um auszuwählen',
+  form_select_search_placeholder: 'Typ zum Suchen',
 };
