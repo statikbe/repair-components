@@ -1,6 +1,6 @@
 import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
 
-import { RForm } from '../components';
+import { RApp, RForm, RInput, RTextarea, RButton, RCheckbox } from '../components';
 
 <Meta title="Form" component={RForm} />
 
@@ -8,13 +8,25 @@ import { RForm } from '../components';
 
 <ArgsTable of={RForm} />
 
-Default
+## Form
 
 <Canvas>
-  <Story name="Index">
+  <Story name="Form">
     {{
-      components: { RForm },
-      template: '<r-app><r-form>Default</r-form></r-app>',
+      components: { RApp, RForm, RInput, RTextarea, RButton, RCheckbox },
+      template:
+        '<r-app><r-form><r-input label="Name"/><r-input label="Email"/><r-textarea label="Message"/><r-button>Submit</r-button></r-form></r-app>',
+    }}
+  </Story>
+</Canvas>
+
+## Checkbox
+
+<Canvas>
+  <Story name="Checkbox">
+    {{
+      components: { RApp, RCheckbox },
+      template: '<r-app><r-checkbox label="Checkbox"/></r-app>',
     }}
   </Story>
 </Canvas>

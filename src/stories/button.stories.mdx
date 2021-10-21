@@ -1,6 +1,6 @@
 import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
 
-import { RButton } from '../components';
+import { RApp, RButton } from '../components';
 
 <Meta title="Button" component={RButton} />
 
@@ -8,13 +8,79 @@ import { RButton } from '../components';
 
 <ArgsTable of={RButton} />
 
-Default
+## Default
 
 <Canvas>
-  <Story name="Index">
+  <Story name="Default">
     {{
-      components: { RButton },
-      template: '<r-app><r-button>Default</r-button></r-app>',
+      components: { RApp, RButton },
+      template: `<r-app><r-button>Default</r-button></r-app>`,
+    }}
+  </Story>
+</Canvas>
+
+## Secondary
+
+<Canvas>
+  <Story name="Secondary">
+    {{
+      components: { RApp, RButton },
+      template: `<r-app><r-button color="secondary">Secondary</r-button></r-app>`,
+    }}
+  </Story>
+</Canvas>
+
+## Ghost
+
+<Canvas>
+  <Story name="Ghost">
+    {{
+      components: { RApp, RButton },
+      template: `<r-app><r-button ghost>Ghost</r-button></r-app>`,
+    }}
+  </Story>
+</Canvas>
+
+## Contrast
+
+<Canvas>
+  <Story name="Contrast">
+    {{
+      components: { RApp, RButton },
+      template: `<r-app><r-section class="bg-primary"><r-button contrast>Ghost</r-button></r-section></r-app>`,
+    }}
+  </Story>
+</Canvas>
+
+## Icons
+
+<Canvas>
+  <Story name="Icons">
+    {{
+      components: { RApp, RButton },
+      template: `
+        <r-app>
+          <r-button icon-before="mdiCog">Before</r-button>
+          <br/>
+          <br/>
+          <r-button icon-after="mdiChevronRight">After</r-button>
+        </r-app>
+      `,
+    }}
+  </Story>
+</Canvas>
+
+## Loading
+
+<Canvas>
+  <Story name="Loading">
+    {{
+      components: { RApp, RButton },
+      template: `
+        <r-app>
+          <r-button loading>Loading</r-button>
+        </r-app>
+      `,
     }}
   </Story>
 </Canvas>

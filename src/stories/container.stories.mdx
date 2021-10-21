@@ -1,6 +1,6 @@
 import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
 
-import { RContainer } from '../components';
+import { RApp, RContainer } from '../components';
 
 <Meta title="Container" component={RContainer} />
 
@@ -11,9 +11,9 @@ import { RContainer } from '../components';
 Default
 
 <Canvas>
-  <Story name="Index">
+  <Story name="Container">
     {{
-      components: { RContainer },
+      components: { RApp, RContainer },
       template: '<r-app><r-container>Default</r-container></r-app>',
     }}
   </Story>
