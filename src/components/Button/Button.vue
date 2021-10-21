@@ -98,9 +98,9 @@ export default {
             classes += ` hover:bg-${color}-dark hover:border-${color}-dark`;
           }
         } else {
-          classes = `text-${color} bg-${color} bg-opacity-0 border-${color}`;
+          classes = `text-${color} bg-transparent border-${color}`;
           if (addHoverClasses) {
-            classes += ` hover:text-${color}-contrast hover:bg-opacity-100 hover:border-${color}`;
+            classes += ` hover:text-${color}-contrast hover:bg-${color} hover:border-${color}`;
           }
         }
       } else {
@@ -110,9 +110,9 @@ export default {
             classes += ` hover:bg-${color}-dark hover:text-${color}-contrast hover:border-${color}-dark`;
           }
         } else {
-          classes = `text-${color}-contrast bg-${color}-contrast bg-opacity-0 border-${color}-contrast`;
+          classes = `text-${color}-contrast bg-transparent border-${color}-contrast`;
           if (addHoverClasses) {
-            classes += ` hover:bg-opacity-100 hover:text-${color}`;
+            classes += ` hover:bg-${color}-contrast hover:text-${color}`;
           }
         }
       }

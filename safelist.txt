@@ -15,7 +15,9 @@ hover:text-main
 text-primary-contrast
 bg-primary
 border-primary
+hover:bg-primary
 hover:bg-primary-dark
+hover:bg-primary-contrast
 hover:border-primary-dark
 text-primary
 hover:text-primary-contrast
@@ -27,7 +29,9 @@ hover:text-primary
 text-secondary-contrast
 bg-secondary
 border-secondary
+hover:bg-secondary
 hover:bg-secondary-dark
+hover:bg-secondary-contrast
 hover:border-secondary-dark
 text-secondary
 hover:text-secondary-contrast
