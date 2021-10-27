@@ -2,12 +2,12 @@
   <component
     v-on="$listeners"
     :is="component"
-    :href="href"
     class="inline-flex items-center font-base font-bold text-base text-black transition-colors underline"
     :class="[
       { 'cursor-pointer hover:no-underline': !disabled, 'opacity-60 cursor-not-allowed': disabled },
       color ? `hover:text-${color}` : '',
     ]"
+    v-bind="{ ...$attrs }"
   >
     <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" :class="`text-${color}`" />
     <slot />
@@ -35,10 +35,6 @@ export default {
     button: {
       type: Boolean,
       default: () => false,
-    },
-    href: {
-      type: String,
-      default: () => 'javascript:void(0)',
     },
     disabled: {
       type: Boolean,

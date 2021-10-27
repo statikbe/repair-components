@@ -5,6 +5,7 @@
     :to="to"
     :class="dynamicClasses"
     :disabled="$attrs.disabled || loading"
+    v-bind="{ ...$attrs }"
   >
     <div class="flex align-center" :class="{ 'opacity-0': loading }">
       <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" />
