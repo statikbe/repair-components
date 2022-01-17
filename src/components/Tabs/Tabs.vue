@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="border-0 border-b-2 border-solid border-gray-300">
+    <div class="border-0 border-b-2 border-gray-300 border-solid">
       <button
         type="button"
         v-for="value in values"
@@ -17,11 +17,7 @@
         </div>
       </button>
     </div>
-    <div
-      v-if="hasContent"
-      class="p-6 pb-0 border-2 border-t-0 border-b-0 border-solid border-gray-300"
-      :class="`bg-${bg}`"
-    >
+    <div v-if="hasContent" class="p-6 border-2 border-t-0 border-gray-300 border-solid" :class="`bg-${bg}`">
       <slot name="default" :value="modelValue"></slot>
     </div>
   </div>

@@ -28337,9 +28337,11 @@ __webpack_require__.d(icons_namespaceObject, "mdiUndo", function() { return dist
 __webpack_require__.d(icons_namespaceObject, "contact_website", function() { return dist_mdiEarth; });
 __webpack_require__.d(icons_namespaceObject, "contact_email", function() { return dist_mdiEmail; });
 __webpack_require__.d(icons_namespaceObject, "contact_facebook", function() { return dist_mdiFacebook; });
+__webpack_require__.d(icons_namespaceObject, "contact_instagram", function() { return dist_mdiInstagram; });
 __webpack_require__.d(icons_namespaceObject, "contact_google", function() { return dist_mdiGoogle; });
 __webpack_require__.d(icons_namespaceObject, "contact_linkedin", function() { return dist_mdiLinkedin; });
 __webpack_require__.d(icons_namespaceObject, "contact_phone", function() { return dist_mdiPhone; });
+__webpack_require__.d(icons_namespaceObject, "contact_mobile", function() { return dist_mdiCellphone; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -57024,12 +57026,12 @@ var Section_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/Section/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"19fc74ec-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Tabs/Tabs.vue?vue&type=template&id=ff38d00a&
-var Tabsvue_type_template_id_ff38d00a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"border-0 border-b-2 border-solid border-gray-300"},_vm._l((_vm.values),function(value){return _c('button',{key:value,staticClass:"p-0 border-2 border-b-0 border-solid cursor-pointer",class:_vm.isActive(value) ? ("bg-" + _vm.bg + " border-gray-300") : 'bg-gray-100 border-gray-100',attrs:{"type":"button"},on:{"click":function($event){return _vm.$emit('update:modelValue', value)}}},[_c('div',{staticClass:"relative top-[2px] p-2 border-0 border-b-2 border-solid min-w-[100px] text-small",class:_vm.isActive(value) ? ("border-" + _vm.bg) : 'border-gray-300'},[_vm._v(" "+_vm._s((_vm.labels && _vm.labels[value]) || value)+" ")])])}),0),(_vm.hasContent)?_c('div',{staticClass:"p-6 pb-0 border-2 border-t-0 border-b-0 border-solid border-gray-300",class:("bg-" + _vm.bg)},[_vm._t("default",null,{"value":_vm.modelValue})],2):_vm._e()])}
-var Tabsvue_type_template_id_ff38d00a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"19fc74ec-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Tabs/Tabs.vue?vue&type=template&id=5d179484&
+var Tabsvue_type_template_id_5d179484_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"border-0 border-b-2 border-gray-300 border-solid"},_vm._l((_vm.values),function(value){return _c('button',{key:value,staticClass:"p-0 border-2 border-b-0 border-solid cursor-pointer",class:_vm.isActive(value) ? ("bg-" + _vm.bg + " border-gray-300") : 'bg-gray-100 border-gray-100',attrs:{"type":"button"},on:{"click":function($event){return _vm.$emit('update:modelValue', value)}}},[_c('div',{staticClass:"relative top-[2px] p-2 border-0 border-b-2 border-solid min-w-[100px] text-small",class:_vm.isActive(value) ? ("border-" + _vm.bg) : 'border-gray-300'},[_vm._v(" "+_vm._s((_vm.labels && _vm.labels[value]) || value)+" ")])])}),0),(_vm.hasContent)?_c('div',{staticClass:"p-6 border-2 border-t-0 border-gray-300 border-solid",class:("bg-" + _vm.bg)},[_vm._t("default",null,{"value":_vm.modelValue})],2):_vm._e()])}
+var Tabsvue_type_template_id_5d179484_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Tabs/Tabs.vue?vue&type=template&id=ff38d00a&
+// CONCATENATED MODULE: ./src/components/Tabs/Tabs.vue?vue&type=template&id=5d179484&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/@vue/cli-plugin-babel/node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Tabs/Tabs.vue?vue&type=script&lang=js&
 
@@ -57037,10 +57039,6 @@ var Tabsvue_type_template_id_ff38d00a_staticRenderFns = []
 
 
 
-//
-//
-//
-//
 //
 //
 //
@@ -57138,8 +57136,8 @@ var Tabsvue_type_template_id_ff38d00a_staticRenderFns = []
 
 var Tabs_component = normalizeComponent(
   Tabs_Tabsvue_type_script_lang_js_,
-  Tabsvue_type_template_id_ff38d00a_render,
-  Tabsvue_type_template_id_ff38d00a_staticRenderFns,
+  Tabsvue_type_template_id_5d179484_render,
+  Tabsvue_type_template_id_5d179484_staticRenderFns,
   false,
   null,
   null,
@@ -57302,6 +57300,11 @@ const mdiEmail = "M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0
 const mdiFacebook = "M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z";
 /* harmony default export */ var dist_mdiFacebook = (mdiFacebook);
 
+// CONCATENATED MODULE: ./node_modules/mdi-es/dist/mdiInstagram.js
+// Material Design Icons v6.1.95
+const mdiInstagram = "M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z";
+/* harmony default export */ var dist_mdiInstagram = (mdiInstagram);
+
 // CONCATENATED MODULE: ./node_modules/mdi-es/dist/mdiGoogle.js
 // Material Design Icons v6.1.95
 const mdiGoogle = "M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z";
@@ -57316,6 +57319,11 @@ const mdiLinkedin = "M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A
 // Material Design Icons v6.1.95
 const mdiPhone = "M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z";
 /* harmony default export */ var dist_mdiPhone = (mdiPhone);
+
+// CONCATENATED MODULE: ./node_modules/mdi-es/dist/mdiCellphone.js
+// Material Design Icons v6.1.95
+const mdiCellphone = "M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z";
+/* harmony default export */ var dist_mdiCellphone = (mdiCellphone);
 
 // CONCATENATED MODULE: ./src/assets/icons/index.js
 
