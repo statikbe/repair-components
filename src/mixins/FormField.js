@@ -43,7 +43,7 @@ export default {
       default: () => null,
     },
     tooltip: {
-      type: String,
+      type: [String, Object],
       default: () => null,
     },
   },
