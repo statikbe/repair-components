@@ -16,7 +16,7 @@
       >
         <span
           class="flex items-center flex-grow-0 flex-shrink-0"
-          :class="{ 'text-[32px] mr-2': toggle, 'mt-1 mr-2': !toggle }"
+          :class="{ 'text-[32px] mr-2': toggle, 'mt-1 mr-2': !toggle, 'text-primary': isChecked }"
         >
           <r-icon v-if="isChecked" :name="toggle ? 'mdiToggleSwitch' : 'mdiCheckboxMarked'" />
           <r-icon v-else :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'" />
