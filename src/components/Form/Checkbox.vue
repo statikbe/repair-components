@@ -10,13 +10,19 @@
       @change="onChange"
     />
     <label :for="htmlId" class="cursor-pointer">
-      <div class="flex items-start" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
-        <span class="mr-2 flex-shrink-0 flex-grow-0 flex items-center mt-1" :class="{ 'text-huge': toggle }">
+      <div
+        class="flex"
+        :class="{ 'opacity-60 cursor-not-allowed': disabled, 'items-center': toggle, 'items-start': !toggle }"
+      >
+        <span
+          class="flex items-center flex-grow-0 flex-shrink-0"
+          :class="{ 'text-[32px] mr-2': toggle, 'mt-1 mr-2': !toggle }"
+        >
           <r-icon v-if="isChecked" :name="toggle ? 'mdiToggleSwitch' : 'mdiCheckboxMarked'" />
           <r-icon v-else :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'" />
         </span>
-        <div>
-          <span class="text-base font-medium mr-2 align-middle">
+        <div :class="{ flex: toggle }">
+          <span class="mr-2 text-base font-medium align-middle">
             <slot name="label" v-bind="{ label }">
               <span v-html="label"></span>
             </slot>
@@ -25,7 +31,7 @@
             v-if="tooltip"
             v-tooltip="tooltip"
             name="mdiInformationOutline"
-            class="relative text-tiny align-middle"
+            class="relative align-middle text-tiny"
           />
         </div>
       </div>
