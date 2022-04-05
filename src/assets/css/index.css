@@ -21,6 +21,7 @@
 
   * {
     font-family: 'Titillium Web', sans-serif;
+    @apply antialiased;
   }
 
   a {
