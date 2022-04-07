@@ -3,19 +3,19 @@
     <slot name="label" v-bind="{ id, canReset, required, label, tooltip }">
       <div class="flex">
         <label v-if="label" :for="id" class="cursor-pointer">
-          <span class="text-base font-bold mr-2">{{ label }}</span>
+          <span class="mr-2 text-base font-bold">{{ label }}</span>
           <r-icon
             v-if="tooltip"
             v-tooltip="tooltip"
             name="mdiInformationOutline"
-            class="relative text-tiny mr-2 align-middle"
+            class="relative mr-2 align-middle text-tiny"
           />
-          <small v-if="!required" class="opacity-50 align-baseline mr-2">{{ $t('form_field_optional') }}</small>
+          <small v-if="!required" class="mr-2 align-baseline opacity-50">{{ $t('form_field_optional') }}</small>
         </label>
         <a
           v-if="canReset"
           href="javascript:void(0)"
-          class="text-small ml-auto"
+          class="ml-auto text-small"
           @click="$emit('reset')"
           v-tooltip="$t('form_field_reset')"
         >
@@ -23,11 +23,11 @@
         </a>
       </div>
     </slot>
-    <div v-if="info" v-html="info" class="text-small opacity-50" />
+    <div v-if="info" v-html="info" class="opacity-50 text-small" />
     <div class="mt-1">
       <slot name="default" v-bind="{ id }"></slot>
     </div>
-    <div v-if="errors" class="text-small text-error font-bold mt-1" v-html="formattedErrors"></div>
+    <div v-if="errors" class="mt-1 font-bold text-small text-error" v-html="formattedErrors"></div>
   </div>
 </template>
 
@@ -62,7 +62,7 @@ export default {
       default: () => null,
     },
     tooltip: {
-      type: String,
+      type: [String, Object],
       default: () => null,
     },
   },
