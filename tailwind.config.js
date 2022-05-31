@@ -4,7 +4,7 @@ const defaultColors = require('tailwindcss/colors');
 const colors = {
   ...defaultColors,
   main: {
-    DEFAULT: defaultColors.gray[700],
+    DEFAULT: '#333333',
     dark: defaultColors.gray[900],
     contrast: 'white',
   },
