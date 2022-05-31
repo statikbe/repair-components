@@ -2,14 +2,19 @@
   <component
     v-on="$listeners"
     :is="component"
-    class="inline-flex items-center font-base font-bold text-base text-black transition-colors underline"
+    class="inline-flex items-center text-base font-semibold text-black underline transition-colors font-base group"
     :class="[
       { 'cursor-pointer hover:no-underline': !disabled, 'opacity-60 cursor-not-allowed': disabled },
       color ? `hover:text-${color}` : '',
     ]"
     v-bind="{ ...$attrs }"
   >
-    <r-icon v-if="iconBefore" :name="iconBefore" class="mr-2" :class="`text-${color}`" />
+    <r-icon
+      v-if="iconBefore"
+      :name="iconBefore"
+      class="mr-2 transition-transform duration-300 ease-in-out transform group-hover:translate-x-1"
+      :class="`text-${color}`"
+    />
     <slot />
     <r-icon v-if="iconAfter" :name="iconAfter" class="ml-2" :class="`text-${color}`" />
   </component>
