@@ -1,5 +1,5 @@
 <template>
-  <div class="py-6" :class="color && `bg-${color} text-${color}-contrast`">
+  <div class="py-6 sm:py-12" :class="color && `bg-${color} text-${color}-contrast`">
     <r-container v-if="container">
       <slot />
     </r-container>

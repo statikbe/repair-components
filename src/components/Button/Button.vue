@@ -15,7 +15,7 @@
       <r-icon
         v-if="iconAfter"
         :name="iconAfter"
-        class="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+        class="ml-2 transition-transform duration-300 ease-in-out transform group-hover:translate-x-1"
       />
     </div>
     <div v-show="loading" class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
@@ -105,7 +105,7 @@ export default {
         } else {
           classes = `text-${color} bg-transparent border-${color} font-semibold ${iconAfter ? 'group' : ''}`;
           if (addHoverClasses) {
-            classes += ` hover:text-${color}-contrast hover:bg-${color} hover:border-${color} ${
+            classes += ` hover:text-${color}-contrast hover:bg-${color} hover:border-${color} font-semibold ${
               iconAfter ? 'group' : ''
             }`;
           }
@@ -123,7 +123,7 @@ export default {
             iconAfter ? 'group' : ''
           }`;
           if (addHoverClasses) {
-            classes += ` hover:bg-${color}-contrast hover:text-${color} ${iconAfter ? 'group' : ''}`;
+            classes += ` hover:bg-${color}-contrast hover:text-${color} font-semibold ${iconAfter ? 'group' : ''}`;
           }
         }
       }
