@@ -1,6 +1,6 @@
 <template>
   <component
-    class="relative inline-block px-8 py-3 font-bold no-underline transition-colors border-2 border-solid rounded-full font-base text-button"
+    class="relative inline-block px-8 py-3 antialiased font-bold no-underline transition-colors border-2 border-solid rounded-full font-base text-button"
     :is="component"
     :to="to"
     :class="dynamicClasses"

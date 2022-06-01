@@ -2,7 +2,7 @@
   <r-app>
     <r-section color="primary"> Repair Maps </r-section>
     <r-section class="bg-gray-100">
-      <h2 class="text-h2 text-center">Step 1</h2>
+      <h2 class="antialiased text-center text-h2">Step 1</h2>
       <p class="text-center">Contact information of the initiative</p>
       <r-link>Contact information of the initiative</r-link>
     </r-section>

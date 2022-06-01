@@ -1,9 +1,10 @@
 export default {
   cookie_banner_title: 'Diese Webseite verwendet Cookies',
   cookie_banner_text:
-    'Diese Webseite verwendet Cookies um das Besuchererlebnis zu verbessern. Klicken Sie auf "Zustimmen", um alle Cookies zu akzeptieren, oder gehen Sie zu den Cookie-Einstellungen, um Ihre Einstellungen zu verwalten.',
-  cookie_banner_agree: 'Zustimmen',
-  cookie_banner_settings: 'Cookie-Einstellungen',
+    'Wenn Sie "Alle Cookies akzeptieren" wählen, erklären Sie sich mit der Verwendung von Cookies einverstanden, die uns helfen, Ihnen ein besseres Nutzererlebnis zu bieten und die Nutzung der Website zu analysieren. Wenn Sie auf "Einstellen Ihrer Präferenzen" klicken, können Sie wählen, welche Cookies Sie zulassen möchten. Nur die wichtigsten Cookies sind für das ordnungsgemäße Funktionieren unserer Website erforderlich und können nicht abgelehnt werden.',
+  cookie_banner_accept: 'Alle Cookies akzeptieren',
+  cookie_banner_accept_necessary: 'Nur notwendige Cookies akzeptieren',
+  cookie_banner_preferences: 'Einstellen Ihrer Präferenzen',
   cookie_settings_title: 'Cookie-Einstellungen',
   cookie_settings_text:
     'Unsere Webseite verwendet drei Arten von Cookies. Sie können Ihre Einstellungen jederzeit anpassen. Wenn Sie mehr darüber erfahren möchten, was Cookies sind und welche Cookies wir sammeln, lesen Sie bitte unsere <a href=":privacyUrl">Cookie-Richtlinie</a>.',
@@ -13,7 +14,10 @@ export default {
     'ermöglichen uns, die Nutzung der Webseite zu analysieren und das Besuchererlebnis zu verbessern.',
   cookies_essential_label: 'Funktionelle Cookies',
   cookies_essential_text:
-    'sind essentielle Cookies, die sicherstellen, dass die Webseite ordnungsgemäss funktioniert und dass Ihre Präferenzen (z.B. Sprache, Region) gespeichert werden.',
+    'sind aus technischen Gründen notwendig. Ohne sie würde diese Website möglicherweise nicht richtig funktionieren.',
+  cookies_functional_label: 'Funktionelle Cookies',
+  cookies_functional_text:
+    'sind für bestimmte Funktionen der Website erforderlich. Ohne sie können einige Funktionen deaktiviert sein.',
   cookies_marketing_label: 'Marketing Cookies',
   cookies_marketing_text:
     'ermöglichen uns, Ihre Erfahrung zu personalisieren und Ihnen relevante Inhalte und Angebote, auf dieser Webseite und anderen Webseiten, zu senden.',
