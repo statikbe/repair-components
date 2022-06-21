@@ -107,16 +107,15 @@ export default {
         }
       } else {
         if (groupValues) {
-          this.internalValue = modelValue.map((value) => {
-            options.find((option) => {
-              option[groupValues].find((optionValue) => {
-                if (optionValue === value) {
-                  return value.value;
-                }
-              });
+          const values = [];
+          options.forEach((option) => {
+            option[groupValues].forEach((value) => {
+              if (modelValue.includes(value[trackBy])) {
+                values.push(value);
+              }
             });
           });
-          console.log(this.internalValue);
+          this.internalValue = values;
         } else {
           this.internalValue = options.filter((option) => modelValue.includes(option[trackBy])) || null;
         }
@@ -132,7 +131,7 @@ export default {
 
       if (!multiple) {
         if (groupValues) {
-          this.$emit('update:modelValue', value.value);
+          this.$emit('update:modelValue', value[trackBy]);
         } else {
           this.$emit('update:modelValue', trackBy ? value[trackBy] : value);
         }

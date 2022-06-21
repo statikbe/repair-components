@@ -108,12 +108,13 @@
             { name: 'React', value: 'react' },
             { name: 'Angular', value: 'angular' },
           ]"
-          :multiple="true"
+          :multiple="false"
         />
         <r-select
           v-model="form.selectGroup"
           label="Select with categories"
           label-by="name"
+          track-by="value"
           group-values="libs"
           group-label="language"
           searchable="searchable"
