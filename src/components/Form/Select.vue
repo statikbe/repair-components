@@ -11,6 +11,9 @@
       :value="internalValue"
       :allow-empty="!fieldProps.required"
       :disabled="disabled"
+      :group-label="groupLabel"
+      :group-values="groupValues"
+      :group-select="groupSelect"
       @input="handleInput"
     >
       <slot v-if="$slots.option" name="option" />
@@ -47,6 +50,18 @@ export default {
       type: Boolean,
       default: () => false,
     },
+    groupLabel: {
+      type: String,
+      default: () => null,
+    },
+    groupValues: {
+      type: String,
+      default: () => null,
+    },
+    groupSelect: {
+      type: Boolean,
+      default: () => false,
+    },
   },
   data: () => ({
     internalValue: null,
@@ -68,6 +83,8 @@ export default {
     setInternalValue() {
       const {
         trackBy,
+        // groupLabel,
+        groupValues,
         modelValue,
         $attrs: { options, multiple },
       } = this;
@@ -77,19 +94,48 @@ export default {
       }
 
       if (!multiple) {
-        this.internalValue = options.find((option) => option[trackBy] == modelValue) || null;
+        if (groupValues) {
+          options.find((option) => {
+            option[groupValues].find((value) => {
+              if (value.value === modelValue) {
+                this.internalValue = value;
+              }
+            });
+          });
+        } else {
+          this.internalValue = options.find((option) => option[trackBy] == modelValue) || null;
+        }
       } else {
-        this.internalValue = options.filter((option) => modelValue.includes(option[trackBy])) || null;
+        if (groupValues) {
+          this.internalValue = modelValue.map((value) => {
+            options.find((option) => {
+              option[groupValues].find((optionValue) => {
+                if (optionValue === value) {
+                  return value.value;
+                }
+              });
+            });
+          });
+          console.log(this.internalValue);
+        } else {
+          this.internalValue = options.filter((option) => modelValue.includes(option[trackBy])) || null;
+        }
       }
     },
     handleInput(value) {
       const {
         trackBy,
+        // groupLabel,
+        groupValues,
         $attrs: { multiple },
       } = this;
 
       if (!multiple) {
-        this.$emit('update:modelValue', trackBy ? value[trackBy] : value);
+        if (groupValues) {
+          this.$emit('update:modelValue', value.value);
+        } else {
+          this.$emit('update:modelValue', trackBy ? value[trackBy] : value);
+        }
       } else {
         this.$emit('update:modelValue', trackBy ? value.map((option) => option[trackBy]) : value);
         // something is wrong with multiple select

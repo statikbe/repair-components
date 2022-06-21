@@ -99,15 +99,51 @@
         </div>
         <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="hallo" optional />
         <r-select
-          v-model="form.select"
-          label="Select"
+          v-model="form.selectNoGroup"
+          label="Select with no categories"
           label-by="name"
           track-by="value"
           :options="[
-            { name: 'one', value: 1 },
-            { name: 'two', value: 2 },
+            { name: 'Vue', value: 'vue' },
+            { name: 'React', value: 'react' },
+            { name: 'Angular', value: 'angular' },
           ]"
           :multiple="true"
+        />
+        <r-select
+          v-model="form.selectGroup"
+          label="Select with categories"
+          label-by="name"
+          group-values="libs"
+          group-label="language"
+          searchable="searchable"
+          :options="[
+            {
+              language: 'Javascript',
+              libs: [
+                { name: 'Vue JS', value: 'vue' },
+                { name: 'Svelte', value: 'svelte' },
+                { name: 'React', value: 'react' },
+                { name: 'Alpine JS', value: 'alpinejs' },
+              ],
+            },
+            {
+              language: 'Ruby',
+              libs: [
+                { name: 'Rails', value: 'rails' },
+                { name: 'Sinatra', value: 'sinatra' },
+              ],
+            },
+            {
+              language: 'Php',
+              libs: [
+                { name: 'Laravel', value: 'laravel' },
+                { name: 'Symfony', value: 'symfony' },
+              ],
+            },
+          ]"
+          :multiple="false"
+          :group-select="false"
         />
         <r-form-collection v-model="form.notes" label="Collection">
           <template #default="{ item, updateItem, disabled }">
@@ -255,7 +291,8 @@ export default {
       radio: 'radio',
       checkbox: false,
       editorContent: 'blaaa',
-      select: [1, 2],
+      selectNoGroup: [],
+      selectGroup: [],
       notes: [
         {
           person: 'Kristof S.',

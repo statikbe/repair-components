@@ -1,6 +1,6 @@
 <template>
   <div>
-    <r-modal name="cookie-banner" :dismissable="isCookieSet" maxWidth="450">
+    <r-modal name="cookie-banner" :dismissable="isCookieSet" :maxWidth="450">
       <h2 class="antialiased text-h2 text-primary">{{ $t('cookie_banner_title') }}</h2>
       <p class="mb-6">
         {{ $t('cookie_banner_text') }}
