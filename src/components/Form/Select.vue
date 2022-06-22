@@ -83,7 +83,6 @@ export default {
     setInternalValue() {
       const {
         trackBy,
-        // groupLabel,
         groupValues,
         modelValue,
         $attrs: { options, multiple },
@@ -124,7 +123,6 @@ export default {
     handleInput(value) {
       const {
         trackBy,
-        // groupLabel,
         groupValues,
         $attrs: { multiple },
       } = this;
@@ -143,3 +141,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.multiselect__option--group {
+  font-weight: 600;
+}
+.multiselect__option:not(.multiselect__option--group) {
+  padding-left: 20px;
+}
+</style>
