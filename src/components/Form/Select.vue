@@ -141,12 +141,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.multiselect__option--group {
-  font-weight: 600;
-}
-.multiselect__option:not(.multiselect__option--group) {
-  padding-left: 20px;
-}
-</style>
