@@ -2,7 +2,7 @@
   <div class="mb-4">
     <slot name="label" v-bind="{ id, canReset, required, label, tooltip }">
       <div class="flex">
-        <label v-if="label" :for="id" class="cursor-pointer">
+        <label v-if="label" :for="id" class="cursor-pointer form__label">
           <span class="mr-2 text-base font-bold">{{ label }}</span>
           <r-icon
             v-if="tooltip"
@@ -10,7 +10,9 @@
             name="mdiInformationOutline"
             class="relative mr-2 align-middle text-tiny"
           />
-          <small v-if="!required" class="mr-2 align-baseline opacity-50">{{ $t('form_field_optional') }}</small>
+          <small v-if="!required" class="mr-2 align-baseline opacity-50 message-optional">{{
+            $t('form_field_optional')
+          }}</small>
         </label>
         <a
           v-if="canReset"
