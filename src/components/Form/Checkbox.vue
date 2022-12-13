@@ -7,6 +7,7 @@
       :value="value"
       :checked="isChecked"
       :disabled="disabled"
+      :required="required"
       @change="onChange"
     />
     <label :for="htmlId" class="cursor-pointer">
@@ -60,6 +61,10 @@ export default {
       default: () => true,
     },
     falseValue: {
+      default: () => false,
+    },
+    required: {
+      type: Boolean,
       default: () => false,
     },
     toggle: {
