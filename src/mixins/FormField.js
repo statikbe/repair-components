@@ -64,7 +64,7 @@ export default {
     fieldClass() {
       return `text-small block w-full rounded border-gray-300 border-2 border-solid px-3 py-2 box-border max-w-none ${
         this.disabled ? 'text-gray-400 bg-gray-50 cursor-not-allowed' : 'text-main bg-white'
-      } ${this.errors.length ? 'border-red-500' : 'border-gray-300'}`;
+      } ${this.errors.length && !this.modelValue.length ? 'border-red-500 bg-red-100' : 'border-gray-300'}`;
     },
   },
   created() {

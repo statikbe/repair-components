@@ -54,6 +54,7 @@
               label="Phone"
               v-bind="fieldProps('phone')"
               v-on="fieldListeners('phone')"
+              required
               :errors="['Error 1', 'Error 2']"
             />
           </div>
@@ -68,6 +69,15 @@
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-input label="LinkedIn" v-bind="fieldProps('linkedin')" v-on="fieldListeners('linkedin')" />
+          </div>
+          <div class="px-2 w-100 md:w-7/12">
+            <r-input
+              label="Required test"
+              v-bind="fieldProps('test')"
+              v-on="fieldListeners('test')"
+              required
+              errors="Dit veld is verplicht."
+            />
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-radio
@@ -172,6 +182,24 @@
             'http://placekitten.com/700/700',
           ]"
         />
+        <div class="mt-4">
+          <r-checkbox
+            v-model="form.checkboxTest"
+            label="Checkbox Required test"
+            required
+            :errors="['Dit veld is verplicht', 'yep']"
+          />
+          <r-checkbox
+            v-model="form.checkboxTest"
+            label="Checkbox Required test"
+            required
+            toggle
+            errors="Dit veld is verplicht"
+          />
+          <div class="mt-6">
+            <r-button color="secondary">Submit</r-button>
+          </div>
+        </div>
       </r-form>
     </r-section>
     <r-section>
@@ -294,6 +322,8 @@ export default {
       editorContent: 'blaaa',
       selectNoGroup: [],
       selectGroup: [],
+      checkboxTest: false,
+      test: '',
       notes: [
         {
           person: 'Kristof S.',

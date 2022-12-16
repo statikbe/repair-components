@@ -20,7 +20,11 @@
           :class="{ 'text-[32px] mr-2': toggle, 'mt-1 mr-2': !toggle, 'text-primary': isChecked }"
         >
           <r-icon v-if="isChecked" :name="toggle ? 'mdiToggleSwitch' : 'mdiCheckboxMarked'" />
-          <r-icon v-else :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'" />
+          <r-icon
+            v-else
+            :name="toggle ? 'mdiToggleSwitchOff' : 'mdiCheckboxBlankOutline'"
+            :class="{ 'text-error': errors && !toggle }"
+          />
         </span>
         <div :class="{ flex: toggle }">
           <span class="mr-2 text-base font-medium align-middle">
@@ -37,6 +41,7 @@
         </div>
       </div>
     </label>
+    <div v-if="errors" class="mt-1 font-bold text-small text-error" v-html="formattedErrors"></div>
   </div>
 </template>
 
@@ -63,10 +68,6 @@ export default {
     falseValue: {
       default: () => false,
     },
-    required: {
-      type: Boolean,
-      default: () => false,
-    },
     toggle: {
       type: Boolean,
       default: () => false,
@@ -81,6 +82,9 @@ export default {
       }
 
       return modelValue === value;
+    },
+    formattedErrors() {
+      return Array.isArray(this.errors) ? this.errors.join('<br/>') : this.errors;
     },
   },
   methods: {
