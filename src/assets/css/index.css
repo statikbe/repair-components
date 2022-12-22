@@ -1,84 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
 
-/* purgecss start ignore */
 @import 'vue-js-modal/dist/styles.css';
 
 @import './vendor/multiselect.css';
 @import './vendor/tooltip.css';
 
-@layer base {
-  *,
-  :before,
-  :after {
-    box-sizing: border-box;
-  }
-
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    @apply antialiased;
-  }
-
-  * {
-    font-family: 'Titillium Web', sans-serif;
-    @apply antialiased;
-  }
-
-  a {
-    @apply underline;
-  }
-
-  dt {
-    @apply font-bold mb-1;
-  }
+*,
+:before,
+:after {
+  box-sizing: border-box;
 }
 
-@layer components {
-  .wysiwyg h1 {
-    @apply text-h1 text-primary;
-  }
-
-  .wysiwyg h2 {
-    @apply text-h2 text-primary;
-  }
-
-  .wysiwyg h3 {
-    @apply text-h3 text-primary;
-  }
-
-  .wysiwyg h4 {
-    @apply text-h4 text-primary;
-  }
-
-  .wysiwyg h5 {
-    @apply text-h5 text-primary;
-  }
-
-  .wysiwyg h6 {
-    @apply text-h6 text-primary;
-  }
-
-  .wysiwyg ol {
-    counter-reset: ol;
-  }
-
-  .wysiwyg li {
-    @apply relative mb-1 pl-6;
-  }
-
-  .wysiwyg li:before {
-    @apply block absolute top-0 left-0 font-bold text-primary;
-  }
-
-  .wysiwyg ol li:before {
-    counter-increment: ol;
-    content: counter(ol) '.';
-  }
-
-  .wysiwyg ul li:before {
-    content: '\2022';
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  @apply antialiased;
 }
 
-/* purgecss end ignore */
+* {
+  font-family: 'Titillium Web', sans-serif;
+  @apply antialiased;
+}
+
+a {
+  @apply underline;
+}
+
+dt {
+  @apply font-bold mb-1;
+}
+
+.wysiwyg h1 {
+  @apply text-h1 text-primary;
+}
+
+.wysiwyg h2 {
+  @apply text-h2 text-primary;
+}
+
+.wysiwyg h3 {
+  @apply text-h3 text-primary;
+}
+
+.wysiwyg h4 {
+  @apply text-h4 text-primary;
+}
+
+.wysiwyg h5 {
+  @apply text-h5 text-primary;
+}
+
+.wysiwyg h6 {
+  @apply text-h6 text-primary;
+}
+
+.wysiwyg ol {
+  counter-reset: ol;
+}
+
+.wysiwyg li {
+  @apply relative mb-1 pl-6;
+}
+
+.wysiwyg li:before {
+  @apply block absolute top-0 left-0 font-bold text-primary;
+}
+
+.wysiwyg ol li:before {
+  counter-increment: ol;
+  content: counter(ol) '.';
+}
+
+.wysiwyg ul li:before {
+  content: '\2022';
+}

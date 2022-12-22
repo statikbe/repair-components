@@ -1,6 +1,8 @@
 <template>
   <r-app>
-    <r-section color="primary"> Repair Maps </r-section>
+    <r-section color="primary">
+      <h1 class="text-h1">Repair Components</h1>
+    </r-section>
     <r-section class="bg-gray-100">
       <h2 class="antialiased text-center text-h2">Step 1</h2>
       <p class="text-center">Contact information of the initiative</p>
@@ -47,7 +49,12 @@
             <r-input label="Email" v-bind="fieldProps('email')" v-on="fieldListeners('email')" />
           </div>
           <div class="px-2 w-100 md:w-6/12">
-            <r-input label="Mobile" v-bind="fieldProps('mobile')" v-on="fieldListeners('mobile')" />
+            <r-input
+              label="Mobile"
+              v-bind="fieldProps('mobile')"
+              v-on="fieldListeners('mobile')"
+              placeholder="Placeholder example"
+            />
           </div>
           <div class="px-2 w-100 md:w-6/12">
             <r-input

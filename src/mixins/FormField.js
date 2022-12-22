@@ -62,7 +62,7 @@ export default {
       };
     },
     fieldClass() {
-      return `text-small block w-full rounded border-gray-300 border-2 border-solid px-3 py-2 box-border max-w-none focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary ${
+      return `text-small block w-full rounded border-gray-300 border-2 border-solid px-3 py-2 box-border max-w-none focus:outline-none placeholder-gray-500 focus:ring-1 focus:ring-primary focus:border-primary ${
         this.disabled ? 'text-gray-400 bg-gray-50 cursor-not-allowed' : 'text-main bg-white'
       } ${this.errors.length && !this.modelValue.length ? 'border-red-500 bg-red-100' : 'border-gray-300'}`;
     },

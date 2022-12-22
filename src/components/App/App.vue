@@ -1,5 +1,5 @@
 <template>
-  <div class="repair-app font-base text-base text-main">
+  <div class="text-base repair-app font-base text-main">
     <slot />
   </div>
 </template>
