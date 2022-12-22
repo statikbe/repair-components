@@ -187,7 +187,7 @@
             v-model="form.checkboxTest"
             label="Checkbox Required test"
             required
-            :errors="['Dit veld is verplicht', 'yep']"
+            :errors="['Dit veld is verplicht', 'Andere validatie']"
           />
           <r-checkbox
             v-model="form.checkboxTest"
