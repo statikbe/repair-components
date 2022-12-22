@@ -10,7 +10,7 @@
             name="mdiInformationOutline"
             class="relative mr-2 align-middle text-tiny"
           />
-          <small v-if="!required" class="mr-2 align-baseline opacity-50 message-optional">{{
+          <small v-if="!required" class="mr-2 align-baseline opacity-70 message-optional">{{
             $t('form_field_optional')
           }}</small>
         </label>

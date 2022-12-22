@@ -113,10 +113,19 @@
           label="Select with no categories"
           label-by="name"
           track-by="value"
+          searchable="searchable"
+          :placeholder="`Typ om te zoeken`"
           :options="[
             { name: 'Vue', value: 'vue' },
             { name: 'React', value: 'react' },
             { name: 'Angular', value: 'angular' },
+            { name: 'Svelte', value: 'svelte' },
+            { name: 'Rails', value: 'rails' },
+            { name: 'Sinatra', value: 'sinatra' },
+            { name: 'Laravel', value: 'laravel' },
+            { name: 'Cake PHP', value: 'cakephp' },
+            { name: 'Symfony', value: 'symfony' },
+            { name: 'Yii', value: 'yii' },
           ]"
           :multiple="false"
         />
@@ -128,6 +137,7 @@
           group-values="libs"
           group-label="language"
           searchable="searchable"
+          :placeholder="`Typ om te zoeken`"
           :options="[
             {
               language: 'Javascript',
@@ -150,6 +160,7 @@
               libs: [
                 { name: 'Laravel', value: 'laravel' },
                 { name: 'Symfony', value: 'symfony' },
+                { name: 'Cake PHP', value: 'cakephp' },
               ],
             },
           ]"

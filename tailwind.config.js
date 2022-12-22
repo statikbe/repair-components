@@ -11,7 +11,7 @@ const colors = {
   info: defaultColors.yellow[500],
   success: defaultColors.green[500],
   warning: defaultColors.blue[500],
-  error: defaultColors.red[500],
+  error: defaultColors.red[600],
 };
 
 module.exports = {
