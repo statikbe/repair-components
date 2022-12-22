@@ -11,6 +11,7 @@
         @click.native="$emit('update:modelValue', modelValue - 1)"
       >
         <r-icon name="mdiChevronLeft" />
+        <span class="sr-only">{{ $t('pagination_prev') }}</span>
       </r-pagination-button>
       <r-pagination-button :is-active="isActive(1)" @click.native="$emit('update:modelValue', 1)">
         {{ 1 }}
@@ -38,6 +39,7 @@
         @click.native="$emit('update:modelValue', modelValue + 1)"
       >
         <r-icon name="mdiChevronRight" />
+        <span class="sr-only">{{ $t('pagination_next') }}</span>
       </r-pagination-button>
     </div>
   </div>

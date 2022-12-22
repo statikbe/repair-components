@@ -32,4 +32,6 @@ export default {
   modal_close: 'Modal schließen (zum Schließen Escape drücken)',
   modal_prev: 'Vorheriges Bild (zum Wechseln Pfeil nach links verwenden)',
   modal_next: 'Nächstes Bild (zum Wechseln Pfeil nach rechts verwenden)',
+  pagination_prev: 'Vorherige Seite',
+  pagination_next: 'Nächste Seite',
 };

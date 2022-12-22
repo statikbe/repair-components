@@ -32,4 +32,6 @@ export default {
   modal_close: 'Fermer modal (appuyez sur Echap pour fermer)',
   modal_prev: 'Image suivante (utiliser la flèche droite pour changer)',
   modal_next: 'Image précédente (utiliser la flèche gauche pour changer)',
+  pagination_prev: 'Page précédente',
+  pagination_next: 'Page suivante',
 };

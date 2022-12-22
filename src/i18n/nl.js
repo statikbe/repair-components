@@ -32,4 +32,6 @@ export default {
   modal_close: 'Modal sluiten (Druk escape om te sluiten)',
   modal_prev: 'Vorige afbeelding (Druk linker pijltoets)',
   modal_next: 'Volgende afbeelding (Druk rechter pijltoets)',
+  pagination_prev: 'Vorige pagina',
+  pagination_next: 'Volgende pagina',
 };
