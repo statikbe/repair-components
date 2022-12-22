@@ -29,4 +29,7 @@ export default {
   form_location_search: 'Einen Standort finden',
   form_select_placeholder: 'Klicke um auszuwählen',
   form_select_search_placeholder: 'Typ zum Suchen',
+  modal_close: 'Modal schließen (zum Schließen Escape drücken)',
+  modal_prev: 'Vorheriges Bild (zum Wechseln Pfeil nach links verwenden)',
+  modal_next: 'Nächstes Bild (zum Wechseln Pfeil nach rechts verwenden)',
 };

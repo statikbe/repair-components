@@ -29,4 +29,7 @@ export default {
   form_location_search: 'Zoek een plaats',
   form_select_placeholder: 'Klik om te selecteren',
   form_select_search_placeholder: 'Typ om te zoeken',
+  modal_close: 'Modal sluiten (Druk escape om te sluiten)',
+  modal_prev: 'Vorige afbeelding (Druk linker pijltoets)',
+  modal_next: 'Volgende afbeelding (Druk rechter pijltoets)',
 };

@@ -9,9 +9,10 @@
       <button
         v-if="dismissable"
         type="button"
-        class="p-3 bg-white bg-opacity-50 hover:bg-opacity-100 text-black border-none cursor-pointer absolute top-0 right-0 rounded-bl transition-colors"
+        class="absolute top-0 right-0 p-3 text-black transition-colors bg-white bg-opacity-50 border-none rounded-bl cursor-pointer hover:bg-opacity-100"
         @click="closeModal"
       >
+        <span class="sr-only">{{ $t('modal_close') }}</span>
         <r-icon name="mdiClose" />
       </button>
       <slot name="content">

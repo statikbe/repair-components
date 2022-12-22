@@ -27,4 +27,7 @@ export default {
   form_location_search: 'Find a location',
   form_select_placeholder: 'Click to select',
   form_select_search_placeholder: 'Type to search',
+  modal_close: 'Close modal (Press escape to close)',
+  modal_prev: 'Previous image (use left arrow to change)',
+  modal_next: 'Next image (use right arrow to change)',
 };

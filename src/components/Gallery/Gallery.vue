@@ -1,11 +1,12 @@
 <template>
-  <div v-if="items.length">
+  <div v-if="items.length" v-on:keyup.left="shiftIndex(-1)" v-on:keyup.right="shiftIndex(+1)">
     <r-grid>
       <r-grid-item v-for="(item, index) in items" :key="index" class="w-4/12 overflow-hidden">
         <slot v-bind="{ item }">
           <a
             href="javascript:void(0)"
             class="block group"
+            role="button"
             @click="
               currentIndex = index;
               $modal.show(name);
@@ -13,12 +14,12 @@
           >
             <div class="relative aspect-w-1 aspect-h-1">
               <slot name="thumbnail" v-bind="{ item }">
-                <img :src="item" alt="" class="w-full object-cover" />
+                <img :src="item" alt="" class="object-cover w-full" />
               </slot>
               <div
-                class="flex justify-center items-center absolute inset-0 bg-primary bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity"
+                class="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 bg-primary bg-opacity-80 group-hover:opacity-100"
               >
-                <r-icon name="mdiPlusCircle" class="text-huge text-white" />
+                <r-icon name="mdiPlusCircle" class="text-white text-huge" />
               </div>
             </div>
           </a>
@@ -30,20 +31,26 @@
         <div class="relative h-full">
           <button
             type="button"
-            class="absolute top-1/2 transform -translate-y-1/2 left-0 rounded-r flex p-2 text-large text-black bg-white bg-opacity-50 hover:bg-opacity-100 border-0 cursor-pointer transition-colors"
+            class="absolute left-0 flex p-2 text-black transition-colors transform -translate-y-1/2 bg-white bg-opacity-50 border-0 rounded-r cursor-pointer top-1/2 text-large hover:bg-opacity-100"
             @click="shiftIndex(-1)"
           >
             <r-icon name="mdiChevronLeft" />
+            <span class="sr-only">
+              {{ $t('modal_prev') }}
+            </span>
           </button>
           <slot name="modal" v-bind="{ item: items[currentIndex] }">
-            <img :src="items[currentIndex]" alt="" class="flex object-contain mx-auto max-w-full" />
+            <img :src="items[currentIndex]" alt="" class="flex object-contain max-w-full mx-auto" />
           </slot>
           <button
             type="button"
-            class="absolute top-1/2 transform -translate-y-1/2 right-0 rounded-l flex p-2 text-large text-black bg-white bg-opacity-50 hover:bg-opacity-100 border-0 cursor-pointer transition-colors"
+            class="absolute right-0 flex p-2 text-black transition-colors transform -translate-y-1/2 bg-white bg-opacity-50 border-0 rounded-l cursor-pointer top-1/2 text-large hover:bg-opacity-100"
             @click="shiftIndex(1)"
           >
             <r-icon name="mdiChevronRight" />
+            <span class="sr-only">
+              {{ $t('modal_next') }}
+            </span>
           </button>
         </div>
       </template>
@@ -79,10 +86,12 @@ export default {
       return `gallery_${this.uuid}`;
     },
   },
+  updated: () => {
+    console.log('yeet');
+  },
   methods: {
     shiftIndex(offset) {
       const { currentIndex, items } = this;
-
       this.currentIndex = (currentIndex + items.length + offset) % items.length;
     },
   },
