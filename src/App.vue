@@ -1,6 +1,6 @@
 <template>
   <r-app>
-    <r-section color="primary">
+    <r-section>
       <h1 class="text-h1">Repair Components</h1>
     </r-section>
     <r-section class="bg-gray-100">

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="items.length" v-on:keyup.left="shiftIndex(-1)" v-on:keyup.right="shiftIndex(+1)">
+  <div v-if="items.length">
     <r-grid>
       <r-grid-item v-for="(item, index) in items" :key="index" class="w-4/12 overflow-hidden">
         <slot v-bind="{ item }">
@@ -12,6 +12,7 @@
               $modal.show(name);
             "
           >
+            <span class="sr-only">{{ $t('modal_link_description') }}</span>
             <div class="relative aspect-w-1 aspect-h-1">
               <slot name="thumbnail" v-bind="{ item }">
                 <img :src="item" alt="" class="object-cover w-full" />
@@ -27,7 +28,7 @@
       </r-grid-item>
     </r-grid>
     <r-modal :name="name">
-      <template #content>
+      <template #content v-on:keyup.left="shiftIndex(-1)" v-on:keyup.right="shiftIndex(+1)">
         <div class="relative h-full">
           <button
             type="button"
@@ -85,9 +86,6 @@ export default {
     name() {
       return `gallery_${this.uuid}`;
     },
-  },
-  updated: () => {
-    console.log('yeet');
   },
   methods: {
     shiftIndex(offset) {

@@ -1,11 +1,11 @@
 <template>
   <r-form-field v-bind="fieldProps" v-on="fieldListeners">
     <template #default="{ id }">
-      <div v-show="thumbnails.length" class="mb-3 w-80 max-w-full">
+      <div v-show="thumbnails.length" class="max-w-full mb-3 w-80">
         <r-grid>
           <r-grid-item v-for="(url, index) in thumbnails" class="w-3/12" :key="index">
             <div
-              class="relative aspect-w-1 aspect-h-1 bg-cover bg-no-repeat bg-center"
+              class="relative bg-center bg-no-repeat bg-cover aspect-w-1 aspect-h-1"
               :style="{
                 backgroundImage: `url('${url}')`,
               }"
@@ -13,9 +13,10 @@
               <a
                 v-if="!disabled"
                 href="javascript:void(0)"
-                class="absolute inset-0 flex items-center justify-center text-white bg-error bg-opacity-0 text-opacity-0 hover:text-opacity-100 hover:bg-opacity-90 transition-all"
+                class="absolute inset-0 flex items-center justify-center text-white text-opacity-0 transition-all bg-opacity-0 bg-error hover:text-opacity-100 hover:bg-opacity-90"
                 @click="removeImage(index)"
               >
+                <span class="sr-only">{{ $t('form_image_remove') }}</span>
                 <r-icon name="mdiTrashCan" />
               </a>
             </div>

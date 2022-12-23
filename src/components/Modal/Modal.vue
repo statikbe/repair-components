@@ -9,7 +9,7 @@
       <button
         v-if="dismissable"
         type="button"
-        class="absolute top-0 right-0 p-3 text-black transition-colors bg-white bg-opacity-50 border-none rounded-bl cursor-pointer hover:bg-opacity-100"
+        class="absolute top-0 right-0 z-20 p-3 text-black transition-colors bg-white bg-opacity-50 border-none rounded-bl cursor-pointer hover:bg-opacity-100"
         @click="closeModal"
       >
         <span class="sr-only">{{ $t('modal_close') }}</span>
