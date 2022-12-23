@@ -1,14 +1,24 @@
 <template>
   <div class="mb-1">
-    <input type="radio" :id="htmlId" :value="value" :checked="isChecked" class="sr-only" @change="onChange" />
     <label :for="htmlId" class="cursor-pointer">
       <div class="flex items-start" :class="{ 'opacity-60 cursor-not-allowed': disabled }">
-        <span class="mr-2 flex-shrink-0 flex-grow-0 flex items-center mt-1">
+        <input
+          type="radio"
+          :id="htmlId"
+          :value="value"
+          :checked="isChecked"
+          class="sr-only custom-radio"
+          @change="onChange"
+        />
+        <span
+          class="flex items-center flex-grow-0 flex-shrink-0 mt-1 mr-2 text-large"
+          :class="{ 'text-primary': isChecked }"
+        >
           <r-icon v-if="isChecked" name="mdiRadioboxMarked" />
           <r-icon v-else name="mdiRadioboxBlank" />
         </span>
         <div>
-          <span class="text-base font-medium mr-2 align-middle">
+          <span class="mr-2 text-base font-medium align-middle">
             <slot name="label" v-bind="{ label }">
               <span v-html="label"></span>
             </slot>
@@ -17,13 +27,20 @@
             v-if="tooltip"
             v-tooltip="tooltip"
             name="mdiInformationOutline"
-            class="relative text-tiny align-middle"
+            class="relative align-middle text-tiny"
           />
         </div>
       </div>
     </label>
   </div>
 </template>
+
+<style scoped>
+.custom-radio:focus + span {
+  box-shadow: inset 0 0 0 3px var(--repair-secondary, #9c7a97);
+  border-radius: 9999px;
+}
+</style>
 
 <script>
 import FormField from '../../mixins/FormField';

@@ -1,20 +1,21 @@
 <template>
   <div class="mb-1">
-    <input
-      type="checkbox"
-      class="sr-only"
-      :id="htmlId"
-      :value="value"
-      :checked="isChecked"
-      :disabled="disabled"
-      :required="required"
-      @change="onChange"
-    />
     <label :for="htmlId" class="cursor-pointer">
       <div
         class="flex"
         :class="{ 'opacity-60 cursor-not-allowed': disabled, 'items-center': toggle, 'items-start': !toggle }"
       >
+        <input
+          type="checkbox"
+          class="sr-only custom-checkbox"
+          :aria-describedby="htmlId"
+          :id="htmlId"
+          :value="value"
+          :checked="isChecked"
+          :disabled="disabled"
+          :required="required"
+          @change="onChange"
+        />
         <span
           class="flex items-center flex-grow-0 flex-shrink-0"
           :class="{ 'text-[32px] mr-2': toggle, 'mt-1 mr-2': !toggle, 'text-primary': isChecked }"
@@ -44,6 +45,13 @@
     <div v-if="errors" class="mt-1 font-bold text-small text-error" v-html="formattedErrors"></div>
   </div>
 </template>
+
+<style scoped>
+.custom-checkbox:focus + span {
+  box-shadow: inset 0 0 0 3px var(--repair-secondary, #9C7A97);
+  border-radius: 0.25rem;
+}
+</style>
 
 <script>
 import FormField from '../../mixins/FormField';
