@@ -66,7 +66,12 @@
             />
           </div>
           <div class="px-2 w-100 md:w-7/12">
-            <r-input label="Website" v-bind="fieldProps('website')" v-on="fieldListeners('website')" />
+            <r-input
+              label="Website"
+              v-bind="fieldProps('website')"
+              v-on="fieldListeners('website')"
+              tooltip="Tooltip voorbeeld"
+            />
           </div>
           <div class="px-2 w-100 md:w-7/12">
             <r-input label="Facebook" v-bind="fieldProps('facebook')" v-on="fieldListeners('facebook')" />
@@ -114,7 +119,7 @@
             <r-form-image label="Images" v-bind="fieldProps('images')" v-on="fieldListeners('images')" multiple />
           </div>
         </div>
-        <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="hallo" optional />
+        <r-editor v-model="form.editorContent" label="Text" tooltip="hallo" info="Extra info?" optional />
         <r-select
           v-model="form.selectNoGroup"
           label="Select with no categories"

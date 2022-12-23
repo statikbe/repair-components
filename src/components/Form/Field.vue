@@ -6,9 +6,12 @@
           <span class="mr-2 text-base font-bold">{{ label }}</span>
           <r-icon
             v-if="tooltip"
-            v-tooltip="tooltip"
+            v-tooltip="{
+              content: tooltip,
+              trigger: 'hover click',
+            }"
             name="mdiInformationOutline"
-            class="relative mr-2 align-middle text-tiny"
+            class="relative mr-2 align-middle text-tiny focus:ring-2 focus:ring-primary-dark focus:outline-none focus:rounded"
           />
           <small v-if="!required" class="mr-2 align-baseline opacity-70 message-optional">{{
             $t('form_field_optional')
@@ -25,7 +28,7 @@
         </a>
       </div>
     </slot>
-    <div v-if="info" v-html="info" class="opacity-50 text-small" />
+    <div v-if="info" v-html="info" class="opacity-70 text-small" />
     <div class="mt-1">
       <slot name="default" v-bind="{ id }"></slot>
     </div>
