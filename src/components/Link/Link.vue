@@ -2,7 +2,7 @@
   <component
     v-on="$listeners"
     :is="component"
-    class="inline-flex items-center text-base font-semibold text-black underline transition-colors font-base group"
+    class="inline-flex items-center text-base font-semibold text-black underline transition-colors font-base group focus:ring-2 focus:ring-primary focus:outline-none"
     :class="[
       { 'cursor-pointer hover:no-underline': !disabled, 'opacity-60 cursor-not-allowed': disabled },
       color ? `hover:text-${color}` : '',

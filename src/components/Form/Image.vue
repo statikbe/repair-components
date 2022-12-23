@@ -32,7 +32,13 @@
           @change="handleChange"
         />
       </div>
-      <r-link v-if="!disabled" icon-before="mdiPlusCircle" @click="$refs.input.click()">
+      <r-link
+        href="javascript:void(0)"
+        v-if="!disabled"
+        icon-before="mdiPlusCircle"
+        role="button"
+        @click="$refs.input.click()"
+      >
         {{ $t('form_image_add') }}
       </r-link>
     </template>
