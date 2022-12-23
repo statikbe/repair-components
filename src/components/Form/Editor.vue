@@ -1,46 +1,51 @@
 <template>
   <r-form-field v-bind="fieldProps" v-on="fieldListeners">
-    <div v-if="editor" class="rounded-t border-2 border-solid border-b-0 border-gray-300 bg-gray-100">
+    <div v-if="editor" class="bg-gray-100 border-2 border-b-0 border-gray-300 border-solid rounded-t">
       <slot name="toolbar" v-bind="{ editor }">
         <button
           type="button"
-          class="text-base p-2 bg-gray-200 bg-opacity-0 hover:bg-opacity-100 border-none mr-1 cursor-pointer"
+          class="p-2 mr-1 text-base bg-gray-300 bg-opacity-0 border-none cursor-pointer hover:bg-opacity-100 focus:ring-2 focus:ring-primary focus:outline-none"
           :class="{ 'bg-opacity-100': editor.isActive('bold') }"
           @click="editor.chain().focus().toggleBold().run()"
         >
           <r-icon name="mdiFormatBold" />
+          <span class="sr-only">Bold</span>
         </button>
         <button
           type="button"
-          class="text-base p-2 bg-gray-200 bg-opacity-0 hover:bg-opacity-100 border-none mr-1 cursor-pointer"
+          class="p-2 mr-1 text-base bg-gray-300 bg-opacity-0 border-none cursor-pointer hover:bg-opacity-100 focus:ring-2 focus:ring-primary focus:outline-none"
           :class="{ 'bg-opacity-100': editor.isActive('italic') }"
           @click="editor.chain().focus().toggleItalic().run()"
         >
           <r-icon name="mdiFormatItalic" />
+          <span class="sr-only">Italic</span>
         </button>
         <button
           type="button"
-          class="text-base p-2 bg-gray-200 bg-opacity-0 hover:bg-opacity-100 border-none mr-1 cursor-pointer"
+          class="p-2 mr-1 text-base bg-gray-300 bg-opacity-0 border-none cursor-pointer hover:bg-opacity-100 focus:ring-2 focus:ring-primary focus:outline-none"
           :class="{ 'bg-opacity-100': editor.isActive('link') }"
           @click="setLink"
         >
           <r-icon name="mdiLink" />
+          <span class="sr-only">Link</span>
         </button>
         <button
           type="button"
-          class="text-base p-2 bg-gray-200 bg-opacity-0 hover:bg-opacity-100 border-none mr-1 cursor-pointer"
+          class="p-2 mr-1 text-base bg-gray-300 bg-opacity-0 border-none cursor-pointer hover:bg-opacity-100 focus:ring-2 focus:ring-primary focus:outline-none"
           :class="{ 'bg-opacity-100': editor.isActive('bulletList') }"
           @click="editor.chain().focus().toggleBulletList().run()"
         >
           <r-icon name="mdiFormatListBulleted" />
+          <span class="sr-only">Bulleted List</span>
         </button>
         <button
           type="button"
-          class="text-base p-2 bg-gray-200 bg-opacity-0 hover:bg-opacity-100 border-none mr-1 cursor-pointer"
+          class="p-2 mr-1 text-base bg-gray-300 bg-opacity-0 border-none cursor-pointer hover:bg-opacity-100 focus:ring-2 focus:ring-primary focus:outline-none"
           :class="{ 'bg-opacity-100': editor.isActive('orderedList') }"
           @click="editor.chain().focus().toggleOrderedList().run()"
         >
           <r-icon name="mdiFormatListNumbered" />
+          <span class="sr-only">Numbered List</span>
         </button>
       </slot>
     </div>
