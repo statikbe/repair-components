@@ -48,7 +48,7 @@
 
 <style scoped>
 .custom-checkbox:focus + span {
-  box-shadow: inset 0 0 0 3px var(--repair-secondary, #9C7A97);
+  box-shadow: inset 0 0 0 3px var(--repair-secondary, #9c7a97);
   border-radius: 0.25rem;
 }
 </style>
