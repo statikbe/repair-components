@@ -52,3 +52,11 @@ Vue.use(RepairComponents, {
 ## Documentation
 
 Check out the components and their props at the Storybook [documentation](https://statikbe.github.io/repair-components/).
+
+## For developers
+
+### Publishing to NPM
+
+First, run `yarn build` to build this package as a library.
+
+To publish this package to the NPM registry, make sure you are logged in with statikbe credentials (see 1pw) using `npm login`, then run `npx np --no-2fa`. Respect the [semantic versioning](https://semver.org/) guidelines when doing so!
